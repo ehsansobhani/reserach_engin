@@ -1,0 +1,15 @@
+{
+  "title": "Charging Games in Networks of Electrical Vehicles",
+  "authors": [
+    "Olivier Beaude",
+    "Samson Lasaulce",
+    "Martin Hennebel"
+  ],
+  "year": 2015,
+  "venue": "arXiv",
+  "arxiv_id": "1509.07349v1",
+  "abstract": "In this paper, a static non-cooperative game formulation of the problem of distributed charging in electrical vehicle (EV) networks is proposed. This formulation allows one to model the interaction between several EV which are connected to a common residential distribution transformer. Each EV aims at choosing the time at which it starts charging its battery in order to minimize an individual cost which is mainly related to the total power delivered by the transformer, the location of the time interval over which the charging operation is performed, and the charging duration needed for the considered EV to have its battery fully recharged. As individual cost functions are assumed to be memoryless, it is possible to show that the game of interest is always an ordinal potential game. More precisely, both an atomic and nonatomic versions of the charging game are considered. In both cases, equilibrium analysis is conducted. In particular, important issues such as equilibrium uniqueness and efficiency are tackled. Interestingly, both analytical and numerical results show that the efficiency loss due to decentralization (e.g., when cost functions such as distribution network Joule losses or life of residential distribution transformers when no thermal inertia is assumed) induced by charging is small and the corresponding \"efficiency\", a notion close to the Price of Anarchy, tends to one when the number of EV increases.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1509.07349v1",
+  "key": "charging_games_2015"
+}

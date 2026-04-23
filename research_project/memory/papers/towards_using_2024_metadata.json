@@ -1,0 +1,20 @@
+{
+  "title": "Towards Using Machine Learning to Generatively Simulate EV Charging in Urban Areas",
+  "authors": [
+    "Marek Miltner",
+    "Jakub Zíka",
+    "Daniel Vašata",
+    "Artem Bryksa",
+    "Magda Friedjungová",
+    "Ondřej Štogl",
+    "Ram Rajagopal",
+    "Oldřich Starý"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv_id": "2412.10531v2",
+  "abstract": "This study addresses the challenge of predicting electric vehicle (EV) charging profiles in urban locations with limited data. Utilizing a neural network architecture, we aim to uncover latent charging profiles influenced by spatio-temporal factors. Our model focuses on peak power demand and daily load shapes, providing insights into charging behavior. Our results indicate significant impacts from the type of Basic Administrative Units on predicted load curves, which contributes to the understanding and optimization of EV charging infrastructure in urban settings and allows Distribution System Operators (DSO) to more efficiently plan EV charging infrastructure expansion.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2412.10531v2",
+  "key": "towards_using_2024"
+}

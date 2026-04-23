@@ -1,0 +1,15 @@
+{
+  "title": "Competitive Charging Station Pricing for Plug-in Electric Vehicles",
+  "authors": [
+    "Wei Yuan",
+    "Jianwei Huang",
+    "Ying Jun Zhang"
+  ],
+  "year": 2015,
+  "venue": "arXiv",
+  "arxiv_id": "1511.07907v2",
+  "abstract": "This paper considers the problem of charging station pricing and plug-in electric vehicles (PEVs) station selection. When a PEV needs to be charged, it selects a charging station by considering the charging prices, waiting times, and travel distances. Each charging station optimizes its charging price based on the prediction of the PEVs' charging station selection decisions and the other station's pricing decision, in order to maximize its profit. To obtain insights of such a highly coupled system, we consider a one-dimensional system with two competing charging stations and Poisson arriving PEVs. We propose a multi-leader-multi-follower Stackelberg game model, in which the charging stations (leaders) announce their charging prices in Stage I, and the PEVs (followers) make their charging station selections in Stage II. We show that there always exists a unique charging station selection equilibrium in Stage II, and such equilibrium depends on the charging stations' service capacities and the price difference between them. We then characterize the sufficient conditions for the existence and uniqueness of the pricing equilibrium in Stage I. We also develop a low complexity algorithm that efficiently computes the pricing equilibrium and the subgame perfect equilibrium of the two-stage Stackelberg game.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1511.07907v2",
+  "key": "competitive_charging_2015"
+}

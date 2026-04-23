@@ -1,0 +1,17 @@
+{
+  "title": "A Digital Twin Framework for Decision-Support and Optimization of EV Charging Infrastructure in Localized Urban Systems",
+  "authors": [
+    "Bui Khanh Linh Do",
+    "Thanh H. Nguyen",
+    "Nghi Huynh Quang",
+    "Doanh Nguyen-Ngoc",
+    "Laurent El Ghaoui"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2510.24758v2",
+  "abstract": "As Electric Vehicle (EV) adoption accelerates in urban environments, optimizing charging infrastructure is vital for balancing user satisfaction, energy efficiency, and financial viability. This study advances beyond static models by proposing a digital twin framework that integrates agent-based decision support with embedded optimization to dynamically simulate EV charging behaviors, infrastructure layouts, and policy responses across scenarios. Applied to a localized urban site (a university campus) in Hanoi, Vietnam, the model evaluates operational policies, EV station configurations, and renewable energy sources. The interactive dashboard enables seasonal analysis, revealing a 20% drop in solar efficiency from October to March, with wind power contributing under 5% of demand, highlighting the need for adaptive energy management. Simulations show that dynamic notifications of newly available charging slots improve user satisfaction, while gasoline bans and idle fees enhance slot turnover with minimal added complexity. Embedded metaheuristic optimization identifies near-optimal mixes of fast (30kW) and standard (11kW) solar-powered chargers, balancing energy performance, profitability, and demand with high computational efficiency. This digital twin provides a flexible, computation-driven platform for EV infrastructure planning, with a transferable, modular design that enables seamless scaling from localized to city-wide urban contexts.",
+  "doi": "10.1016/j.compenvurbsys.2026.102422",
+  "url": "https://arxiv.org/abs/2510.24758v2",
+  "key": "a_2025"
+}

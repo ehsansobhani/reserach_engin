@@ -1,0 +1,15 @@
+{
+  "title": "Optimal EV Charging Scheduling at Electric Railway Stations Under Peak Load Constraints",
+  "authors": [
+    "G. Pierrou",
+    "C. Valero-De La Flor",
+    "G. Hug"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv_id": "2404.07804v1",
+  "abstract": "In this paper, a novel Energy Management System (EMS) algorithm to achieve optimal Electric Vehicle (EV) charging scheduling at the parking lots of electric railway stations is proposed. The proposed approach uncovers the potential of leveraging EV charging flexibility to prevent overloading in the combined EV charging and railway operation along with renewable generation, railway regenerative capabilities, and energy storage. Specifically, to realize end-user flexibility, each EV state of charge at departure time is introduced as an optimization variable. Peak load constraints are included in the railway EMS to properly adjust EV charging requirements during periods of high railway demand. A comprehensive numerical study using a scenario-tree approach on an actual railway line in Switzerland demonstrates the effectiveness and the feasibility of the proposed method in a practical setting under multiple scenarios.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2404.07804v1",
+  "key": "optimal_ev_2024"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "WEcharge: democratizing EV charging infrastructure",
+  "authors": [
+    "Md Umar Hashmi",
+    "Mohammad Meraj Alam",
+    "Ony Lalaina Valerie Ramarozatovo",
+    "Mohammad Shadab Alam"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2204.01478v1",
+  "abstract": "The sustainable growth of EVs will have to be met with proportional growth in EV charging infrastructure. With limited urban spaces to place new charging stations, shrinking profitability, privately owned charging facilities need to be shared. WEcharge will allow privately owned charging infrastructure to be shared with public EV owners using a business model. We propose a resource matching algorithm that takes into account incoming EV preferences, hard constraints for such EV, and provides the best suited resource for charging. We demonstrate the applicability of the matching model by showing a realistic case study with a Nissan Leaf 40 kW EV and 25 company and publicly owned charging stations (DC fast charger, AC rapid charger, level 1 and level 2 charger) in Hasselt, Belgium. The case study shows that consumer preferences will govern resource matching.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2204.01478v1",
+  "key": "wecharge_democratizing_2022"
+}

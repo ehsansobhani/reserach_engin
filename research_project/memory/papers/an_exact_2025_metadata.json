@@ -1,0 +1,14 @@
+{
+  "title": "An Exact Solution Algorithm for the Bi-Level Optimization Problem of Electric Vehicles Charging Station Placement",
+  "authors": [
+    "Mobina Nankali",
+    "Michael W. Levin"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2511.19884v2",
+  "abstract": "This work addresses electric vehicle (EV) charging station placement through a bi-level optimization model, where the upper-level planner maximizes net revenue by selecting station locations under budget constraints, while EV users at the lower level choose routes and charging stations to minimize travel and charging costs. To account for range anxiety, we construct a battery-expanded network and apply a shortest path algorithm with Frank-Wolfe traffic assignment. Our primary contribution is developing the first exact solution algorithm for large scale EV charging station placement problems. We propose a Branch-and-Price-and-Cut algorithm enhanced with value function cuts and column generation. While existing research relies on heuristic methods that provide no optimality guarantees or exact algorithms that require prohibitively long runtimes, our exact algorithm delivers globally optimal solutions with mathematical certainty under a reasonable runtime. Computational experiments on the Eastern Massachusetts network (74 nodes, 248 links), the Anaheim network (416 nodes, 914 links), and the Barcelona network (110 zones, 1,020 nodes, and 2,512 links) demonstrate exceptional performance. Our algorithm terminates within minutes rather than hours, while achieving optimality gaps below 1% across all instances. This result represents a computational speedup of over two orders of magnitude compared to existing methods. The algorithm successfully handles problems with over 300,000 feasible combinations, which transform EV charging infrastructure planning from a computationally prohibitive problem into a tractable optimization task suitable for practical decision making problem for real world networks.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2511.19884v2",
+  "key": "an_exact_2025"
+}

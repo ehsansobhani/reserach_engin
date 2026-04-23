@@ -1,0 +1,15 @@
+{
+  "title": "Analysis of Electric Vehicle Charging Station Usage and Profitability in Germany based on Empirical Data",
+  "authors": [
+    "Christopher Hecht",
+    "Jan Figgener",
+    "Dirk Uwe Sauer"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2206.09582v1",
+  "abstract": "Electric vehicles are booming and with them the required public charging stations. Knowing how charging stations are used is crucial for operators of the charging stations themselves, navigation systems, electricity grids, and many more. Given that there are now 2.5 as many vehicles per charging station compared to 2017, the system needs to allocate charging points intelligently and efficiently. This paper presents representative data on energy consumption, arrival times, occupation, and profitability of charging stations in Germany by combining usage data of 27,800 installations. Charging happens mainly during the day and on weekdays for AC charging stations while DC fast-charging stations are more popular on the weekend. Fast-chargers service approximately 3 times as many vehicles per connection point while also being substantially more profitable due to higher achieved margins. For AC chargers, up to 20 kWh of energy are charged in an average charge event while DC fast-chargers supply approximately 40 kWh.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2206.09582v1",
+  "key": "analysis_of_2022"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Distributed Coordination of Charging Stations Considering Aggregate EV Power Flexibility",
+  "authors": [
+    "Dongxiang Yan",
+    "Chengbin Ma",
+    "Yue Chen"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2206.06834v1",
+  "abstract": "In recent years, electric vehicle (EV) charging stations have witnessed a rapid growth. However, effective management of charging stations is challenging due to individual EV owners' privacy concerns, competing interests of different stations, and the coupling distribution network constraints. To cope with this challenge, this paper proposes a two-stage scheme. In the first stage, the aggregate EV power flexibility region is derived by solving an optimization problem. We prove that any trajectory within the obtained region corresponds to at least one feasible EV dispatch strategy. By submitting this flexibility region instead of the detailed EV data to the charging station operator, EV owners' privacy can be preserved and the computational burden can be reduced. In the second stage, a distributed coordination mechanism with a clear physical interpretation is developed with consideration of AC power flow constraints. We prove that the proposed mechanism is guaranteed to converge to the centralized optimum. Case studies validate the theoretical results. Comprehensive performance comparisons are carried out to demonstrate the advantages of the proposed scheme.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2206.06834v1",
+  "key": "distributed_coordination_2022"
+}

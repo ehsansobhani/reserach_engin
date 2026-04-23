@@ -1,0 +1,16 @@
+{
+  "title": "Incorporating time-dependent demand patterns in the optimal location of capacitated charging stations",
+  "authors": [
+    "Carlo Filippi",
+    "Gianfranco Guastaroba",
+    "Lorenzo Peirano",
+    "M. Grazia Speranza"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2301.05077v1",
+  "abstract": "A massive use of electric vehicles is nowadays considered to be a key element of a sustainable transportation policy and the availability of charging stations is a crucial issue for their extensive use. Charging stations in an urban area have to be deployed in such a way that they can satisfy a demand that may dramatically vary in space and time. In this paper we present an optimization model for the location of charging stations that takes into account the main specific features of the problem, in particular the different charging technologies, and their associated service time, and the fact that the demand depends on space and time. To measure the importance of incorporating the time dependence in an optimization model, we also present a simpler model that extends a classical location model and does not include the temporal dimension. A worst-case analysis and extensive computational experiments show that ignoring the temporal dimension of the problem may lead to a substantial amount of unsatisfied demand.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2301.05077v1",
+  "key": "incorporating_time-dependent_2023"
+}

@@ -1,0 +1,300 @@
+# Extraction Schema — BEV Charging Infrastructure Systematic Review
+
+version: 1.0
+schema_source: PRISMA 2020 + dissertation gap framework
+last_updated: 2026-04-23
+
+# Paper Identity
+paper_id:
+  type: string
+  description: "Unique identifier in format firstauthor_year (e.g., chen_2023)"
+  required: true
+
+metadata:
+  title:
+    type: string
+    required: true
+  authors:
+    type: list[string]
+    required: true
+  year:
+    type: integer
+    required: true
+  venue:
+    type: string
+    required: true
+    note: "Journal name, conference, or arXiv"
+  doi:
+    type: string
+    required: false
+  arxiv_id:
+    type: string
+    required: false
+  url:
+    type: string
+    required: false
+
+# Research Problem
+problem:
+  stated_problem:
+    type: string
+    required: true
+    description: "Primary research question or problem statement from the paper"
+  motivation:
+    type: string
+    required: true
+    description: "Why this problem matters (policy, industry, research gap)"
+  scope:
+    type: string
+    required: true
+    enum: [city, regional, corridor, neighborhood, site, national]
+    description: "Geographic/scale scope of the study"
+
+# Methodology
+methodology:
+  approach:
+    type: string
+    required: true
+    enum: [optimization, simulation, empirical, theoretical, mixed]
+  data_source:
+    type: string
+    required: true
+    description: "What data was used (real data, synthetic, hypothetical)"
+  data_description:
+    type: string
+    required: true
+    description: "Brief description of dataset size, location, time period"
+  model_type:
+    type: string
+    required: false
+    description: "Specific model/algorithm used (e.g., MILP, agent-based, regression)"
+  tools:
+    type: list[string]
+    required: false
+    description: "Software, solvers, or tools used"
+
+# Spatial Dimensions
+spatial:
+  planning_scale:
+    type: string
+    required: true
+    enum: [city, regional, corridor, neighborhood, site]
+    description: "The primary spatial planning scale"
+  spatial_unit:
+    type: string
+    required: true
+    description: "Unit of analysis (e.g., TAZ, grid cell, parcel, census tract, admin boundary)"
+  spatial_unit_alignment:
+    type: string
+    required: true
+    enum: [administrative, corridor-based, activity-based, mixed]
+    description: "How the spatial unit aligns with mobility patterns"
+
+# Demand Modeling
+demand:
+  modeling_method:
+    type: string
+    required: true
+    description: "How demand was estimated or forecasted"
+  demand_type:
+    type: list[string]
+    description: "Type of demand modeled"
+    items:
+      enum: [daily charging demand, peak demand, network demand, trip-based]
+  disaggregation_level:
+    type: string
+    required: false
+    description: "Level of spatial/temporal disaggregation in demand model"
+
+# Optimization
+optimization:
+  objective:
+    type: list[string]
+    required: true
+    description: "What the optimization maximizes or minimizes"
+  constraints:
+    type: list[string]
+    required: false
+    description: "Key constraints in the optimization model"
+  solution_method:
+    type: string
+    required: false
+    description: "How the optimization problem was solved"
+  multi_objective:
+    type: boolean
+    required: true
+    description: "Does the model optimize multiple objectives simultaneously"
+
+# Equity
+equity:
+  equity_measured:
+    type: boolean
+    required: true
+  equity_definition:
+    type: string
+    required: false
+    description: "How equity is defined in the study"
+  equity_metric:
+    type: string
+    required: false
+    description: "Quantitative equity metric used (e.g., Gini, spatial accessibility index)"
+  equity_analysis_type:
+    type: string
+    required: false
+    enum: [spatial, demographic, socioeconomic, temporal, multi-dimensional]
+    description: "Type of equity analysis"
+  equity_findings:
+    type: string
+    required: false
+    description: "Key findings regarding equity"
+
+# Utilization
+utilization:
+  utilization_measured:
+    type: boolean
+    required: true
+  utilization_definition:
+    type: string
+    required: false
+    description: "How utilization is defined"
+  utilization_metric:
+    type: string
+    required: false
+    description: "Quantitative utilization metric (e.g., fill rate, usage intensity)"
+  utilization_findings:
+    type: string
+    required: false
+    description: "Key findings regarding utilization"
+
+# Rollout / Phasing
+rollout:
+  phased_approach:
+    type: boolean
+    required: true
+  phasing_method:
+    type: string
+    required: false
+    description: "How phases are determined (time, budget, demand thresholds)"
+  temporal_horizon:
+    type: string
+    required: false
+    description: "Planning horizon (e.g., 5-year, 10-year, 2030)"
+  rollout_criteria:
+    type: list[string]
+    required: false
+    description: "Criteria that trigger next phase"
+
+# Zoning and Land Use
+zoning:
+  zoning_considered:
+    type: boolean
+    required: true
+  zoning_framework:
+    type: string
+    required: false
+    description: "What zoning framework was used or referenced"
+  land_use_compatibility:
+    type: string
+    required: false
+    description: "How land-use compatibility was assessed"
+  regulatory_alignment:
+    type: boolean
+    required: false
+    description: "Whether study aligns with existing zoning/regulatory frameworks"
+
+# Meso-Micro Bridge
+meso_micro:
+  meso_level:
+    type: boolean
+    required: true
+    description: "Does the study operate at meso level"
+  micro_level:
+    type: boolean
+    required: true
+    description: "Does the study operate at micro/site level"
+  bridging_method:
+    type: string
+    required: false
+    description: "How meso planning is connected to micro implementation"
+  scale_translation:
+    type: string
+    required: false
+    description: "How site-level decisions are informed by meso-level analysis"
+
+# Quality Assessment
+quality:
+  limitations:
+    type: list[string]
+    required: true
+    description: "Limitations explicitly stated by authors"
+  generalizability:
+    type: string
+    required: false
+    description: "Assessment of how generalizable the findings are"
+  data_quality_concerns:
+    type: list[string]
+    required: false
+    description: "Concerns about input data quality or availability"
+
+# Gap Mapping
+dissertation_gaps:
+  gap_1_spatial_units:
+    type: boolean
+    required: true
+    description: "Does paper address misaligned spatial units"
+  gap_1_evidence:
+    type: string
+    required: false
+    description: "Specific evidence from paper"
+  gap_2_zoning_impact:
+    type: boolean
+    required: true
+    description: "Does paper address zoning impact analysis"
+  gap_2_evidence:
+    type: string
+    required: false
+    description: "Specific evidence from paper"
+  gap_3_equity_utilization:
+    type: boolean
+    required: true
+    description: "Does paper address combined equity and utilization"
+  gap_3_evidence:
+    type: string
+    required: false
+    description: "Specific evidence from paper"
+  gap_4_static_optimization:
+    type: boolean
+    required: true
+    description: "Does paper address phased rollout sequencing"
+  gap_4_evidence:
+    type: string
+    required: false
+    description: "Specific evidence from paper"
+  gap_5_meso_micro:
+    type: boolean
+    required: true
+    description: "Does paper address meso-micro integration"
+  gap_5_evidence:
+    type: string
+    required: false
+    description: "Specific evidence from paper"
+  new_gaps_identified:
+    type: list[string]
+    required: false
+    description: "Gaps not in the original framework"
+
+# Categorization
+categories:
+  primary:
+    type: string
+    required: true
+    enum: [spatial_optimization, equity_planning, utilization_modeling, rollout_sequencing, zoning_land_use, meso_micro_bridge, review_synthesis, general]
+  secondary:
+    type: list[string]
+    required: false
+
+# Reviewer Info
+reviewer:
+  name: string
+  date: string
+  notes: string

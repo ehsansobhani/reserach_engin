@@ -1,0 +1,15 @@
+{
+  "title": "Phase separation induces congestion waves in electric vehicle charging",
+  "authors": [
+    "Philip Marszal",
+    "Marc Timme",
+    "Malte Schröder"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2206.15113v1",
+  "abstract": "Electric vehicles may dominate motorized transport in the next decade, yet the impact of the collective dynamics of electric mobility on long-range traffic flow is still largely unknown. We demonstrate a type of congestion that arises if charging infrastructure is limited or electric vehicle density is high. This congestion emerges solely through indirect interactions at charging infrastructure by queue-avoidance behavior that - counterintuitively - induces clustering of occupied charging stations and phase separation of the flow into free and congested stations. The resulting congestion waves always propagate forward in the direction of travel, in contrast to typically backward-propagating congestion waves known from traditional traffic jams. These results may guide the planning and design of charging infrastructure and decision support applications in the near future.",
+  "doi": "10.1103/PhysRevE.104.L042302",
+  "url": "https://arxiv.org/abs/2206.15113v1",
+  "key": "phase_separation_2022"
+}

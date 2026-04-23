@@ -1,0 +1,15 @@
+{
+  "title": "Joint Planning of Active Distribution Network and EV Charging Stations Considering Vehicle-to-Grid Functionality and Reactive Power Support",
+  "authors": [
+    "Yongheng Wang",
+    "Xinwei Shen",
+    "Yan Xu"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2312.16258v1",
+  "abstract": "This paper proposes a collaborative planning model for the active distribution network (ADN) and electric vehicle (EV) charging stations that fully considers the vehicle-to-grid (V2G) function and reactive power support of EVs in different regions. This paper employs a sequential decomposition method based on the physical characteristics of the problem, breaking down the holistic problem into two sub-problems for solution. Subproblem I optimizes the charging and discharging behavior of the autopilot electric vehicles (AEVs) using a mixed-integer linear programming (MILP) model. Subproblem II uses a mixed-integer second-order cone programming (MISOCP) model to plan the ADN and retrofit or construct V2G charging stations (V2GCS), as well as multiple distributed generation resources (DGRs). The paper also analyzes the impact of the bi-directional active-reactive power interaction of V2GCS on ADN planning. The presented model was tested in the 47 nodes ADN in Longgang District, Shenzhen, China, and the IEEE 33 nodes ADN, demonstrating that decomposition can significantly improve the speed of solving large-scale problems while maintaining accuracy with low AEV penetration.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2312.16258v1",
+  "key": "joint_planning_2023"
+}

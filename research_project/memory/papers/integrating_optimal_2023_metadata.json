@@ -1,0 +1,14 @@
+{
+  "title": "Integrating Optimal EV Charging in the Energy Management of Electric Railway Stations",
+  "authors": [
+    "Georgia Pierrou",
+    "Gabriela Hug"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2308.01145v1",
+  "abstract": "In this paper, an electric railway Energy Management System (EMS) with integration of an Energy Storage System (ESS), Regenerative Braking Energy (RBE), and renewable generation is proposed to minimize the daily operating costs of the railway station while meeting railway and Electric Vehicle (EV) charging demand. Compared to other railway EMS methods, the proposed approach integrates an optimal EV charging policy at the railway station to avoid high power demand due to charging requirements. Specifically, receding horizon control is leveraged to minimize the daily peak power spent on EV charging. The numerical study on an actual railway station in Chur, Switzerland shows that the proposed method that integrates railway demand and optimal EV charging along with ESS, RBE, and renewable generation can significantly reduce the average daily operating cost of the railway station over a large number of different scenarios while ensuring that peak load capacity limits are respected.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2308.01145v1",
+  "key": "integrating_optimal_2023"
+}

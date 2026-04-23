@@ -1,0 +1,14 @@
+{
+  "title": "Routing and charging game in ride-hailing service with electric vehicles",
+  "authors": [
+    "Kenan Zhang",
+    "John Lygeros"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2309.05120v1",
+  "abstract": "This paper studies the routing and charging behaviors of electric vehicles in a competitive ride-hailing market. When the vehicles are idle, they can choose whether to continue cruising to search for passengers, or move a charging station to recharge. The behaviors of individual vehicles are then modeled by a Markov decision process (MDP). The state transitions in the MDP model, however, depend on the aggregate vehicle flows both in service zones and at charging stations. Accordingly, the value function of each vehicle is determined by the collective behaviors of all vehicles. With the assumption of the large population, we formulate the collective routing and charging behaviors as a mean-field Markov game. We characterize the equilibrium of such a game, prove its existence, and numerically show that the competition among vehicles leads to ``inefficient congestion\" both in service zones and at charging stations.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2309.05120v1",
+  "key": "routing_and_2023"
+}

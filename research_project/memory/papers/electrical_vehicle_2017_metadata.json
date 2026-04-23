@@ -1,0 +1,17 @@
+{
+  "title": "Electrical Vehicle Charging Station Profit Maximization: Admission, Pricing, and Online Scheduling",
+  "authors": [
+    "Shuoyao Wang",
+    "Suzhi Bi",
+    "Ying Jun",
+    "Zhang",
+    "Jianwei Huang"
+  ],
+  "year": 2017,
+  "venue": "arXiv",
+  "arxiv_id": "1705.02116v2",
+  "abstract": "The rapid emergence of electric vehicles (EVs) demands an advanced infrastructure of publicly accessible charging stations that provide efficient charging services. In this paper, we propose a new charging station operation mechanism, the JoAP, which jointly optimizes the EV admission control, pricing, and charging scheduling to maximize the charging station's profit. More specifically, by introducing a tandem queueing network model, we analytically characterize the average charging station profit as a function of the admission control and pricing policies. Based on the analysis, we characterize the optimal JoAP algorithm. Through extensive simulations, we demonstrate that the proposed JoAP algorithm on average can achieve 330% and 531% higher profit than a widely adopted benchmark method under two representative waiting-time penalty rates.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1705.02116v2",
+  "key": "electrical_vehicle_2017"
+}

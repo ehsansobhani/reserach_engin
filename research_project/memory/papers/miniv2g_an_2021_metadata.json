@@ -1,0 +1,16 @@
+{
+  "title": "MiniV2G: An Electric Vehicle Charging Emulator",
+  "authors": [
+    "Luca Attanasio",
+    "Mauro Conti",
+    "Denis Donadel",
+    "Federico Turrin"
+  ],
+  "year": 2021,
+  "venue": "arXiv",
+  "arxiv_id": "2101.11720v1",
+  "abstract": "The impact of global warming and the imperative to limit climate change have stimulated the need to develop new solutions based on renewable energy sources. One of the emerging trends in this endeavor are the Electric Vehicles (EVs), which use electricity instead of traditional fossil fuels as a power source, relying on the Vehicle-to-Grid (V2G) paradigm. The novelty of such a paradigm requires careful analysis to avoid malicious attempts. An attacker can exploit several surfaces, such as the remote connection between the Distribution Grid and Charging Supply or the authentication system between the charging Supply Equipment and the Electric Vehicles. However, V2G architecture's high cost and complexity in implementation can restrain this field's research capability. In this paper, we approach this limitation by proposing MiniV2G, an open-source emulator to simulate Electric Vehicle Charging (EVC) built on top of Mininet and RiseV2G. MiniV2G is particularly suitable for security researchers to study and test real V2G charging scenarios. MiniV2G can reproduce with high fidelity a V2G architecture to easily simulate an EV charging process. Finally, we present a MiniV2G application and show how MiniV2G can be used to study V2G communication and develop attacks and countermeasures that can be applied to real systems. Since we believe our tool can be of great help for research in this field, we also made it freely available.",
+  "doi": "10.1145/3457339.3457980",
+  "url": "https://arxiv.org/abs/2101.11720v1",
+  "key": "miniv2g_an_2021"
+}

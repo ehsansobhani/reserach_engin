@@ -1,0 +1,14 @@
+{
+  "title": "Reducing Waiting Times at Charging Stations with Adaptive Electric Vehicle Route Planning",
+  "authors": [
+    "Sven Schoenberg",
+    "Falko Dressler"
+  ],
+  "year": 2021,
+  "venue": "arXiv",
+  "arxiv_id": "2102.06503v1",
+  "abstract": "Electric vehicles are becoming more popular all over the world. With increasing battery capacities and a growing fast-charging infrastructure, they are becoming suitable for long distance travel. However, queues at charging stations could lead to long waiting times, making efficient route planning even more important. In general, optimal multi-objective route planning is extremely computationally expensive. We propose an adaptive charging and routing strategy, which considers driving, waiting, and charging time. For this, we developed a multi-criterion shortest-path search algorithm using contraction hierarchies. To further reduce the computational effort, we precompute shortest-path trees between the known locations of the charging stations. We propose a central charging station database (CSDB) that helps estimating waiting times at charging stations ahead of time. This enables our adaptive charging and routing strategy to reduce these waiting times. In an extensive set of simulation experiments, we demonstrate the advantages of our concept, which reduces average waiting times at charging stations by up to 97 %. Even if only a subset of the cars uses the CSDB approach, we can substantially reduce waiting times and thereby the total travel time of electric vehicles.",
+  "doi": "10.1109/TIV.2022.3140894",
+  "url": "https://arxiv.org/abs/2102.06503v1",
+  "key": "reducing_waiting_2021"
+}

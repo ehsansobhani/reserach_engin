@@ -1,0 +1,14 @@
+{
+  "title": "Urban Mobility",
+  "authors": [
+    "Laura Alessandretti",
+    "Michael Szell"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2211.00355v1",
+  "abstract": "In this chapter, we discuss urban mobility from a complexity science perspective. First, we give an overview of the datasets that enable this approach, such as mobile phone records, location-based social network traces, or GPS trajectories from sensors installed on vehicles. We then review the empirical and theoretical understanding of the properties of human movements, including the distribution of travel distances and times, the entropy of trajectories, and the interplay between exploration and exploitation of locations. Next, we explain generative and predictive models of individual mobility, and their limitations due to intrinsic limits of predictability. Finally, we discuss urban transport from a systemic perspective, including system-wide challenges like ridesharing, multimodality, and sustainable transport.",
+  "doi": "10.1007/978-3-031-82666-5_4",
+  "url": "https://arxiv.org/abs/2211.00355v1",
+  "key": "urban_mobility_2022"
+}

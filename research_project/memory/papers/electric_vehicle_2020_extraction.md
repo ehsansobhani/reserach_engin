@@ -1,0 +1,42 @@
+# Extraction: Electric Vehicle Charging Station Search in Stochastic Environments
+
+**Key:** electric_vehicle_2020
+**Authors:** Marianne Guillet, Gerhard Hiermann, Alexander Kröller, Maximilian Schiffer
+**Year:** 2020
+**Category:** rollout_sequencing
+
+## Problem Scope
+
+- **Geographic scope:** city
+- **Spatial unit:** not specified
+
+## Methodology
+
+- **Approach:** optimization
+- **Data source:** not specified
+- **Multi-objective:** False
+
+## Thematic Flags
+
+- **Equity measured:** False
+- **Utilization measured:** False
+- **Phased approach:** True
+- **Zoning considered:** False
+- **Meso-level:** False
+- **Micro-level:** False
+
+## Gap Mapping
+
+- **Gap 1 (Misaligned spatial units):** False
+- **Gap 2 (Zoning impact analysis):** False
+- **Gap 3 (Equity-utilization joint):** False
+- **Gap 4 (Phased rollout):** True
+- **Gap 5 (Meso-micro bridge):** False
+
+## Limitations Detected
+
+None detected in abstract.
+
+## Abstract
+
+Electric vehicles are a central component of future mobility systems as they promise to reduce local noxious and fine dust emissions and CO2 emissions, if fed by clean energy sources. However, the adoption of electric vehicles so far fell short of expectations despite significant governmental incentives. One reason for this slow adoption is the drivers' perceived range anxiety, especially for individually owned vehicles. Here, bad user-experiences, e.g., conventional cars blocking charging stations or inconsistent real-time availability data, manifest the drivers' range anxiety. Against this background, we study stochastic search algorithms, that can be readily deployed in today's navigation systems in order to minimize detours to reach an available charging station. We model such a search as a finite horizon Markov decision process and present a comprehensive framework that considers different problem variants, speed-up techniques, and three solution algorithms: an exact labeling algorithm, a heuristic labeling algorithm, and a rollout algorithm. Extensive numerical studies show that our algorithms significantly decrease the expected time to find a free charging station while increasing the solution quality robustness and the likelihood that a search is successful compared to myopic approaches.

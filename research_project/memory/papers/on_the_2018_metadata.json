@@ -1,0 +1,13 @@
+{
+  "title": "On the solution existence and stability of polynomial optimization problems",
+  "authors": [
+    "Vu Trung Hieu"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "arxiv_id": "1808.06100v6",
+  "abstract": "This paper introduces and investigates a regularity condition in the asymptotic sense for optimization problems whose objective functions are polynomial. Under this regularity condition, the normalization argument in asymptotic analysis enables us to see the solution existence as well as the solution stability of these problems. We prove a Frank-Wolfe type theorem for regular optimization problems and an Eaves type theorem for non-regular pseudoconvex optimization problems. Moreover, we show results on the stability such as upper semicontinuity and local upper-Hölder stability of the solution map of polynomial optimization problems. At the end of the paper, we discuss the genericity of the regularity condition.",
+  "doi": "10.1007/s11590-021-01788-z",
+  "url": "https://arxiv.org/abs/1808.06100v6",
+  "key": "on_the_2018"
+}

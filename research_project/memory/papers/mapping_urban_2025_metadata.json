@@ -1,0 +1,16 @@
+{
+  "title": "Mapping Urban Villages in China: Progress and Challenges",
+  "authors": [
+    "Rui Cao",
+    "Wei Tu",
+    "Dongsheng Chen",
+    "Wenyu Zhang"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2503.14195v1",
+  "abstract": "The shift toward high-quality urbanization has brought increased attention to the issue of \"urban villages\", which has become a prominent social problem in China. However, there is a lack of available geospatial data on urban villages, making it crucial to prioritize urban village mapping. In order to assess the current progress in urban village mapping and identify challenges and future directions, we have conducted a comprehensive review, which to the best of our knowledge is the first of its kind in this field. Our review begins by providing a clear context for urban villages and elaborating the method for literature review, then summarizes the study areas, data sources, and approaches used for urban village mapping in China. We also address the challenges and future directions for further research. Through thorough investigation, we find that current studies only cover very limited study areas and periods and lack sufficient investigation into the scalability, transferability, and interpretability of identification approaches due to the challenges in concept fuzziness and variances, spatial heterogeneity and variances of urban villages, and data availability. Future research can complement and further the current research in the following potential directions in order to achieve large-area mapping across the whole nation...",
+  "doi": "10.1016/j.compenvurbsys.2025.102282",
+  "url": "https://arxiv.org/abs/2503.14195v1",
+  "key": "mapping_urban_2025"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Optimal mixed fleet and charging infrastructure planning to electrify demand responsive feeder services with target CO2 emission constraints",
+  "authors": [
+    "Haruko Nakao",
+    "Tai-Yu Ma",
+    "Richard D. Connors",
+    "Francesco Viti"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2503.13085v2",
+  "abstract": "Electrifying demand-responsive transport systems need to plan the charging infrastructure carefully, considering the trade-offs of charging efficiency and charging infrastructure costs. Earlier studies assume a fully electrified fleet and overlook the planning issue in the transition period. This study addresses the joint fleet size and charging infrastructure planning for a demand-responsive feeder service under stochastic demand, given a user-defined targeted CO2 emission reduction policy. We propose a bi-level optimization model where the upper-level determines charging station configuration given stochastic demand patterns, whereas the lower-level solves a mixed fleet dial-a-ride routing problem under the CO2 emission and capacitated charging station constraints. An efficient deterministic annealing metaheuristic is proposed to solve the CO2-constrained mixed fleet routing problem. The performance of the algorithm is validated by a series of numerical test instances with up to 500 requests. We apply the model for a real-world case study in Bettembourg, Luxembourg, with different demand and customised CO2 reduction targets. The results show that the proposed method provides a flexible tool for joint charging infrastructure and fleet size planning under different levels of demand and CO2 emission reduction targets.",
+  "doi": "10.1016/j.apenergy.2025.127216",
+  "url": "https://arxiv.org/abs/2503.13085v2",
+  "key": "optimal_mixed_2025"
+}

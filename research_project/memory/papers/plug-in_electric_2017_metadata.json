@@ -1,0 +1,18 @@
+{
+  "title": "Plug-in Electric Vehicle Charging Congestion Analysis Using Taxi Travel Data in the Central Area of Beijing",
+  "authors": [
+    "Huimiao Chen",
+    "Hongcai Zhang",
+    "Zechun Hu",
+    "Yunyi Liang",
+    "Haocheng Luo",
+    "Yinhai Wang"
+  ],
+  "year": 2017,
+  "venue": "arXiv",
+  "arxiv_id": "1712.07300v1",
+  "abstract": "Recharging a plug-in electric vehicle is more time-consuming than refueling an internal combustion engine vehicle. As a result, charging stations may face serious congestion problems during peak traffic hours in the near future with the rapid growth of plug-in electric vehicle population. Considering that drivers' time costs are usually expensive, charging congestion will be a dominant factor that affect a charging station's quality of service. Hence, it is indispensable to conduct adequate congestion analysis when designing charging stations in order to guarantee acceptable quality of service in the future. This paper proposes a data-driven approach for charging congestion analysis of plug-in electric vehicle charging stations. Based on a data-driven plug-in electric vehicle charging station planning model, we adopt the queuing theory to model and analyze the charging congestion phenomenon in these planning results. We simulate and analyze the proposed method for charging stations servicing shared-use electric taxis in the central area of Beijing leveraging real-world taxi travel data.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1712.07300v1",
+  "key": "plug-in_electric_2017"
+}

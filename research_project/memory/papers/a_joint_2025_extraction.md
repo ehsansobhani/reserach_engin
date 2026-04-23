@@ -1,0 +1,42 @@
+# Extraction: A Joint Planning Model for Fixed and Mobile Electric Vehicle Charging Stations Considering Flexible Capacity Strategy
+
+**Key:** a_joint_2025
+**Authors:** Zhe Yu, Xue Hu, Qin Wang
+**Year:** 2025
+**Category:** spatial_optimization
+
+## Problem Scope
+
+- **Geographic scope:** city
+- **Spatial unit:** not specified
+
+## Methodology
+
+- **Approach:** mixed
+- **Data source:** not specified
+- **Multi-objective:** False
+
+## Thematic Flags
+
+- **Equity measured:** False
+- **Utilization measured:** True
+- **Phased approach:** True
+- **Zoning considered:** False
+- **Meso-level:** False
+- **Micro-level:** False
+
+## Gap Mapping
+
+- **Gap 1 (Misaligned spatial units):** True
+- **Gap 2 (Zoning impact analysis):** False
+- **Gap 3 (Equity-utilization joint):** False
+- **Gap 4 (Phased rollout):** True
+- **Gap 5 (Meso-micro bridge):** False
+
+## Limitations Detected
+
+None detected in abstract.
+
+## Abstract
+
+The widespread adoption of electric vehicles (EVs) has significantly increased demand on both transportation and power systems, posing challenges to their stable operation. To support the growing need for EV charging, both fixed charging stations (FCSs) and mobile charging stations (MCSs) have been introduced, serving as key interfaces between the power grid and traffic network. Recognizing the importance of collaborative planning across these sectors, this paper presents a two-stage joint planning model for FCSs and MCSs, utilizing an improved alternating direction method of multipliers (ADMM) algorithm. The primary goal of the proposed model is to transform the potential negative impacts of large-scale EV integration into positive outcomes, thereby enhancing social welfare through collaboration among multiple stakeholders. In the first stage, we develop a framework for evaluating FCS locations, incorporating assessments of EV hosting capacity and voltage stability. The second stage introduces a joint planning model for FCSs and MCSs, aiming to minimize the overall social costs of the EV charging system while maintaining a reliable power supply. To solve the planning problem, we employ a combination of mixed-integer linear programming, queueing theory, and sequential quadratic programming. The improved ADMM algorithm couples the siting and sizing decisions consistently by introducing coupling constraints, and supports a distributed optimization framework that coordinates the interests of EV users, MCS operators, and distribution system operators. Additionally, a flexible capacity planning strategy that accounts for the multi-period development potential of EVCS is proposed to reduce both the complexity and the investment required for FCS construction. Finally, a case study with comparative experiments demonstrates the effectiveness of the proposed models and solution methods.

@@ -1,0 +1,58 @@
+# Paper Summary: Securing the Electric Vehicle Charging Infrastructure
+
+**Key:** securing_the_2021
+**Authors:** Roberto Metere, Myriam Neaimeh, Charles Morisset, Carsten Maple, Xavier Bellekens, Ricardo M. Czekster
+**Year:** 2021
+**Venue:** arXiv
+**Category:** utilization_modeling
+**Date summarized:** 2026-04-23
+
+## Metadata
+
+- **arXiv ID:** 2105.02905v3
+- **DOI:** 
+- **URL:** https://arxiv.org/abs/2105.02905v3
+
+## Abstract
+
+Electric Vehicles (EVs) can help alleviate our reliance on fossil fuels for transport and electricity systems. However, charging millions of EV batteries requires management to prevent overloading the electricity grid and minimise costly upgrades that are ultimately paid for by consumers.
+  Managed chargers, such as Vehicle-to-Grid (V2G) chargers, allow control over the time, speed and direction of charging. Such control assists in balancing electricity supply and demand across a green electricity system and could reduce costs for consumers.
+  Smart and V2G chargers connect EVs to the power grid using a charging device which includes a data connection to exchange information and control commands between various entities in the EV ecosystem. This introduces data privacy concerns and is a potential target for cyber-security attacks. Therefore, the implementation of a secure system is crucial to permit both consumers and electricity system operators to trust smart charging and V2G.
+  In principle, we already have the technology needed for a connected EV charging infrastructure to be securely enabled, borrowing best practices from the Internet and industrial control systems. We must properly adapt the security technology to take into account the challenges peculiar to the EV charging infrastructure. Challenges go beyond technical considerations and other issues arise such as balancing trade-offs between security and other desirable qualities such as interoperability, scalability, crypto-agility, affordability and energy efficiency.
+  This document reviews security and privacy topics relevant to the EV charging ecosystem with a focus on smart charging and V2G.
+
+## Key Findings
+
+<!-- Synthesize key findings from full text below -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Methodology
+
+<!-- Characterize approach: optimization, simulation, empirical, mixed -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Spatial and Planning Dimensions
+
+<!-- Note planning scale, spatial units, zoning considerations -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Equity and Utilization Treatment
+
+<!-- Note how equity and utilization are defined and measured -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Limitations
+
+<!-- Note limitations stated by authors or evident from analysis -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Relevance to Dissertation
+
+<!-- State how this paper connects to the dissertation's five gaps -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->

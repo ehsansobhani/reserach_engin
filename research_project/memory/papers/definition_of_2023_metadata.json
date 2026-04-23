@@ -1,0 +1,17 @@
+{
+  "title": "Definition of Static and Dynamic Load Models for Grid Studies of Electric Vehicles Connected to Fast Charging Stations",
+  "authors": [
+    "Davide del Giudice",
+    "Angelo Maurizio Brambilla",
+    "Federico Bizzarri",
+    "Daniele Linaro",
+    "Samuele Grillo"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2302.03943v1",
+  "abstract": "The growing deployment of electric mobility calls for power system analyses to investigate to what extent the simultaneous charging of electric vehicles leads to degraded network operation and to validate the efficiency of countermeasures. To reduce complexity and CPU time, a common approach while performing these analyses consists in replacing electric vehicles and their charging stations with constant PQ loads. However, this approach is inaccurate, as the power absorbed by these elements actually depends not only on voltage but also on the state of charge, charging method, cathode chemistry of the battery pack, and converter controls in the electric vehicle and charging station. By considering all these aspects, this article develops a novel static load model and a vector fitting-based dynamic load model for electric vehicles connected to fast charging stations. These computationally efficient representations can replace the standard constant PQ load model of electric vehicles to assess more accurately their impact in static and dynamic grid studies. Simulation results of the IEEE14 system modified by adding fleets of electric vehicles prove the accuracy of the proposed models and highlight the shortcomings of the standard electric vehicle representation as a constant PQ load in some cases.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2302.03943v1",
+  "key": "definition_of_2023"
+}

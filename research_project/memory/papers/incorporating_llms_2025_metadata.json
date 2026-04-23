@@ -1,0 +1,20 @@
+{
+  "title": "Incorporating LLMs for Large-Scale Urban Complex Mobility Simulation",
+  "authors": [
+    "Yu-Lun Song",
+    "Chung-En Tsern",
+    "Che-Cheng Wu",
+    "Yu-Ming Chang",
+    "Syuan-Bo Huang",
+    "Wei-Chu Chen",
+    "Michael Chia-Liang Lin",
+    "Yu-Ta Lin"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2505.21880v2",
+  "abstract": "This study presents an innovative approach to urban mobility simulation by integrating a Large Language Model (LLM) with Agent-Based Modeling (ABM). Unlike traditional rule-based ABM, the proposed framework leverages LLM to enhance agent diversity and realism by generating synthetic population profiles, allocating routine and occasional locations, and simulating personalized routes. Using real-world data, the simulation models individual behaviors and large-scale mobility patterns in Taipei City. Key insights, such as route heat maps and mode-specific indicators, provide urban planners with actionable information for policy-making. Future work focuses on establishing robust validation frameworks to ensure accuracy and reliability in urban planning applications.",
+  "doi": "10.17605/OSF.IO/ABYQH",
+  "url": "https://arxiv.org/abs/2505.21880v2",
+  "key": "incorporating_llms_2025"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Electric Vehicle Public Charging Equity Considerations: A Systematic Review",
+  "authors": [
+    "Boyou Chen",
+    "Kaihan Zhang",
+    "Austin Moore",
+    "Bochen Jia",
+    "Mengqiu Cao"
+  ],
+  "year": 2025,
+  "venue": "arXiv",
+  "arxiv_id": "2507.09726v1",
+  "abstract": "Public electric vehicle (EV) charging infrastructure is crucial for accelerating EV adoption and reducing transportation emissions; however, disparities in infrastructure access have raised significant equity concerns. This systematic review synthesizes existing knowledge and identifies gaps regarding equity in EV public charging research. Following structured review protocols, 91 peer-reviewed studies from Scopus and Google Scholar were analyzed, focusing explicitly on equity considerations. The findings indicate that current research on EV public charging equity mainly adopted geographic information systems (GIS), network optimization, behavioral modeling, and hybrid analytical frameworks, yet lacks consistent normative frameworks for assessing equity outcomes. Equity assessments highlight four key dimensions: spatial accessibility, cost burdens, reliability and usability, and user awareness and trust. Socio-economic disparities, particularly income, housing tenure, and ethnicity, frequently exacerbate inequitable access, disproportionately disadvantaging low-income, renter, and minority populations. Additionally, infrastructure-specific choices, including charger reliability, strategic location, and pricing strategies, significantly influence adoption patterns and equity outcomes. However, existing literature primarily reflects North American, European, and Chinese contexts, revealing substantial geographical and methodological limitations. This review suggests the need for more robust normative evaluations of equity, comprehensive demographic data integration, and advanced methodological frameworks, thereby guiding targeted, inclusive, and context-sensitive infrastructure planning and policy interventions.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2507.09726v1",
+  "key": "electric_vehicle_2025"
+}

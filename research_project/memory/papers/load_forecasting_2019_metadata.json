@@ -1,0 +1,18 @@
+{
+  "title": "Load Forecasting Model and Day-ahead Operation Strategy for City-located EV Quick Charge Stations",
+  "authors": [
+    "Zeyu Liu",
+    "Yaxin Xie",
+    "Donghan Feng",
+    "Yun Zhou",
+    "Shanshan Shi",
+    "Chen Fang"
+  ],
+  "year": 2019,
+  "venue": "arXiv",
+  "arxiv_id": "1909.00971v1",
+  "abstract": "Charging demands of electric vehicles (EVs) are sharply increasing due to the rapid development of EVs. Hence, reliable and convenient quick charge stations are required to respond to the needs of EV drivers. Due to the uncertainty of EV charging loads, load forecasting becomes vital for the operation of quick charge stations to formulate the day-ahead plan. In this paper, based on trip chain theory and EV user behaviour, an EV charging load forecasting model is established for quick charge station operators. This model is capable of forecasting the charging demand of a city-located quick charge station during the next day, where the Monte-Carlo simulation method is applied. Furthermore, based on the forecasting model, a day-ahead profit-oriented operation strategy for such stations is derived. The simulation results support the effectiveness of this forecasting model and the operation strategy. The conclusions of this paper are as follows: 1) The charging load forecasting model ensures operators to grasp the feature of the charging load of the next day. 2) The revenue of the quick charge station can be dramatically increased by applying the proposed day-head operation strategy.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1909.00971v1",
+  "key": "load_forecasting_2019"
+}

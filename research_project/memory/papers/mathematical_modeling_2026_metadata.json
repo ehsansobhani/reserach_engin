@@ -1,0 +1,14 @@
+{
+  "title": "Mathematical modeling of urban sprawl",
+  "authors": [
+    "Marc Barthelemy",
+    "Ulysse Marquis"
+  ],
+  "year": 2026,
+  "venue": "arXiv",
+  "arxiv_id": "2603.08338v1",
+  "abstract": "Urban land cover doubled between 1985 and 2015, yet the spatial dynamics of urban form remain under-quantified, despite its importance for sustainability, infrastructure planning, and climate risk. Urban expansion is a non-equilibrium process shaped by interactions between population growth, infrastructure, institutions, and market failures -- rendering static and equilibrium models inadequate. We review key challenges and modeling approaches, focusing on partial differential equation (PDE) frameworks. Borrowed from statistical physics, PDEs capture spatial heterogeneity, anisotropy, stochasticity, and feedbacks between land use and transport networks. Integrating economic and institutional factors remains a major challenge for policy relevance. We propose a research agenda that bridges remote sensing, urban economics, and complexity science to develop dynamic, empirically grounded models of urban expansion.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2603.08338v1",
+  "key": "mathematical_modeling_2026"
+}

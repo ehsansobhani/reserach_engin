@@ -1,0 +1,15 @@
+{
+  "title": "Base Station and Passive Reflectors Placement for Urban mmWave Networks",
+  "authors": [
+    "Chethan Kumar Anjinappa",
+    "Fatih Erden",
+    "Ismail Guvenc"
+  ],
+  "year": 2020,
+  "venue": "arXiv",
+  "arxiv_id": "2011.01920v1",
+  "abstract": "The use of millimeter-wave (mmWave) bands in 5G networks introduce a new set of challenges to network planning. Vulnerability to blockages and high path loss at mmWave frequencies require careful planning of the network to achieve the desired service quality. In this paper, we propose a novel 3D geometry-based framework for deploying mmWave base stations (gNBs) in urban environments by considering first-order reflection effects. We also provide a solution for the optimum deployment of passive metallic reflectors (PMRs) to extend radio coverage to non-line-of-sight (NLoS) areas. In particular, we perform visibility analysis to find the direct and indirect visibility regions, and using these, we derive a geometry-and-blockage-aided path loss model. We then formulate the network planning problem as two independent optimization problems, placement of gNB(s) and PMRs, to maximize the coverage area with a certain quality-of-service constraint and minimum cost. We test the efficacy of our proposed approach using a generic map and compare our simulation results with the ray-tracing solution. Our simulation results show that considering the first-order reflections in planning the mmWave network helps reduce the number of PMRs required to cover the NLoS area and the gNB placement aided with PMRs requires fewer gNBs to cover the same area, which in turn reduces the deployment cost.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2011.01920v1",
+  "key": "base_station_2020"
+}

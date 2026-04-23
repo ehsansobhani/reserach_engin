@@ -1,0 +1,15 @@
+{
+  "title": "Deep Information Fusion for Electric Vehicle Charging Station Occupancy Forecasting",
+  "authors": [
+    "Ashutosh Sao",
+    "Nicolas Tempelmeier",
+    "Elena Demidova"
+  ],
+  "year": 2021,
+  "venue": "arXiv",
+  "arxiv_id": "2108.12352v1",
+  "abstract": "With an increasing number of electric vehicles, the accurate forecasting of charging station occupation is crucial to enable reliable vehicle charging. This paper introduces a novel Deep Fusion of Dynamic and Static Information model (DFDS) to effectively forecast the charging station occupation. We exploit static information, such as the mean occupation concerning the time of day, to learn the specific charging station patterns. We supplement such static data with dynamic information reflecting the preceding charging station occupation and temporal information such as daytime and weekday. Our model efficiently fuses dynamic and static information to facilitate accurate forecasting. We evaluate the proposed model on a real-world dataset containing 593 charging stations in Germany, covering August 2020 to December 2020. Our experiments demonstrate that DFDS outperforms the baselines by 3.45 percent points in F1-score on average.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2108.12352v1",
+  "key": "deep_information_2021"
+}

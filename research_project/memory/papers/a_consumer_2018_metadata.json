@@ -1,0 +1,15 @@
+{
+  "title": "A Consumer Behavior Based Approach to Multi-Stage EV Charging Station Placement",
+  "authors": [
+    "Chao Luo",
+    "Yih-Fang Huang",
+    "Vijay Gupta"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "arxiv_id": "1801.02135v1",
+  "abstract": "This paper presents a multi-stage approach to the placement of charging stations under the scenarios of different electric vehicle (EV) penetration rates. The EV charging market is modeled as the oligopoly. A consumer behavior based approach is applied to forecast the charging demand of the charging stations using a nested logit model. The impacts of both the urban road network and the power grid network on charging station planning are also considered. At each planning stage, the optimal station placement strategy is derived through solving a Bayesian game among the service providers. To investigate the interplay of the travel pattern, the consumer behavior, urban road network, power grid network, and the charging station placement, a simulation platform (The EV Virtual City 1.0) is developed using Java on Repast.We conduct a case study in the San Pedro District of Los Angeles by importing the geographic and demographic data of that region into the platform. The simulation results demonstrate a strong consistency between the charging station placement and the traffic flow of EVs. The results also reveal an interesting phenomenon that service providers prefer clustering instead of spatial separation in this oligopoly market.",
+  "doi": "10.1109/VTCSpring.2015.7145593",
+  "url": "https://arxiv.org/abs/1801.02135v1",
+  "key": "a_consumer_2018"
+}

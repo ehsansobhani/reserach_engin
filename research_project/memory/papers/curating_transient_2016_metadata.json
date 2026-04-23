@@ -1,0 +1,17 @@
+{
+  "title": "Curating Transient Population in Urban Dynamics System",
+  "authors": [
+    "Gautam S. Thakur",
+    "Kevin A. Sparks",
+    "Robert N. Stewart",
+    "Marie L. Urban",
+    "Budhendra L. Bhaduri"
+  ],
+  "year": 2016,
+  "venue": "arXiv",
+  "arxiv_id": "1606.08488v1",
+  "abstract": "For past several decades, research efforts in population modelling has proven its efficacy in understanding the basic information about residential and commercial areas, as well as for the purposes of planning, development and improvement of the community as an eco-system. More or less, such efforts assume static nature of population distribution, in turn limited by the current ability to capture the dynamics of population change at a finer resolution of space and time. Fast forward today, more and more people are becoming mobile, traveling across borders impacting the nuts and bolts of our urban fabric. Unfortunately, our current efforts are being surpassed by the need to capture such transient population. It is becoming imperative to identify and define them, as well as measure their dynamics and interconnectedness. In this work, we intend to research urban population mobility patterns, gauge their transient nature, and extend our knowledge of their visited locations. We plan to achieve this by designing and developing novel methods and using VGI data that models and characterizes transient population dynamics.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1606.08488v1",
+  "key": "curating_transient_2016"
+}

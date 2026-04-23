@@ -1,0 +1,17 @@
+{
+  "title": "Locality and Utilization in Placement Suboptimality",
+  "authors": [
+    "Jason Cong",
+    "Michalis Romesis",
+    "Joseph R. Shinnerl",
+    "Kenton Sze",
+    "Min Xie"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2305.16413v1",
+  "abstract": "The mixed-size placement benchmarks described in this book chapter directly address several of the shortcomings in previously published suboptimality benchmarks. Two new sets of placement examples are constructed, one targeting the role of nonlocal nets in suboptimality, and another targeting the role of white space and large variations in module sizes. The first set, PEKO-MC, is a set of standard-cell circuits with nonlocal nets in known optimal placements. A given netlist is modified so as to render a given placement for it optimal for the new netlist. Cell dimensions and locations are not changed, net-degree statistics are matched exactly, and over 60% of the original netlist is left unchanged. The second set, PEKO-MS, incorporates a parametrized percentage of white space into a mixed-size placement which precisely matches given macro dimensions and locations as well as the net-degree distributions of the ISPD 2005 benchmark suite [21]. HPWL for the placements generated for the PEKO-MS circuits are proven to be less than 3% above optimal for most cases and within 8% of optimal on all cases.",
+  "doi": "10.1007/978-0-387-68739-1",
+  "url": "https://arxiv.org/abs/2305.16413v1",
+  "key": "locality_and_2023"
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Predicting Electric Vehicle Charging Station Usage: Using Machine Learning to Estimate Individual Station Statistics from Physical Configurations of Charging Station Networks",
+  "authors": [
+    "Anshul Ramachandran",
+    "Ashwin Balakrishna",
+    "Peter Kundzicz",
+    "Anirudh Neti"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "arxiv_id": "1804.00714v1",
+  "abstract": "Electric vehicles (EVs) have been gaining popularity due to their environmental friendliness and efficiency. EV charging station networks are scalable solutions for supporting increasing numbers of EVs within modern electric grid constraints, yet few tools exist to aid the physical configuration design of new networks. We use neural networks to predict individual charging station usage statistics from the station's physical location within a network. We have shown this quickly gives accurate estimates of average usage statistics given a proposed configuration, without the need for running many computationally expensive simulations. The trained neural network can help EV charging network designers rapidly test various placements of charging stations under additional individual constraints in order to find an optimal configuration given their design objectives.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1804.00714v1",
+  "key": "predicting_electric_2018"
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Optimal recovery of damaged infrastructure network",
+  "authors": [
+    "Alexander Gutfraind",
+    "Milan Bradonjić",
+    "Tim Novikoff"
+  ],
+  "year": 2012,
+  "venue": "arXiv",
+  "arxiv_id": "1207.2799v1",
+  "abstract": "Natural disasters or attacks may disrupt infrastructure networks on a vast scale. Parts of the damaged network are interdependent, making it difficult to plan and optimally execute the recovery operations. To study how interdependencies affect the recovery schedule, we introduce a new discrete optimization problem where the goal is to minimize the total cost of installing (or recovering) a given network. This cost is determined by the structure of the network and the sequence in which the nodes are installed. Namely, the cost of installing a node is a function of the number of its neighbors that have been installed before it. We analyze the natural case where the cost function is decreasing and convex, and provide bounds on the cost of the optimal solution. We also show that all sequences have the same cost when the cost function is linear and provide an upper bound on the cost of a random solution for an Erdős-Rényi random graph. Examining the computational complexity, we show that the problem is NP-hard when the cost function is arbitrary. Finally, we provide a formulation as an integer program, an exact dynamic programming algorithm, and a greedy heuristic which gives high quality solutions.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1207.2799v1",
+  "key": "optimal_recovery_2012"
+}

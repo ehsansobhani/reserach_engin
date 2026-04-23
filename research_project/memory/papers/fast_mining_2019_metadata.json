@@ -1,0 +1,15 @@
+{
+  "title": "Fast Mining of Spatial Frequent Wordset from Social Database",
+  "authors": [
+    "Yongmi Lee",
+    "Kwang Woo Nam",
+    "Keun Ho Ryu"
+  ],
+  "year": 2019,
+  "venue": "arXiv",
+  "arxiv_id": "1912.09127v2",
+  "abstract": "In this paper, we propose an algorithm that extracts spatial frequent patterns to explain the relative characteristics of a specific location from the available social data. This paper proposes a spatial social data model which includes spatial social data, spatial support, spatial frequent patterns, spatial partition, and spatial clustering; these concepts are used for describing the exploration algorithm of spatial frequent patterns. With these defined concepts as the foundation, an SFP-tree structure that maintains not only the frequent words but also the frequent cells was proposed, and an SFP-growth algorithm that explores the frequent patterns on the basis of this SFP-tree was proposed.",
+  "doi": "10.1007/s41324-017-0094-6",
+  "url": "https://arxiv.org/abs/1912.09127v2",
+  "key": "fast_mining_2019"
+}

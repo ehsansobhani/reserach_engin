@@ -1,0 +1,19 @@
+{
+  "title": "Route Optimization of Electric Vehicles based on Dynamic Wireless Charging",
+  "authors": [
+    "Dimitrios Kosmanos",
+    "Leandros Maglaras",
+    "Michalis Mavrovouniotis",
+    "Sotiris Moschoyiannis",
+    "Antonios Argyriou",
+    "Athanasios Maglaras",
+    "Helge Janicke"
+  ],
+  "year": 2017,
+  "venue": "arXiv",
+  "arxiv_id": "1710.03726v1",
+  "abstract": "One of the barriers to adoption of Electric Vehicles (EVs) is the anxiety around the limited driving range. Recent proposals have explored charging EVs on the move, using dynamic wireless charging which enables power exchange between the vehicle and the grid while the vehicle is moving. In this article, we focus on the intelligent routing of EVs in need of charging so that they can make most efficient use of the so-called {\\it Mobile Energy Disseminators} (MEDs) which operates as mobile charging stations. We present a method for routing EVs around MEDs on the road network, which is based on constraint logic programming and optimisation using a graph-based shortest path algorithm. The proposed method exploits Inter-Vehicle (IVC) communications in order to eco-route electric vehicles. We argue that combining modern communications between vehicles and state of the art technologies on energy transfer, the driving range of EVs can be extended without the need for larger batteries or overtly costly infrastructure. We present extensive simulations in city conditions that show the driving range and consequently the overall travel time of electric vehicles is improved with intelligent routing in the presence of MEDs.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1710.03726v1",
+  "key": "route_optimization_2017"
+}

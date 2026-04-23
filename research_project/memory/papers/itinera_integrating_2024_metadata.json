@@ -1,0 +1,26 @@
+{
+  "title": "ITINERA: Integrating Spatial Optimization with Large Language Models for Open-domain Urban Itinerary Planning",
+  "authors": [
+    "Yihong Tang",
+    "Zhaokai Wang",
+    "Ao Qu",
+    "Yihao Yan",
+    "Zhaofeng Wu",
+    "Dingyi Zhuang",
+    "Jushi Kai",
+    "Kebing Hou",
+    "Xiaotong Guo",
+    "Han Zheng",
+    "Tiange Luo",
+    "Jinhua Zhao",
+    "Zhan Zhao",
+    "Wei Ma"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv_id": "2402.07204v5",
+  "abstract": "Citywalk, a recently popular form of urban travel, requires genuine personalization and understanding of fine-grained requests compared to traditional itinerary planning. In this paper, we introduce the novel task of Open-domain Urban Itinerary Planning (OUIP), which generates personalized urban itineraries from user requests in natural language. We then present ITINERA, an OUIP system that integrates spatial optimization with large language models to provide customized urban itineraries based on user needs. This involves decomposing user requests, selecting candidate points of interest (POIs), ordering the POIs based on cluster-aware spatial optimization, and generating the itinerary. Experiments on real-world datasets and the performance of the deployed system demonstrate our system's capacity to deliver personalized and spatially coherent itineraries compared to current solutions. Source codes of ITINERA are available at https://github.com/YihongT/ITINERA.",
+  "doi": "10.18653/v1/2024.emnlp-industry.104",
+  "url": "https://arxiv.org/abs/2402.07204v5",
+  "key": "itinera_integrating_2024"
+}

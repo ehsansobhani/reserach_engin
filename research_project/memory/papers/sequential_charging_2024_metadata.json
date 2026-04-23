@@ -1,0 +1,16 @@
+{
+  "title": "Sequential Charging Station Location Optimization under Uncertain Charging Behavior and User Growth",
+  "authors": [
+    "Wenjia Shen",
+    "Bo Zhou",
+    "Ruiwei Jiang",
+    "Siqian Shen"
+  ],
+  "year": 2024,
+  "venue": "arXiv",
+  "arxiv_id": "2411.01416v1",
+  "abstract": "Charging station availability is crucial for a thriving electric vehicle market. Due to budget constraints, locating these stations usually proceeds in phases, which calls for careful consideration of the (random) charging demand growth throughout the planning horizon. This paper integrates user choice behavior into two-stage and multi-stage stochastic programming models for intracity charging station planning under demand uncertainty. We derive a second-order conic representation for the nonlinear, nonconvex formulation by taking advantage of the binary nature of location variables and propose subgradient inequalities to accelerate computation. Numerical results demonstrate the value of employing multi-stage models, particularly in scenarios of high demand fluctuations, increased demand dispersion, and high user sensitivity to the distance-to-recharge.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2411.01416v1",
+  "key": "sequential_charging_2024"
+}

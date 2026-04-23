@@ -1,0 +1,16 @@
+{
+  "title": "Spatiotemporal gender differences in urban vibrancy",
+  "authors": [
+    "Thomas Collins",
+    "Riccardo Di Clemente",
+    "Mario Gutiérrez-Roig",
+    "Federico Botta"
+  ],
+  "year": 2023,
+  "venue": "arXiv",
+  "arxiv_id": "2304.12840v2",
+  "abstract": "Urban vibrancy is the dynamic activity of humans in urban locations. It can vary with urban features and the opportunities for human interactions, but it might also differ according to the underlying social conditions of city inhabitants across and within social surroundings. Such heterogeneity in how different demographic groups may experience cities has the potential to cause gender segregation because of differences in the preferences of inhabitants, their accessibility and opportunities, and large-scale mobility behaviours. However, traditional studies have failed to capture fully a high-frequency understanding of how urban vibrancy is linked to urban features, how this might differ for different genders, and how this might affect segregation in cities. Our results show that (1) there are differences between males and females in terms of urban vibrancy, (2) the differences relate to `Points of Interest` as well as transportation networks, and (3) that there are both positive and negative `spatial spillovers` existing across each city. To do this, we use a quantitative approach using Call Detail Record data--taking advantage of the near-ubiquitous use of mobile phones--to gain high-frequency observations of spatial behaviours across the seven most prominent cities of Italy. We use a spatial model comparison approach of the direct and `spillover` effects from urban features on male-female differences. Our results increase our understanding of inequality in cities and how we can make future cities fairer.",
+  "doi": "10.1177/23998083231209073",
+  "url": "https://arxiv.org/abs/2304.12840v2",
+  "key": "spatiotemporal_gender_2023"
+}

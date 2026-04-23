@@ -1,0 +1,54 @@
+# Paper Summary: Optimal fast charging station locations for electric ridesharing service with online vehicle-charging station assignment
+
+**Key:** optimal_fast_2020
+**Authors:** Tai-Yu Ma, Simin Xie
+**Year:** 2020
+**Venue:** arXiv
+**Category:** spatial_optimization
+**Date summarized:** 2026-04-23
+
+## Metadata
+
+- **arXiv ID:** 2008.05949v2
+- **DOI:** 10.1016/j.trd.2020.102682
+- **URL:** https://arxiv.org/abs/2008.05949v2
+
+## Abstract
+
+Electrified shared mobility services need to handle charging infrastructure planning and manage their daily charging operations to minimize total charging operation time and cost. However, existing studies tend to address these problems separately. A new online vehicle-charging assignment model is proposed and integrated into the fast charging location problem for dynamic ridesharing services using electric vehicles. The latter is formulated as a bi-level optimization problem to minimize the fleet's daily charging operation time. A surrogate-assisted optimization approach is proposed to solve the combinatorial optimization problem efficiently. The proposed model is tested on a realistic flexible bus service in Luxembourg. The results show that the proposed online charging policy can effectively reduce the charging delays of the fleet compared to the state-of-the-art methods. With 10 additional DC fast chargers installed, charging operation time can be reduced up to 27.8% when applying the online charging policy under the test scenarios.
+
+## Key Findings
+
+<!-- Synthesize key findings from full text below -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Methodology
+
+<!-- Characterize approach: optimization, simulation, empirical, mixed -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Spatial and Planning Dimensions
+
+<!-- Note planning scale, spatial units, zoning considerations -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Equity and Utilization Treatment
+
+<!-- Note how equity and utilization are defined and measured -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Limitations
+
+<!-- Note limitations stated by authors or evident from analysis -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->
+
+## Relevance to Dissertation
+
+<!-- State how this paper connects to the dissertation's five gaps -->
+
+<!-- [TO BE COMPLETED BY AGENT] -->

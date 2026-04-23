@@ -1,0 +1,15 @@
+{
+  "title": "Electric Vehicle Scheduling with Capacitated Charging Stations and Partial Charging",
+  "authors": [
+    "Marelot de Vos",
+    "Rolf Nelson van Lieshout",
+    "Twan Dollevoet"
+  ],
+  "year": 2022,
+  "venue": "arXiv",
+  "arxiv_id": "2207.13734v2",
+  "abstract": "This paper considers the scheduling of electric vehicles in a public transit system. Our main innovation is that we take into account that charging stations have limited capacity, while also considering partial charging. To solve the problem, we expand a connection-based network in order to track the state of charge of vehicles and model recharging actions. We then formulate the electric vehicle scheduling problem as a path-based binary program, whose linear relaxation we solve using column generation. We find integer feasible solutions using two heuristics: price-and-branch and truncated column generation, including acceleration strategies. We test the approach using data of the concession Gooi en Vechtstreek in the Netherlands, containing up to 816 trips. The truncated column generation outperforms the other heuristic, and solves the entire concession within 28 hours of computation time with an optimality gap less than 3.5 percent.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2207.13734v2",
+  "key": "electric_vehicle_2022"
+}

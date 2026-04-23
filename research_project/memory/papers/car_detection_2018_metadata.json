@@ -1,0 +1,17 @@
+{
+  "title": "Car Detection using Unmanned Aerial Vehicles: Comparison between Faster R-CNN and YOLOv3",
+  "authors": [
+    "Bilel Benjdira",
+    "Taha Khursheed",
+    "Anis Koubaa",
+    "Adel Ammar",
+    "Kais Ouni"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "arxiv_id": "1812.10968v1",
+  "abstract": "Unmanned Aerial Vehicles are increasingly being used in surveillance and traffic monitoring thanks to their high mobility and ability to cover areas at different altitudes and locations. One of the major challenges is to use aerial images to accurately detect cars and count them in real-time for traffic monitoring purposes. Several deep learning techniques were recently proposed based on convolution neural network (CNN) for real-time classification and recognition in computer vision. However, their performance depends on the scenarios where they are used. In this paper, we investigate the performance of two state-of-the-art CNN algorithms, namely Faster R-CNN and YOLOv3, in the context of car detection from aerial images. We trained and tested these two models on a large car dataset taken from UAVs. We demonstrated in this paper that YOLOv3 outperforms Faster R-CNN in sensitivity and processing time, although they are comparable in the precision metric.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/1812.10968v1",
+  "key": "car_detection_2018"
+}

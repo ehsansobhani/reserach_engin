@@ -1,0 +1,15 @@
+{
+  "title": "Placement of EV Charging Stations --- Balancing Benefits among Multiple Entities",
+  "authors": [
+    "Chao Luo",
+    "Yih-Fang Huang",
+    "Vijay Gupta"
+  ],
+  "year": 2018,
+  "venue": "arXiv",
+  "arxiv_id": "1801.02129v1",
+  "abstract": "This paper studies the problem of multi-stage placement of electric vehicle (EV) charging stations with incremental EV penetration rates. A nested logit model is employed to analyze the charging preference of the individual consumer (EV owner), and predict the aggregated charging demand at the charging stations. The EV charging industry is modeled as an oligopoly where the entire market is dominated by a few charging service providers (oligopolists). At the beginning of each planning stage, an optimal placement policy for each service provider is obtained through analyzing strategic interactions in a Bayesian game. To derive the optimal placement policy, we consider both the transportation network graph and the electric power network graph. A simulation software --- The EV Virtual City 1.0 --- is developed using Java to investigate the interactions among the consumers (EV owner), the transportation network graph, the electric power network graph, and the charging stations. Through a series of experiments using the geographic and demographic data from the city of San Pedro District of Los Angeles, we show that the charging station placement is highly consistent with the heatmap of the traffic flow. In addition, we observe a spatial economic phenomenon that service providers prefer clustering instead of separation in the EV charging market.",
+  "doi": "10.1109/TSG.2015.2508740",
+  "url": "https://arxiv.org/abs/1801.02129v1",
+  "key": "placement_of_2018"
+}

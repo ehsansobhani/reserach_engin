@@ -1,0 +1,16 @@
+{
+  "title": "Deep Spatio-Temporal Forecasting of Electrical Vehicle Charging Demand",
+  "authors": [
+    "Frederik Boe Hüttel",
+    "Inon Peled",
+    "Filipe Rodrigues",
+    "Francisco C. Pereira"
+  ],
+  "year": 2021,
+  "venue": "arXiv",
+  "arxiv_id": "2106.10940v1",
+  "abstract": "Electric vehicles can offer a low carbon emission solution to reverse rising emission trends. However, this requires that the energy used to meet the demand is green. To meet this requirement, accurate forecasting of the charging demand is vital. Short and long-term charging demand forecasting will allow for better optimisation of the power grid and future infrastructure expansions. In this paper, we propose to use publicly available data to forecast the electric vehicle charging demand. To model the complex spatial-temporal correlations between charging stations, we argue that Temporal Graph Convolution Models are the most suitable to capture the correlations. The proposed Temporal Graph Convolutional Networks provide the most accurate forecasts for short and long-term forecasting compared with other forecasting methods.",
+  "doi": "",
+  "url": "https://arxiv.org/abs/2106.10940v1",
+  "key": "deep_spatio-temporal_2021"
+}
