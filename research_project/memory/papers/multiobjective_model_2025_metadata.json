@@ -1,0 +1,16 @@
+{
+  "title": "Multiobjective model to optimize charging station location for the decarbonization process in Mexico",
+  "authors": [
+    "Francisco Ruiz‐Barajas",
+    "Elias Olivares‐Benitez",
+    "Adrian Ramirez‐Nafarrate",
+    "Rosa G. González‐Ramírez"
+  ],
+  "year": 2025,
+  "venue": "International Transactions in Operational Research",
+  "doi": "10.1111/itor.13611",
+  "arxiv_id": "",
+  "abstract": "<jats:title>Abstract</jats:title><jats:p>Electric vehicles (EVs) offer significant potential for advancing sustainable environmental goals. However, their widespread adoption has been concentrated in urban areas, raising challenges for interurban travel. In many countries, charging station networks are primarily located within cities, highlighting a key opportunity for expansion to support longer distance journeys. This article addresses the facility location problem for EV charging stations to enable interurban travel. We propose a multiobjective optimization model based on the flow refueling location model with three objectives: maximizing CO<jats:sub>2</jats:sub> emissions reduction, minimizing total costs, and reducing user charging time. The model is solved using an epsilon constraint approach, and Mexico's charging station network is used as a case study. Through computational experiments, various scenarios are evaluated, and a comparative analysis is performed between electric and internal combustion vehicles. Results show that deploying 20 strategically located charging stations could mitigate 3.1 million tons of CO<jats:sub>2</jats:sub>, requiring an investment of nearly USD 3.9 million.</jats:p>",
+  "url": "https://doi.org/10.1111/itor.13611",
+  "key": "multiobjective_model_2025"
+}

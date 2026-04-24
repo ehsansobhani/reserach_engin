@@ -1,0 +1,14 @@
+{
+  "title": "A Survey of Road Traffic Congestion Measures towards a Sustainable and Resilient Transportation System",
+  "authors": [
+    "Tanzina Afrin",
+    "Nita Yodo"
+  ],
+  "year": 2020,
+  "venue": "Sustainability",
+  "doi": "10.3390/su12114660",
+  "arxiv_id": "",
+  "abstract": "<jats:p>Traffic congestion is a perpetual problem for the sustainability of transportation development. Traffic congestion causes delays, inconvenience, and economic losses to drivers, as well as air pollution. Identification and quantification of traffic congestion are crucial for decision-makers to initiate mitigation strategies to improve the overall transportation system’s sustainability. In this paper, the currently available measures are detailed and compared by implementing them on a daily and weekly traffic historical dataset. The results showed each measure showed significant variations in congestion states while indicating a similar congestion trend. The advantages and disadvantages of each measure are identified from the data analysis. This study summarizes the current road traffic congestion measures and provides a constructive insight into the development of a sustainable and resilient traffic management system.</jats:p>",
+  "url": "https://doi.org/10.3390/su12114660",
+  "key": "a_survey_2020"
+}

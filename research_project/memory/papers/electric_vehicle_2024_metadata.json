@@ -1,15 +1,15 @@
 {
-  "title": "Electric Vehicle Charging Stations Placement Optimization in Vietnam Using Mixed-Integer Nonlinear Programming Model",
+  "title": "Electric Vehicle Charging Infrastructure Optimization Incorporating Demand Forecasting and Renewable Energy Application",
   "authors": [
-    "Quynh Vu Truc",
-    "Minh Ha Hien",
-    "Hai Vu Tuan"
+    "Zhiyun Li",
+    "Mashrur Chowdhury",
+    "Parth Bhavsar"
   ],
   "year": 2024,
-  "venue": "arXiv",
-  "arxiv_id": "2412.16025v2",
-  "abstract": "Vietnam is viewed as one of the promising markets for electric vehicles (EVs), especially automobiles, when it is predicted to reach 1 million in 2028 and 3.5 million in 2040. However, the lack of charging station infrastructure has hindered the growth rate of EVs in this country. This study aims to propose an optimization model using Mixed-Integer Nonlinear Programming to implement an optimal location strategy for EVs charging stations in Ho Chi Minh City. The problem is solved by Gurobi using the Brand-and-Cut method. There are two perspectives, including Charging Station Operators and EV users. In addition, 7 kinds of costs are considered. From 1509 Point of Interest and 199 residential areas, 134 POIs were chosen with 923 charging stations to fully satisfy the customer demand. Furthermore, the effectiveness of the proposed model is proved by a minor MIP Gap and running in a short time with full feasibility.",
-  "doi": "",
-  "url": "https://arxiv.org/abs/2412.16025v2",
+  "venue": "World Journal of Innovation and Modern Technology",
+  "doi": "10.53469/wjimt.2024.07(06).12",
+  "arxiv_id": "",
+  "abstract": "<jats:p>The rapid growth in electric vehicle (EV) adoption and the increasing use of renewable energy have introduced challenges in designing and managing EV charging infrastructure. This study presents a framework that combines a hybrid deep learning model, spatial and temporal demand analysis, and vehicle-to-grid (V2G) optimization to address these issues. The framework achieved high predictive accuracy, with an RMSE of 2.1 kWh and an R2R^2R2 value of 0.92, effectively capturing daily demand patterns and variations across charging stations. Spatial analysis revealed differences in usage between urban and suburban stations, highlighting the need for targeted planning strategies to address high-demand areas and underused locations. V2G optimization reduced the Peak-to-Average Ratio by 28% and increased renewable energy usage to 68% under normal conditions, contributing to grid stability and energy efficiency. The framework was tested under scenarios of increasing EV adoption and station numbers, maintaining reliable performance and operational effectiveness. These results provide practical guidance for improving EV charging systems and ensuring reliable energy distribution while promoting sustainability. By addressing key operational challenges, this research provides a strong foundation for incorporating advanced tools into urban energy systems. Future studies could explore the use of real-time traffic data and localized events to further improve prediction accuracy and enhance system performance in complex urban settings.</jats:p>",
+  "url": "https://doi.org/10.53469/wjimt.2024.07(06).12",
   "key": "electric_vehicle_2024"
 }

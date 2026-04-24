@@ -1,0 +1,16 @@
+{
+  "title": "Siting and Sizing of Charging Infrastructure for Shared Autonomous Electric Fleets",
+  "authors": [
+    "Ramin Ahadi",
+    "Wolfgang Ketter",
+    "John Collins",
+    "Nicolò Daina"
+  ],
+  "year": 2021,
+  "venue": "International Joint Conference on Autonomous Agents and Multiagent Systems",
+  "doi": "10.65109/uaun3752",
+  "arxiv_id": "",
+  "abstract": "<jats:p>Business models rooted in shared economy, electrification, and automation are transforming urban mobility. Accounting for how these transformations interact is crucial if synergies are to be exploited. In this paper, we focus on how a cost-effective charging infrastructure for e-mobility can support the emergence of shared, autonomous mobility. This study addresses the problem of siting and sizing of charging stations for a fleet of shared autonomous electric vehicles (SAEVs). We develop a hybrid simulation-optimization model to find locations and numbers of chargers needed to serve charging demands. Our agent-based model provides an enhanced representation of SAEV operations allowing for smart charging and vehicle cruising when parking/charging is not available. Also, we model charging station placement as full covering optimization and solve the location-allocation problem simultaneously. Finally, we employ real-world trip data from ShareNow in Berlin to evaluate our approach for realistic demand patterns under different charging strategies and fleet sizes. The results show that charging station locations depend mostly on the spatial distribution of installation costs and charging demands. Moreover, charging strategies and fleet size affect the charging patterns and the required number of chargers as well as fleet performance.</jats:p>",
+  "url": "https://doi.org/10.65109/uaun3752",
+  "key": "siting_and_2021"
+}

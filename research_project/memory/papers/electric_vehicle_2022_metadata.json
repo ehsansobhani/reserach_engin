@@ -1,15 +1,18 @@
 {
-  "title": "Electric Vehicle Scheduling with Capacitated Charging Stations and Partial Charging",
+  "title": "Electric Vehicle Charging Station Location-Routing Problem with Time Windows and Resource Sharing",
   "authors": [
-    "Marelot de Vos",
-    "Rolf Nelson van Lieshout",
-    "Twan Dollevoet"
+    "Yong Wang",
+    "Jingxin Zhou",
+    "Yaoyao Sun",
+    "Xiuwen Wang",
+    "Jiayi Zhe",
+    "Haizhong Wang"
   ],
   "year": 2022,
-  "venue": "arXiv",
-  "arxiv_id": "2207.13734v2",
-  "abstract": "This paper considers the scheduling of electric vehicles in a public transit system. Our main innovation is that we take into account that charging stations have limited capacity, while also considering partial charging. To solve the problem, we expand a connection-based network in order to track the state of charge of vehicles and model recharging actions. We then formulate the electric vehicle scheduling problem as a path-based binary program, whose linear relaxation we solve using column generation. We find integer feasible solutions using two heuristics: price-and-branch and truncated column generation, including acceleration strategies. We test the approach using data of the concession Gooi en Vechtstreek in the Netherlands, containing up to 816 trips. The truncated column generation outperforms the other heuristic, and solves the entire concession within 28 hours of computation time with an optimality gap less than 3.5 percent.",
-  "doi": "",
-  "url": "https://arxiv.org/abs/2207.13734v2",
+  "venue": "Sustainability",
+  "doi": "10.3390/su141811681",
+  "arxiv_id": "",
+  "abstract": "<jats:p>Electric vehicles (EVs) are widely applied in logistics companies’ urban logistics distribution, as fuel prices increase and environmental awareness grows. This study introduces an EV charging station (CS) location-routing problem with time windows and resource sharing (EVCS-LRPTWRS). Resource sharing, among multiple depots within multiple service periods is proposed to adjust the transportation resource configuration for a sustainable logistics development. Solving the EVCS-LRPTWRS involves a periodic CS location selection and a multi-depot multi-period EV routing optimization. A bi-objective nonlinear programming model is proposed to formulate the EVCS-LRPTWRS with a minimum total operating cost and number of EVs. A hybrid algorithm combining the Gaussian mixture clustering algorithm (GMCA) with the improved nondominated sorting genetic algorithm-II (INSGA-II) is designed to address the EVCS-LRPTWRS. The GMCA is employed to assign customers to appropriate depots in various service periods in order to reduce the computational complexity. The INSGA-II is adopted to obtain the Pareto optimal solutions by using the CS insertion operation to select CS locations and integrating the elite retention mechanism to ensure a stable and excellent performance. The superiority of the hybrid algorithm is proven by comparison with the other three algorithms (i.e., multi-objective genetic algorithm, multi-objective particle swarm optimization, and multi-objective ant colony optimization). An empirical study of the EVCS-LRPTWRS in Chongqing City, China is conducted. Then, four types of service period divisions and three scenarios of resource sharing modes are further analyzed and discussed. The empirical results demonstrate the validity and practicability of the proposed solution method in realizing a sustainable operation in EV distribution networks.</jats:p>",
+  "url": "https://doi.org/10.3390/su141811681",
   "key": "electric_vehicle_2022"
 }

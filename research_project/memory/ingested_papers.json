@@ -778,5 +778,505 @@
     "2302.03943v1",
     "definition_of_2023",
     "Definition of Static and Dynamic Load Models for Grid Studies of Electric Vehicles Connected to Fast Charging Stations"
+  ],
+  [
+    "10.1016/j.ejor.2020.01.055",
+    "increasing_electric_2020",
+    "Increasing electric vehicle adoption through the optimal deployment of fast-charging stations for local and long-distance travel"
+  ],
+  [
+    "10.1016/j.eswa.2023.119654",
+    "collaborative_multidepot_2023",
+    "Collaborative multidepot electric vehicle routing problem with time windows and shared charging stations"
+  ],
+  [
+    "10.1287/trsc.2019.0931",
+    "location_of_2020",
+    "Location of Charging Stations in Electric Car Sharing Systems"
+  ],
+  [
+    "10.1016/j.apenergy.2022.119901",
+    "mobile_charging_2022",
+    "Mobile charging stations for EV charging management in urban areas: A case study in Chattanooga"
+  ],
+  [
+    "10.1016/j.compenvurbsys.2023.101949",
+    "an_agent-based_2023",
+    "An agent-based modeling approach for public charging demand estimation and charging station location optimization at urban scale"
+  ],
+  [
+    "10.1109/access.2020.3003071",
+    "optimizing_the_2020",
+    "Optimizing the Locations and Sizes of Solar Assisted Electric Vehicle Charging Stations in an Urban Area"
+  ],
+  [
+    "10.1016/j.eswa.2023.122514",
+    "a_multi-objective_2024",
+    "A multi-objective evolutionary approach for the electric vehicle charging stations problem"
+  ],
+  [
+    "10.24200/sci.2021.56782.4908",
+    "placement_of_2023",
+    "Placement of electric vehicle charging station and solar distributed generation in distribution system considering uncertainties"
+  ],
+  [
+    "10.1016/j.apenergy.2024.124231",
+    "a_vehicle-to-grid_2024",
+    "A Vehicle-to-Grid planning framework incorporating electric vehicle user equilibrium and distribution network flexibility enhancement"
+  ],
+  [
+    "10.1016/j.scs.2023.104678",
+    "fast-charging_station_2023",
+    "Fast-charging station location problem: A two-phase approach with mathematical program with equilibrium constraints considering charging choice behaviour"
+  ],
+  [
+    "10.1109/tits.2022.3196835",
+    "a_novel_2022",
+    "A Novel Data-Driven Approach for Solving the Electric Vehicle Charging Station Location-Routing Problem"
+  ],
+  [
+    "10.1016/j.scs.2024.105567",
+    "optimal_planning_2024",
+    "Optimal planning for electric vehicle fast charging stations placements in a city scale using an advantage actor-critic deep reinforcement learning and geospatial analysis"
+  ],
+  [
+    "10.1109/isie45552.2021.9576448",
+    "a_gis-based_2021",
+    "A GIS-based Optimal Facility Location Framework for Fast Electric Vehicle Charging Stations"
+  ],
+  [
+    "10.1109/tte.2023.3322418",
+    "planning_of_2024",
+    "Planning of Electric Vehicle Charging Stations With PV and Energy Storage Using a Fuzzy Inference System"
+  ],
+  [
+    "10.1016/j.trd.2024.104178",
+    "allocate_electric_2024",
+    "Allocate electric vehicles’ public charging stations with charging demand uncertainty"
+  ],
+  [
+    "10.3390/su141811681",
+    "electric_vehicle_2022",
+    "Electric Vehicle Charging Station Location-Routing Problem with Time Windows and Resource Sharing"
+  ],
+  [
+    "10.1016/j.etran.2024.100352",
+    "advancing_urban_2024",
+    "Advancing urban electric vehicle charging stations: AI-driven day-ahead optimization of pricing and Nudge strategies utilizing multi-agent deep reinforcement learning"
+  ],
+  [
+    "10.1016/j.egyr.2022.10.161",
+    "planning_of_2022",
+    "Planning of electric vehicle fast-charging station based on POI interest point division, functional area, and multiple temporal and spatial characteristics"
+  ],
+  [
+    "10.3390/wevj12040244",
+    "optimal_planning_2021",
+    "Optimal Planning of Electric Vehicle Charging Station Considering Mutual Benefit of Users and Power Grid"
+  ],
+  [
+    "10.1007/s10098-024-02986-w",
+    "location_and_2025",
+    "Location and capacity optimization of EV charging stations using genetic algorithms and fuzzy analytic hierarchy process"
+  ],
+  [
+    "10.1016/j.energy.2024.133885",
+    "optimal_evcs_2024",
+    "Optimal EVCS planning via spatial-temporal distribution of charging demand forecasting and traffic-grid coupling"
+  ],
+  [
+    "10.3390/en13040906",
+    "a_method_2020",
+    "A Method for the Optimization of Daily Activity Chains Including Electric Vehicles"
+  ],
+  [
+    "10.1016/j.apenergy.2024.122931",
+    "equilibrium_configuration_2024",
+    "Equilibrium configuration strategy of vehicle-to-grid-based electric vehicle charging stations in low-carbon resilient distribution networks"
+  ],
+  [
+    "10.1016/j.ijhydene.2024.09.029",
+    "a_particle_2024",
+    "A particle swarm optimizer-based optimization approach for locating electric vehicles charging stations in smart cities"
+  ],
+  [
+    "10.3390/app13148473",
+    "optimal_placement_2023",
+    "Optimal Placement of Charging Stations in Road Networks: A Reinforcement Learning Approach with Attention Mechanism"
+  ],
+  [
+    "10.1016/j.apenergy.2025.126385",
+    "hybrid_optimization_2025",
+    "Hybrid optimization of EV charging station placement and pricing using Bender’s decomposition and NSGA-II algorithm"
+  ],
+  [
+    "10.5267/j.ijiec.2023.9.009",
+    "a_multi-objective_2024",
+    "A multi-objective site selection of electric vehicle charging station based on NSGA-II"
+  ],
+  [
+    "10.1016/j.esd.2024.101643",
+    "an_equity-based_2025",
+    "An equity-based approach for addressing inequality in electric vehicle charging infrastructure: Leaving no one behind in transport electrification"
+  ],
+  [
+    "10.1109/icacrs55517.2022.10029303",
+    "optimal_placement_2022",
+    "Optimal Placement of Electric Vehicle Charging Station by Considering Dynamic Loads in Radial Distribution System"
+  ],
+  [
+    "10.1109/itec53557.2022.9814039",
+    "mobile_charging_2022",
+    "Mobile Charging Station: A Complementary Charging Technology for Electric Vehicles"
+  ],
+  [
+    "10.1016/j.energy.2025.134581",
+    "a_density-based_2025",
+    "A density-based spatial clustering and linear programming method for electric vehicle charging station location and price optimization"
+  ],
+  [
+    "10.24200/sci.2021.57433.5238",
+    "intelligent_algorithm-based_2023",
+    "Intelligent algorithm-based efficient planning of electric vehicle charging station: A case study of metropolitan city of India"
+  ],
+  [
+    "10.1016/j.segan.2022.100989",
+    "optimal_location_2023",
+    "Optimal location of fast charging stations alongside pricing design from distribution company viewpoint considering renewable energy resource: A modified capacitated flow-capturing location model"
+  ],
+  [
+    "10.1016/j.egyr.2024.03.029",
+    "locating_and_2024",
+    "Locating and sizing charging station in multi-period to promote electric vehicles adoption in urban areas"
+  ],
+  [
+    "10.1177/00375497231209996",
+    "a_data-driven_2024",
+    "A data-driven approach of layout evaluation for electric vehicle charging infrastructure using agent-based simulation and GIS"
+  ],
+  [
+    "10.1109/ever48776.2020.9243147",
+    "a_model_2020",
+    "A Model for the Data-based Analysis and Design of Urban Public Charging Infrastructure"
+  ],
+  [
+    "10.3390/su16114729",
+    "towards_sustainable_2024",
+    "Towards Sustainable Urban Mobility: Voronoi-Based Spatial Analysis of EV Charging Stations in Bangkok"
+  ],
+  [
+    "10.11591/ijece.v13i3.pp3266-3280",
+    "initial_location_2023",
+    "Initial location selection of electric vehicles charging infrastructure in urban city through clustering algorithm"
+  ],
+  [
+    "10.1016/j.ijepes.2024.110205",
+    "a_two-layer_2024",
+    "A two-layer planning method for location and capacity determination of public electric vehicle charging stations"
+  ],
+  [
+    "10.3390/su17010001",
+    "sustainable_planning_2024",
+    "Sustainable Planning of Electric Vehicle Charging Stations: A Bi-Level Optimization Framework for Reducing Vehicular Emissions in Urban Road Networks"
+  ],
+  [
+    "10.1016/j.neucom.2021.06.098",
+    "charging_stations_2022",
+    "Charging stations and mobility data generators for agent-based simulations"
+  ],
+  [
+    "10.32604/cmc.2024.049001",
+    "urban_electric_2024",
+    "Urban Electric Vehicle Charging Station Placement Optimization with Graylag Goose Optimization Voting Classifier"
+  ],
+  [
+    "10.1016/j.cstp.2024.101309",
+    "policy_interventions_2024",
+    "Policy interventions and urban characteristics in modeling electric vehicle charging infrastructure utilization"
+  ],
+  [
+    "10.1109/icacite57410.2023.10183075",
+    "optimizing_electric_2023",
+    "Optimizing Electric Vehicle Charging Station Placement in Urban Areas: A Data-Driven Approach"
+  ],
+  [
+    "10.69888/ftsess.2024.000245",
+    "optimization_strategies_2024",
+    "Optimization Strategies for Efficient Charging Station Deployment in Urban and Rural Networks"
+  ],
+  [
+    "10.3390/wevj16080445",
+    "a_spatially_2025",
+    "A Spatially Aware Machine Learning Method for Locating Electric Vehicle Charging Stations"
+  ],
+  [
+    "10.1016/j.nexres.2024.100123",
+    "analyzing_locational_2025",
+    "Analyzing locational inequalities in the placement of electric vehicle charging stations using machine learning: A case study in Glasgow"
+  ],
+  [
+    "10.1111/itor.13611",
+    "multiobjective_model_2025",
+    "Multiobjective model to optimize charging station location for the decarbonization process in Mexico"
+  ],
+  [
+    "10.1038/s41598-025-12079-3",
+    "data-driven_ev_2025",
+    "Data-driven EV charging infrastructure with uncertainty based on a spatial–temporal flow-driven (STFD) models considering batteries"
+  ],
+  [
+    "10.1109/iccea62105.2024.10603658",
+    "optimizing_ev_2024",
+    "Optimizing EV Charging Station Placement in New South Wales: A Soft Actor-Critic Reinforcement Learning Approach"
+  ],
+  [
+    "10.1109/aeees54426.2022.9759746",
+    "integrated_electric_2022",
+    "Integrated Electric Vehicle Charging Path Planning Considering Traffic Network and Power Grid"
+  ],
+  [
+    "10.65109/uaun3752",
+    "siting_and_2021",
+    "Siting and Sizing of Charging Infrastructure for Shared Autonomous Electric Fleets"
+  ],
+  [
+    "10.1145/3565577",
+    "spap_simultaneous_2023",
+    "SPAP: Simultaneous Demand Prediction and Planning for Electric Vehicle Chargers in a New City"
+  ],
+  [
+    "10.1109/pedes49360.2020.9379513",
+    "optimal_siting_2020",
+    "Optimal Siting of Electric Vehicle Battery Swapping Stations with Centralized Charging"
+  ],
+  [
+    "10.1016/j.apenergy.2025.126066",
+    "coordinated_management_2025",
+    "Coordinated Management of Mobile Charging Stations and Community Energy Storage for Electric Vehicle Charging"
+  ],
+  [
+    "10.1109/tits.2025.3553513",
+    "stochastic_behavior_2025",
+    "Stochastic Behavior Modeling and Optimal Bidirectional Charging Station Deployment in EV Energy Network"
+  ],
+  [
+    "10.3390/ijgi14100373",
+    "optimization_of_2025",
+    "Optimization of Electric Vehicle Charging Station Location Distribution Based on Activity–Travel Patterns"
+  ],
+  [
+    "10.2495/ut200021",
+    "optimizing_the_2020",
+    "OPTIMIZING THE LOCATION OF URBAN CHARGING STATIONS FOR ELECTRIC VEHICLES: CASE STUDY OF THE CITY OF TYUMEN, RUSSIAN FEDERATION"
+  ],
+  [
+    "10.2139/ssrn.4537082",
+    "allocate_electric_0",
+    "Allocate Electric Vehicles’ Public Charging Stations with Charging Demand Uncertainty"
+  ],
+  [
+    "10.20944/preprints202508.1268.v1",
+    "electric_vehicle_0",
+    "Electric Vehicle Charging Infrastructure Optimization Incorporating Demand Forecasting and Renewable Energy Application"
+  ],
+  [
+    "10.3390/app15094703",
+    "electric_vehicle_2025",
+    "Electric Vehicle Routing with Time Windows and Charging Stations from the Perspective of Customer Satisfaction"
+  ],
+  [
+    "10.1109/icicacs60521.2024.10498237",
+    "optimal_electric_2024",
+    "Optimal Electric Vehicle Charging Station Placement: A Multi-Criteria Decision-Making Approach for Site Selection"
+  ],
+  [
+    "10.1016/j.apenergy.2025.126911",
+    "a_two-stage_2025",
+    "A two-stage optimization framework for EV charging station planning considering investment cost and service satisfaction"
+  ],
+  [
+    "10.1109/icredg66184.2025.10966078",
+    "predicting_optimal_2025",
+    "Predicting Optimal Placement of Electric Vehicle Charge Stations Using Machine Learning: A Case Study in Glasgow, UK"
+  ],
+  [
+    "10.1109/access.2025.3588880",
+    "fairness-oriented_charging_2025",
+    "Fairness-Oriented Charging Station Location Optimization Driven by Deep Reinforcement Learning"
+  ],
+  [
+    "10.1016/j.apenergy.2025.126649",
+    "optimizing_electric_2025",
+    "Optimizing electric bus charging station locations: An integrated land-use and transportation approach"
+  ],
+  [
+    "10.1051/e3sconf/202342401009",
+    "layout_and_2023",
+    "Layout and optimization of charging piles for new energy electric vehicles – A study on Xi'an urban area"
+  ],
+  [
+    "10.1109/cera59325.2023.10455718",
+    "planning_of_2023",
+    "Planning of Electric Vehicle Charging Stations for Four Wheeled Passenger Vehicles in Guwahati: An Approach through Genetic Algorithm"
+  ],
+  [
+    "10.1109/cdc49753.2023.10383407",
+    "optimal_location_2023",
+    "Optimal Location of EVs Public Charging Stations Based on a Macroscopic Urban Electromobility Model"
+  ],
+  [
+    "10.1109/icacta58201.2023.10392556",
+    "optimal_planning_2023",
+    "Optimal Planning of Battery Swapping and Charging Stations for the Urban Cities"
+  ],
+  [
+    "10.53469/wjimt.2024.07(06).12",
+    "electric_vehicle_2024",
+    "Electric Vehicle Charging Infrastructure Optimization Incorporating Demand Forecasting and Renewable Energy Application"
+  ],
+  [
+    "10.3390/wevj15050181",
+    "charging_station_2024",
+    "Charging Station Site Selection Optimization for Electric Logistics Vehicles, Taking into Account Time-Window and Load Constraints"
+  ],
+  [
+    "10.1073/pnas.2514184122",
+    "charge-map_an_2025",
+    "CHARGE-MAP: An integrated framework to study the multicriteria EV charging infrastructure expansion problem"
+  ],
+  [
+    "10.1109/tia.2025.3600209",
+    "joint_planning_2026",
+    "Joint Planning of Distribution Systems and EV Charging Infrastructure Using a GIS-Based Spatial Analysis Framework"
+  ],
+  [
+    "10.1051/e3sconf/202670602004",
+    "strategic_planning_2026",
+    "Strategic Planning of Public Electric Vehicle Charging Stations Using AHP and GIS to Support Sustainable Mobility in West Java, Indonesia"
+  ],
+  [
+    "10.3390/en15103788",
+    "a_framework_2022",
+    "A Framework to Analyze the Requirements of a Multiport Megawatt-Level Charging Station for Heavy-Duty Electric Vehicles"
+  ],
+  [
+    "10.1109/iv51971.2022.9827442",
+    "model-based_framework_2022",
+    "Model-Based Framework to Optimize Charger Station Deployment for Battery Electric Vehicles"
+  ],
+  [
+    "10.56578/mits030304",
+    "optimizing_electric_2024",
+    "Optimizing Electric Vehicle Charging Infrastructure: A Site Selection Strategy for Ludhiana, India"
+  ],
+  [
+    "10.1109/tsg.2021.3053026",
+    "optimal_pricing_2021",
+    "Optimal Pricing of Public Electric Vehicle Charging Stations Considering Operations of Coupled Transportation and Power Systems"
+  ],
+  [
+    "10.1109/tsg.2024.3446859",
+    "electric_vehicle_2025",
+    "Electric Vehicle Charging Planning: A Complex Systems Perspective"
+  ],
+  [
+    "10.1109/tte.2023.3284783",
+    "a_decentralized_2024",
+    "A Decentralized Bi-Level Decomposition Method for Optimal Operation of Electric Vehicles in Coupled Urban Transportation and Power Distribution Systems"
+  ],
+  [
+    "10.1016/j.trc.2023.104172",
+    "fleet_sizing_2023",
+    "Fleet sizing and charging infrastructure design for electric autonomous mobility-on-demand systems with endogenous congestion and limited link space"
+  ],
+  [
+    "10.1016/j.energy.2023.126613",
+    "optimal_management_2023",
+    "Optimal management of parking lots as a big data for electric vehicles using internet of things and Long–Short term Memory"
+  ],
+  [
+    "10.1016/j.energy.2022.126073",
+    "planning_of_2023",
+    "Planning of static and dynamic charging facilities for electric vehicles in electrified transportation networks"
+  ],
+  [
+    "10.1186/s42162-024-00428-x",
+    "multiobjective_optimization_2024",
+    "Multiobjective optimization for sizing and placing electric vehicle charging stations considering comprehensive uncertainties"
+  ],
+  [
+    "10.1016/j.tranpol.2024.06.017",
+    "charging_infrastructure_2024",
+    "Charging infrastructure assessment for shared autonomous electric vehicles in 374 small and medium-sized urban areas: An agent-based simulation approach"
+  ],
+  [
+    "10.1109/tte.2024.3362848",
+    "risk-aware_hierarchical_2024",
+    "Risk-Aware Hierarchical Coordination of Peer-to-Peer Energy Trading for Electric Vehicle Charging Stations in Constrained Power Distribution and Urban Transportation Networks Under Uncertainties"
+  ],
+  [
+    "10.3390/su151813634",
+    "optimizing_electric_2023",
+    "Optimizing Electric Vehicle Charging Infrastructure on Highways: A Multi-Agent-Based Planning Approach"
+  ],
+  [
+    "10.1016/j.eswa.2025.127331",
+    "explainable_and_2025",
+    "Explainable and context-aware Graph Neural Networks for dynamic electric vehicle route optimization to optimal charging station"
+  ],
+  [
+    "10.3390/en15207774",
+    "predictive_energy_2022",
+    "Predictive Energy Management Strategy for Range-Extended Electric Vehicles Based on ITS Information and Start–Stop Optimization with Vehicle Velocity Forecast"
+  ],
+  [
+    "10.1186/s13677-023-00547-y",
+    "smart_and_2023",
+    "Smart and efficient EV charging navigation scheme in vehicular edge computing networks"
+  ],
+  [
+    "10.3390/wevj16010005",
+    "optimizing_energy_2024",
+    "Optimizing Energy Supply for Full Electric Vehicles in Smart Cities: A Comprehensive Mobility Network Model"
+  ],
+  [
+    "10.61194/sijl.v2i3.626",
+    "optimizing_urban_2024",
+    "Optimizing Urban Logistics Through Electric Vehicle Integration"
+  ],
+  [
+    "10.1016/j.esd.2025.101784",
+    "a_comparative_2025",
+    "A comparative analysis of in-motion and overnight charging infrastructure design for e-buses"
+  ],
+  [
+    "10.1155/2023/6506169",
+    "a_battery_2023",
+    "A Battery Electric Vehicle Transportation Network Design Model with Bounded Rational Travelers"
+  ],
+  [
+    "10.3233/idt-240298",
+    "energy_management_2024",
+    "Energy management optimization of hybrid electric vehicles based on deep learning model predictive control"
+  ],
+  [
+    "10.1016/j.segan.2025.101975",
+    "an_electric_2025",
+    "An electric vehicle charging demand prediction approach based on a Graph-based Spatio-temporal Attention Network"
+  ],
+  [
+    "10.1145/3638529.3653997",
+    "the_electric_2024",
+    "The Electric Vehicle Problem with Road Junctions and Road Types: An Ant Colony Optimization Approach"
+  ],
+  [
+    "10.1177/0958305x221117518",
+    "retracted_charging_2023",
+    "RETRACTED: Charging infrastructure facilitate a large-scale Introduction of electric vehicle in urban areas using hybrid technique: A RBFNN-SPOA approach"
+  ],
+  [
+    "10.1016/j.ecmx.2025.101256",
+    "cost-benefit_and_2025",
+    "Cost-benefit and net zero impact analysis of PV-grid-battery systems for EV charging stations in Bangladesh"
   ]
 ]

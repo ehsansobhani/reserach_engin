@@ -1,0 +1,42 @@
+# Extraction: Strategic Planning of Public Electric Vehicle Charging Stations Using AHP and GIS to Support Sustainable Mobility in West Java, Indonesia
+
+**Key:** strategic_planning_2026
+**Authors:** Amelia Nur Fariza, Ilham Kurniawan, Rizki Amalia Pratiwi, Aina Nindiani, Annisa Indah Pratiwi
+**Year:** 2026
+**Category:** spatial_optimization
+
+## Problem Scope
+
+- **Geographic scope:** regional
+- **Spatial unit:** not specified
+
+## Methodology
+
+- **Approach:** optimization
+- **Data source:** not specified
+- **Multi-objective:** False
+
+## Thematic Flags
+
+- **Equity measured:** False
+- **Utilization measured:** True
+- **Phased approach:** False
+- **Zoning considered:** True
+- **Meso-level:** False
+- **Micro-level:** False
+
+## Gap Mapping
+
+- **Gap 1 (Misaligned spatial units):** True
+- **Gap 2 (Zoning impact analysis):** True
+- **Gap 3 (Equity-utilization joint):** False
+- **Gap 4 (Phased rollout):** False
+- **Gap 5 (Meso-micro bridge):** False
+
+## Limitations Detected
+
+None detected in abstract.
+
+## Abstract
+
+<jats:p>The transition toward sustainable and low-emission transportation in Indonesia has accelerated the adoption of electric vehicles (EVs), especially in densely populated provinces such as West Java. Despite this progress, the distribution and capacity of Public EV Charging Stations (EVCS) remain uneven, creating significant gaps between vehicle growth and infrastructure readiness. This spatial imbalance threatens to slow down EV adoption and limit the effectiveness of national decarbonization targets. Addressing this challenge requires an integrated, evidence-based planning approach that combines spatial analysis and multi-criteria decision methods. This study aims to determine strategic priority zones for the development of EVCS infrastructure across West Java using a Geographic Information System (GIS) framework integrated with the Analytical Hierarchy Process (AHP) and Weighted Overlay methods. Five spatial criteria were used to evaluate site suitability, including proximity to city centers, main roads, industrial zones, fuel stations, and PLN (state electricity company) networks. The analysis results show that Bekasi City, eastern Bekasi Regency, Depok City, and central Bogor Regency represent areas with very high potential for EVCS expansion due to their dense population, strong industrial base, and robust electrical network. The resulting spatial model produces a data-driven priority zoning map that supports evidence-based policy formulation and regional planning. This research provides strategic insights for policymakers and energy planners to enhance infrastructure accessibility, optimize resource allocation, and accelerate the electric mobility transition in West Java.</jats:p>

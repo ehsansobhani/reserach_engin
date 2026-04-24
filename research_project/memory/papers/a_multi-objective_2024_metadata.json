@@ -1,0 +1,14 @@
+{
+  "title": "A multi-objective site selection of electric vehicle charging station based on NSGA-II",
+  "authors": [
+    "Hong Zhang",
+    "Feifan Shi"
+  ],
+  "year": 2024,
+  "venue": "International Journal of Industrial Engineering Computations",
+  "doi": "10.5267/j.ijiec.2023.9.009",
+  "arxiv_id": "",
+  "abstract": "<jats:p>The planning of charging infrastructure is crucial to developing electric vehicles. Planning for charging stations requires considering several variables, including building costs, charging demand, and coverage levels. It might be advantageous to use a multi-objective optimization method based on the NSGA-II. We need to address the current problems in choosing the location of electric vehicle charging stations. Firstly, urban land use is divided into five functional areas, and the TF-IDF algorithm is applied to the division of functional areas. A combined clustering algorithm is proposed to cluster POIs in functional areas into several clusters and determine the cluster centers as charging demand points. We Analyze charging practices and travel patterns of electric car users, fit the charging likelihood of various functional regions, and calculate the charging demand of each charging demand point in the study area. Introduce the NSGA-II algorithm and consider the charging station's progressive coverage to fit the actual area covered by the charging station.Taking the maximization of system benefits and the maximization of the minimum coverage level as the optimization objectives to carry out multi-objective optimization. Finally, we take the charging station planning in the urban area of Hohhot as an example and provide different site selection planning schemes. The planning schemes for different numbers of charging stations are analyzed to obtain a charging station planning scheme that takes into account both objectives.</jats:p>",
+  "url": "https://doi.org/10.5267/j.ijiec.2023.9.009",
+  "key": "a_multi-objective_2024"
+}

@@ -1,14 +1,14 @@
 # Dissertation Research Gaps — Detailed Analysis
 
-**Total included papers:** 111
-**Generated from:** systematic extraction of 111 papers.
+**Total included papers:** 200
+**Generated from:** systematic extraction of 200 papers.
 
 ---
 ## Gap 1 — Misaligned Spatial Units
 
 **Definition:** Administrative zoning boundaries poorly represent actual mobility corridor patterns, creating spatial misalignment between infrastructure supply and travel demand.
 
-**Papers addressing this gap:** 79 of 111 (71%)
+**Papers addressing this gap:** 133 of 200 (66%)
 **Coverage level:** High
 
 ### What Remains Unaddressed
@@ -23,64 +23,117 @@
 | Key | Authors | Year | Approach | Scope | Equity | Util. | Phased |
 |-----|---------|------|----------|-------|--------|-------|--------|
 | `a_two-stage_2026` | Najafzad et al. | 2026 | optimization | city | Y | Y | Y |
+| `joint_planning_2026` | Mejia et al. | 2026 | optimization | city | N | N | N |
 | `pricing_electric_2026` | Jiang et al. | 2026 | optimization | city | N | Y | N |
 | `regional_transportation_2026` | Babur et al. | 2026 | simulation | regional | Y | Y | Y |
 | `simultaneous_optimization_2026` | Bertucci et al. | 2026 | optimization | city | N | N | N |
+| `strategic_planning_2026` | Fariza et al. | 2026 | optimization | regional | N | Y | N |
 | `a_2025` | Do et al. | 2025 | mixed | city | N | Y | N |
+| `a_density-based_2025` | Ameer et al. | 2025 | optimization | city | N | N | N |
 | `a_joint_2025` | Yu et al. | 2025 | mixed | city | N | Y | Y |
 | `a_multi-modal_2025` | Karakuş et al. | 2025 | empirical | city | N | N | Y |
+| `a_spatially_2025` | Huang et al. | 2025 | mixed | city | N | Y | N |
+| `a_two-stage_2025` | Meng et al. | 2025 | optimization | city | N | N | N |
 | `a_united_2025` | Kinchen et al. | 2025 | mixed | city | Y | N | N |
 | `an_exact_2025` | Nankali et al. | 2025 | mixed | city | N | N | N |
+| `analyzing_locational_2025` | Mousaei | 2025 | empirical | city | N | N | N |
 | `causal_spillover_2025` | Silva et al. | 2025 | empirical | city | N | N | Y |
+| `charge-map_an_2025` | Islam et al. | 2025 | mixed | city | N | Y | Y |
 | `competitive_ev_2025` | Nguyen et al. | 2025 | mixed | city | N | N | N |
+| `data-driven_ev_2025` | Alharbi et al. | 2025 | optimization | city | N | N | Y |
 | `data-driven_optimization_2025` | Junker et al. | 2025 | mixed | site | N | Y | N |
-| `electric_vehicle_2025` | Chen et al. | 2025 | optimization | city | Y | N | N |
+| `electric_vehicle_2025` | Zhao et al. | 2025 | optimization | city | Y | N | N |
+| `explainable_and_2025` | Kapoor | 2025 | optimization | city | N | N | N |
+| `fairness-oriented_charging_2025` | Yuan et al. | 2025 | optimization | city | Y | N | N |
+| `hybrid_optimization_2025` | Ameer et al. | 2025 | optimization | city | N | N | N |
 | `joint_optimization_2025` | Okada et al. | 2025 | optimization | city | N | Y | Y |
 | `large_language_2025` | Zheng et al. | 2025 | mixed | city | N | Y | Y |
+| `location_and_2025` | Choi et al. | 2025 | optimization | city | N | Y | N |
+| `multiobjective_model_2025` | Ruiz‐Barajas et al. | 2025 | mixed | city | N | N | N |
 | `optimal_mixed_2025` | Nakao et al. | 2025 | mixed | city | N | Y | N |
-| `optimizing_electric_2025` | Nguyen et al. | 2025 | mixed | city | N | Y | N |
+| `optimization_of_2025` | Zhang et al. | 2025 | optimization | city | N | Y | N |
+| `optimizing_electric_2025` | Zhong et al. | 2025 | mixed | city | N | Y | N |
 | `optimizing_urban_2025` | Ai et al. | 2025 | optimization | city | N | Y | N |
 | `planning_future_2025` | Yuan et al. | 2025 | empirical | regional | N | Y | Y |
+| `predicting_optimal_2025` | Mousaei et al. | 2025 | empirical | city | N | N | N |
 | `reinforcement_learning_2025` | Zhu et al. | 2025 | empirical | city | N | Y | N |
 | `robust_charging_2025` | Xia et al. | 2025 | optimization | corridor | N | Y | N |
 | `synergistic_development_2025` | Pimpale | 2025 | optimization | city | N | Y | N |
 | `trajectory-integrated_accessibility_2025` | Ju et al. | 2025 | optimization | neighborhood | N | N | N |
+| `a_data-driven_2024` | Zhang et al. | 2024 | mixed | city | N | N | Y |
+| `a_multi-objective_2024` | Zhang et al. | 2024 | optimization | site | N | Y | N |
+| `a_particle_2024` | Aljaidi et al. | 2024 | optimization | city | N | N | N |
 | `a_quantum_2024` | Radvand et al. | 2024 | optimization | city | N | N | N |
+| `a_two-layer_2024` | Wu et al. | 2024 | optimization | city | N | Y | N |
+| `advancing_urban_2024` | Zhang et al. | 2024 | optimization | city | N | N | N |
 | `battery_swapping_2024` | Liu et al. | 2024 | mixed | neighborhood | N | Y | Y |
 | `beyond_profit_2024` | Wang et al. | 2024 | mixed | city | N | Y | N |
-| `electric_vehicle_2024` | Truc et al. | 2024 | optimization | city | N | Y | N |
+| `charging_station_2024` | Cai et al. | 2024 | mixed | site | N | N | N |
+| `electric_vehicle_2024` | Li et al. | 2024 | optimization | city | N | Y | N |
+| `energy_management_2024` | Cao et al. | 2024 | mixed | city | N | N | N |
 | `integrating_en_2024` | Mehditabrizi et al. | 2024 | optimization | city | N | N | N |
+| `multiobjective_optimization_2024` | Mohammed et al. | 2024 | optimization | city | N | N | N |
+| `optimal_electric_2024` | Kumar et al. | 2024 | optimization | site | N | N | N |
 | `optimal_ev_2024` | Pierrou et al. | 2024 | optimization | city | N | Y | N |
-| `optimal_planning_2024` | Wang et al. | 2024 | empirical | city | N | N | N |
+| `optimal_evcs_2024` | He et al. | 2024 | optimization | city | N | Y | Y |
+| `optimal_planning_2024` | Heo et al. | 2024 | empirical | city | N | N | N |
+| `optimization_strategies_2024` | Panyaram | 2024 | optimization | city | N | Y | Y |
+| `optimizing_ev_2024` | Huang et al. | 2024 | optimization | city | N | N | N |
+| `optimizing_urban_2024` | Munawar | 2024 | mixed | regional | N | N | N |
 | `sequential_charging_2024` | Shen et al. | 2024 | optimization | city | N | Y | Y |
+| `sustainable_planning_2024` | Seilabi et al. | 2024 | optimization | city | N | Y | Y |
+| `the_electric_2024` | Akbay et al. | 2024 | optimization | city | N | N | N |
+| `towards_sustainable_2024` | Boonprong et al. | 2024 | empirical | city | Y | Y | N |
 | `towards_using_2024` | Miltner et al. | 2024 | mixed | city | N | Y | Y |
+| `urban_electric_2024` | Alhussan et al. | 2024 | optimization | city | N | N | N |
+| `a_battery_2023` | Xin et al. | 2023 | optimization | city | N | N | N |
 | `a_data-driven_2023` | Al-Dahabreh et al. | 2023 | mixed | city | N | Y | N |
 | `a_robust_2023` | Arief et al. | 2023 | mixed | city | Y | Y | N |
+| `an_agent-based_2023` | Yi et al. | 2023 | mixed | city | N | Y | N |
 | `electric_vehicle_2023` | Varma et al. | 2023 | simulation | city | N | Y | N |
+| `fast-charging_station_2023` | Qiao et al. | 2023 | optimization | city | N | N | N |
 | `incorporating_time-dependent_2023` | Filippi et al. | 2023 | optimization | city | N | Y | Y |
+| `initial_location_2023` | Tambunan et al. | 2023 | optimization | city | N | N | N |
+| `layout_and_2023` | Jiang | 2023 | optimization | city | N | Y | N |
 | `maximum_flow-based_2023` | Parent et al. | 2023 | mixed | city | N | Y | Y |
 | `on_the_2023` | Tiu et al. | 2023 | optimization | city | N | Y | Y |
+| `optimal_location_2023` | Mourgues et al. | 2023 | optimization | city | N | N | N |
+| `optimal_placement_2023` | Liu et al. | 2023 | optimization | city | Y | Y | N |
+| `optimizing_electric_2023` | Wu et al. | 2023 | mixed | city | N | N | N |
+| `placement_of_2023` | Pal et al. | 2023 | optimization | city | N | N | N |
+| `spap_simultaneous_2023` | Wang et al. | 2023 | mixed | city | N | Y | Y |
 | `spatial_arbitrage_2023` | Mohammadian et al. | 2023 | mixed | city | N | N | Y |
+| `a_framework_2022` | Mishra et al. | 2022 | mixed | corridor | N | Y | N |
+| `a_novel_2022` | Hung et al. | 2022 | optimization | city | N | N | N |
 | `designing_an_2022` | Amilia et al. | 2022 | mixed | city | Y | Y | Y |
 | `development_of_2022` | Jin et al. | 2022 | optimization | city | N | Y | N |
 | `distributed_coordination_2022` | Yan et al. | 2022 | optimization | city | N | N | N |
 | `ev_charging_2022` | Mousavi et al. | 2022 | mixed | city | N | N | N |
+| `optimal_placement_2022` | Srinivas et al. | 2022 | optimization | city | N | N | N |
 | `optimising_electric_2022` | Lamontagne et al. | 2022 | mixed | city | N | N | N |
 | `performance_analysis_2022` | Qin et al. | 2022 | optimization | city | N | Y | N |
+| `planning_of_2022` | Bian et al. | 2022 | optimization | city | N | N | Y |
+| `predictive_energy_2022` | Lin et al. | 2022 | mixed | city | N | N | N |
 | `reinforcement_learning-based_2022` | Wahl et al. | 2022 | empirical | city | N | Y | N |
 | `research_on_2022` | Wang et al. | 2022 | mixed | city | N | Y | N |
 | `web_mining_2022` | Hummler et al. | 2022 | empirical | city | N | Y | N |
+| `a_gis-based_2021` | Zafar et al. | 2021 | optimization | city | N | N | N |
 | `citizen_centric_2021` | Cintrano et al. | 2021 | optimization | neighborhood | N | N | N |
 | `deep_spatio-temporal_2021` | Hüttel et al. | 2021 | optimization | city | N | Y | Y |
 | `energy-optimal_design_2021` | Hurk et al. | 2021 | mixed | city | N | N | N |
 | `hierarchical_optimization_2021` | Mirheli et al. | 2021 | optimization | city | N | Y | Y |
 | `joint_optimization_2021` | Luke et al. | 2021 | optimization | city | N | Y | N |
 | `optimal_placement_2021` | Padmanabhan et al. | 2021 | optimization | city | N | Y | N |
+| `optimal_planning_2021` | Hou et al. | 2021 | mixed | city | N | Y | N |
 | `reducing_waiting_2021` | Schoenberg et al. | 2021 | simulation | city | N | N | N |
+| `siting_and_2021` | Ahadi et al. | 2021 | mixed | city | N | Y | N |
 | `strategic_competition_2021` | Bayani et al. | 2021 | optimization | city | N | N | N |
+| `a_method_2020` | Rizopoulos et al. | 2020 | optimization | city | N | N | Y |
 | `double-layer_game_2020` | Wang et al. | 2020 | mixed | city | N | N | N |
 | `dynamic_modeling_2020` | Yang et al. | 2020 | simulation | regional | N | Y | N |
+| `location_of_2020` | Brandstätter et al. | 2020 | mixed | city | N | Y | Y |
 | `optimal_fast_2020` | Ma et al. | 2020 | optimization | city | N | N | N |
+| `optimizing_the_2020` | GORBUNOVA et al. | 2020 | empirical | city | N | N | N |
 | `resource_aware_2020` | Santoyo et al. | 2020 | mixed | city | N | Y | N |
 | `a_method_2019` | Ouyang et al. | 2019 | mixed | city | N | Y | Y |
 | `optimal_decision_2019` | Upadhaya et al. | 2019 | optimization | city | N | Y | N |
@@ -101,13 +154,14 @@
 | `optimizing_the_2015` | Vazifeh et al. | 2015 | optimization | city | N | Y | Y |
 | `electric_vehicle_2013` | Lam et al. | 2013 | simulation | city | N | N | N |
 | `socially_optimal_2013` | Yudovina et al. | 2013 | simulation | city | N | N | Y |
+| `electric_vehicle_0` | Li et al. | 0 | optimization | city | N | Y | Y |
 
 ---
 ## Gap 2 — Lack of Zoning Impact Analysis
 
 **Definition:** Systematic comparison of alternative zoning schemas — ordinance types, land-use categories, regulatory frameworks — for charging infrastructure siting is absent.
 
-**Papers addressing this gap:** 2 of 111 (2%)
+**Papers addressing this gap:** 5 of 200 (2%)
 **Coverage level:** Low
 
 ### What Remains Unaddressed
@@ -121,7 +175,10 @@
 
 | Key | Authors | Year | Approach | Scope | Equity | Util. | Phased |
 |-----|---------|------|----------|-------|--------|-------|--------|
+| `strategic_planning_2026` | Fariza et al. | 2026 | optimization | regional | N | Y | N |
 | `a_multi-modal_2025` | Karakuş et al. | 2025 | empirical | city | N | N | Y |
+| `a_multi-objective_2024` | Zhang et al. | 2024 | optimization | site | N | Y | N |
+| `towards_sustainable_2024` | Boonprong et al. | 2024 | empirical | city | Y | Y | N |
 | `on-demand_valet_2021` | Lai et al. | 2021 | optimization | city | N | Y | N |
 
 ---
@@ -129,7 +186,7 @@
 
 **Definition:** Most studies optimize equity of access or infrastructure utilization independently; joint multi-objective treatment is rare.
 
-**Papers addressing this gap:** 10 of 111 (9%)
+**Papers addressing this gap:** 14 of 200 (7%)
 **Coverage level:** Medium
 
 ### What Remains Unaddressed
@@ -146,9 +203,13 @@
 | `a_two-stage_2026` | Najafzad et al. | 2026 | optimization | city | Y | Y | Y |
 | `regional_transportation_2026` | Babur et al. | 2026 | simulation | regional | Y | Y | Y |
 | `a_united_2025` | Kinchen et al. | 2025 | mixed | city | Y | N | N |
-| `electric_vehicle_2025` | Chen et al. | 2025 | optimization | city | Y | N | N |
+| `an_equity-based_2025` | Jha et al. | 2025 | optimization | city | Y | N | N |
+| `electric_vehicle_2025` | Zhao et al. | 2025 | optimization | city | Y | N | N |
+| `fairness-oriented_charging_2025` | Yuan et al. | 2025 | optimization | city | Y | N | N |
 | `crowdfunding_for_2024` | Erfani et al. | 2024 | optimization | neighborhood | Y | N | N |
+| `towards_sustainable_2024` | Boonprong et al. | 2024 | empirical | city | Y | Y | N |
 | `a_robust_2023` | Arief et al. | 2023 | mixed | city | Y | Y | N |
+| `optimal_placement_2023` | Liu et al. | 2023 | optimization | city | Y | Y | N |
 | `designing_an_2022` | Amilia et al. | 2022 | mixed | city | Y | Y | Y |
 | `inequitable_access_2021` | Khan et al. | 2021 | optimization | neighborhood | Y | N | N |
 | `electrical_vehicle_2017` | Wang et al. | 2017 | mixed | city | Y | Y | N |
@@ -159,7 +220,7 @@
 
 **Definition:** The overwhelming majority of models optimize a single planning period. Phased, budget-constrained, adaptive rollout sequencing is underrepresented.
 
-**Papers addressing this gap:** 29 of 111 (26%)
+**Papers addressing this gap:** 44 of 200 (22%)
 **Coverage level:** Medium
 
 ### What Remains Unaddressed
@@ -177,12 +238,20 @@
 | `regional_transportation_2026` | Babur et al. | 2026 | simulation | regional | Y | Y | Y |
 | `a_joint_2025` | Yu et al. | 2025 | mixed | city | N | Y | Y |
 | `a_multi-modal_2025` | Karakuş et al. | 2025 | empirical | city | N | N | Y |
+| `an_electric_2025` | Jiang et al. | 2025 | optimization | city | N | Y | Y |
 | `causal_spillover_2025` | Silva et al. | 2025 | empirical | city | N | N | Y |
+| `charge-map_an_2025` | Islam et al. | 2025 | mixed | city | N | Y | Y |
+| `data-driven_ev_2025` | Alharbi et al. | 2025 | optimization | city | N | N | Y |
 | `joint_optimization_2025` | Okada et al. | 2025 | optimization | city | N | Y | Y |
 | `large_language_2025` | Zheng et al. | 2025 | mixed | city | N | Y | Y |
 | `planning_future_2025` | Yuan et al. | 2025 | empirical | regional | N | Y | Y |
+| `stochastic_behavior_2025` | Tang et al. | 2025 | optimization | city | N | N | Y |
+| `a_data-driven_2024` | Zhang et al. | 2024 | mixed | city | N | N | Y |
 | `battery_swapping_2024` | Liu et al. | 2024 | mixed | neighborhood | N | Y | Y |
+| `optimal_evcs_2024` | He et al. | 2024 | optimization | city | N | Y | Y |
+| `optimization_strategies_2024` | Panyaram | 2024 | optimization | city | N | Y | Y |
 | `sequential_charging_2024` | Shen et al. | 2024 | optimization | city | N | Y | Y |
+| `sustainable_planning_2024` | Seilabi et al. | 2024 | optimization | city | N | Y | Y |
 | `towards_using_2024` | Miltner et al. | 2024 | mixed | city | N | Y | Y |
 | `definition_of_2023` | Giudice et al. | 2023 | simulation | city | N | N | Y |
 | `forecasting_electric_2023` | Amara-Ouali et al. | 2023 | empirical | city | N | N | Y |
@@ -190,26 +259,33 @@
 | `m-bev_masked_2023` | Chen et al. | 2023 | optimization | city | N | Y | Y |
 | `maximum_flow-based_2023` | Parent et al. | 2023 | mixed | city | N | Y | Y |
 | `on_the_2023` | Tiu et al. | 2023 | optimization | city | N | Y | Y |
+| `spap_simultaneous_2023` | Wang et al. | 2023 | mixed | city | N | Y | Y |
 | `spatial_arbitrage_2023` | Mohammadian et al. | 2023 | mixed | city | N | N | Y |
 | `designing_an_2022` | Amilia et al. | 2022 | mixed | city | Y | Y | Y |
+| `model-based_framework_2022` | Eagon et al. | 2022 | optimization | city | N | N | Y |
+| `planning_of_2022` | Bian et al. | 2022 | optimization | city | N | N | Y |
 | `deep_information_2021` | Sao et al. | 2021 | empirical | city | N | N | Y |
 | `deep_spatio-temporal_2021` | Hüttel et al. | 2021 | optimization | city | N | Y | Y |
 | `hierarchical_optimization_2021` | Mirheli et al. | 2021 | optimization | city | N | Y | Y |
+| `a_method_2020` | Rizopoulos et al. | 2020 | optimization | city | N | N | Y |
 | `electric_vehicle_2020` | Guillet et al. | 2020 | optimization | city | N | N | Y |
+| `increasing_electric_2020` | Anjos et al. | 2020 | optimization | city | N | N | Y |
+| `location_of_2020` | Brandstätter et al. | 2020 | mixed | city | N | Y | Y |
 | `a_method_2019` | Ouyang et al. | 2019 | mixed | city | N | Y | Y |
 | `predicting_popularity_2019` | Straka et al. | 2019 | optimization | city | N | Y | Y |
 | `demand_prediction_2016` | Gopalakrishnan et al. | 2016 | mixed | city | N | Y | Y |
 | `electric_vehicles_2015` | Lanna et al. | 2015 | optimization | city | N | N | Y |
 | `optimizing_the_2015` | Vazifeh et al. | 2015 | optimization | city | N | Y | Y |
 | `socially_optimal_2013` | Yudovina et al. | 2013 | simulation | city | N | N | Y |
+| `electric_vehicle_0` | Li et al. | 0 | optimization | city | N | Y | Y |
 
 ---
 ## Gap 5 — Missing Meso-Micro Integration
 
 **Definition:** No integrated framework bridges meso-scale city-level rollout plans to micro-scale site-level implementation specifications.
 
-**Papers addressing this gap:** 8 of 111 (7%)
-**Coverage level:** Low
+**Papers addressing this gap:** 11 of 200 (6%)
+**Coverage level:** Medium
 
 ### What Remains Unaddressed
 
@@ -224,9 +300,12 @@
 |-----|---------|------|----------|-------|--------|-------|--------|
 | `a_2025` | Do et al. | 2025 | mixed | city | N | Y | N |
 | `optimizing_urban_2025` | Ai et al. | 2025 | optimization | city | N | Y | N |
+| `a_data-driven_2024` | Zhang et al. | 2024 | mixed | city | N | N | Y |
 | `crowdfunding_for_2024` | Erfani et al. | 2024 | optimization | neighborhood | Y | N | N |
+| `optimizing_urban_2024` | Munawar | 2024 | mixed | regional | N | N | N |
 | `electric_vehicle_2023` | Varma et al. | 2023 | simulation | city | N | Y | N |
 | `development_of_2022` | Jin et al. | 2022 | optimization | city | N | Y | N |
+| `predictive_energy_2022` | Lin et al. | 2022 | mixed | city | N | N | N |
 | `securing_the_2021` | Metere et al. | 2021 | optimization | city | N | Y | N |
 | `optimal_decision_2019` | Upadhaya et al. | 2019 | optimization | city | N | Y | N |
 | `smart_vehicle_2015` | Zuccaro et al. | 2015 | optimization | city | N | Y | N |
@@ -236,50 +315,50 @@
 
 | Gap | Label | N Papers | % | Level | Key Missing Dimension |
 |-----|-------|----------|---|-------|-----------------------|
-| Gap 1 | Misaligned Spatial Units | 79 | 71% | High | Mobility-corridor spatial unit construction (vs. administrative TAZ) |
-| Gap 2 | Lack of Zoning Impact Analysis | 2 | 2% | Low | Comparative analysis of ≥2 distinct municipal zoning schemas |
-| Gap 3 | Equity and Utilization Separation | 10 | 9% | Medium | Joint equity + utilization in a single objective function |
-| Gap 4 | Static Optimization Dominance | 29 | 26% | Medium | Multi-stage / phased location model with budget constraint per phase |
-| Gap 5 | Missing Meso-Micro Integration | 8 | 7% | Low | Explicit meso-to-micro translation method defined |
+| Gap 1 | Misaligned Spatial Units | 133 | 66% | High | Mobility-corridor spatial unit construction (vs. administrative TAZ) |
+| Gap 2 | Lack of Zoning Impact Analysis | 5 | 2% | Low | Comparative analysis of ≥2 distinct municipal zoning schemas |
+| Gap 3 | Equity and Utilization Separation | 14 | 7% | Medium | Joint equity + utilization in a single objective function |
+| Gap 4 | Static Optimization Dominance | 44 | 22% | Medium | Multi-stage / phased location model with budget constraint per phase |
+| Gap 5 | Missing Meso-Micro Integration | 11 | 6% | Medium | Explicit meso-to-micro translation method defined |
 
 ---
 ## Methodology Distribution
 
 | Approach | N | % of Corpus |
 |----------|---|-------------|
-| optimization | 50 | 45.0% |
-| mixed | 32 | 28.8% |
-| simulation | 15 | 13.5% |
-| empirical | 14 | 12.6% |
+| optimization | 116 | 58.0% |
+| mixed | 48 | 24.0% |
+| empirical | 19 | 9.5% |
+| simulation | 17 | 8.5% |
 
 ## Spatial Scope Distribution
 
 | Scope | N | % |
 |-------|---|---|
-| city | 100 | 90.1% |
-| neighborhood | 6 | 5.4% |
-| regional | 3 | 2.7% |
-| site | 1 | 0.9% |
-| corridor | 1 | 0.9% |
+| city | 182 | 91.0% |
+| neighborhood | 6 | 3.0% |
+| site | 5 | 2.5% |
+| regional | 5 | 2.5% |
+| corridor | 2 | 1.0% |
 
 ## Primary Category Distribution
 
 | Category | N | % |
 |----------|---|---|
-| spatial_optimization | 79 | 71.2% |
-| utilization_modeling | 15 | 13.5% |
-| general | 9 | 8.1% |
-| equity_planning | 4 | 3.6% |
-| rollout_sequencing | 4 | 3.6% |
+| spatial_optimization | 133 | 66.5% |
+| general | 34 | 17.0% |
+| utilization_modeling | 21 | 10.5% |
+| rollout_sequencing | 7 | 3.5% |
+| equity_planning | 5 | 2.5% |
 
 ## Thematic Coverage Flags
 
 | Dimension | N | % of Corpus |
 |-----------|---|-------------|
-| Equity measured | 10 | 9.0% |
-| Utilization measured | 66 | 59.5% |
-| Phased approach | 29 | 26.1% |
-| Zoning considered | 2 | 1.8% |
-| Meso-level | 8 | 7.2% |
-| Multi-objective | 5 | 4.5% |
+| Equity measured | 14 | 7.0% |
+| Utilization measured | 92 | 46.0% |
+| Phased approach | 44 | 22.0% |
+| Zoning considered | 5 | 2.5% |
+| Meso-level | 11 | 5.5% |
+| Multi-objective | 10 | 5.0% |
 

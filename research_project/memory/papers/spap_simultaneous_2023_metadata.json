@@ -1,0 +1,17 @@
+{
+  "title": "SPAP: Simultaneous Demand Prediction and Planning for Electric Vehicle Chargers in a New City",
+  "authors": [
+    "Yizong Wang",
+    "Dong Zhao",
+    "Yajie Ren",
+    "Desheng Zhang",
+    "Huadong Ma"
+  ],
+  "year": 2023,
+  "venue": "ACM Transactions on Knowledge Discovery from Data",
+  "doi": "10.1145/3565577",
+  "arxiv_id": "",
+  "abstract": "<jats:p>\n            For a new city that is committed to promoting Electric Vehicles (EVs), it is significant to plan the public charging infrastructure where charging demands are high. However, it is difficult to predict charging demands before the actual deployment of EV chargers for lack of operational data, resulting in a deadlock. A direct idea is to leverage the urban transfer learning paradigm to learn the knowledge from a source city, then exploit it to predict charging demands, and meanwhile determine locations and amounts of slow/fast chargers for charging stations in the target city. However, the demand prediction and charger planning depend on each other, and it is required to re-train the prediction model to eliminate the negative transfer between cities for each varied charger plan, leading to the unacceptable time complexity. To this end, we design an effective solution of\n            <jats:underline>S</jats:underline>\n            imultaneous Demand\n            <jats:underline>P</jats:underline>\n            rediction\n            <jats:underline>A</jats:underline>\n            nd\n            <jats:underline>P</jats:underline>\n            lanning (\n            <jats:italic>SPAP</jats:italic>\n            ): discriminative features are extracted from multi-source data, and fed into an Attention-based Spatial-Temporal City Domain Adaptation Network (\n            <jats:italic>AST-CDAN</jats:italic>\n            ) for cross-city demand prediction; a novel Transfer Iterative Optimization (\n            <jats:italic>TIO</jats:italic>\n            ) algorithm is designed for charger planning by iteratively utilizing\n            <jats:italic>AST-CDAN</jats:italic>\n            and a charger plan fine-tuning algorithm. Extensive experiments on real-world datasets collected from three cities in China validate the effectiveness and efficiency of\n            <jats:italic>SPAP</jats:italic>\n            . Specially,\n            <jats:italic>SPAP</jats:italic>\n            improves at most 72.5% revenue compared with the real-world charger deployment.\n          </jats:p>",
+  "url": "https://doi.org/10.1145/3565577",
+  "key": "spap_simultaneous_2023"
+}
