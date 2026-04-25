@@ -53,6 +53,10 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 \usepackage{graphicx}
 \usepackage{float}
 
+% === Diagrams ================================================================
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit,backgrounds}
+
 % === Lists ===================================================================
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=4pt}
@@ -102,9 +106,6 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 \onehalfspacing
 \usepackage{parskip}
 \setlength{\parskip}{6pt}
-
-% === Bibliography ============================================================
-\usepackage{natbib}
 
 \begin{document}
 """
@@ -581,8 +582,102 @@ def main():
     input_path  = Path(args.input)
     output_path = Path(args.output)
 
+    PRISMA_TIKZ = r"""
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[
+  node distance = 10mm and 28mm,
+  mainbox/.style = {
+    rectangle, rounded corners=6pt,
+    draw=blue!50!black, fill=blue!7, line width=1.2pt,
+    text width=78mm, minimum height=18mm,
+    align=left, font=\small, inner sep=6pt
+  },
+  inclbox/.style = {
+    rectangle, rounded corners=6pt,
+    draw=green!50!black, fill=green!8, line width=1.2pt,
+    text width=78mm, minimum height=14mm,
+    align=left, font=\small, inner sep=6pt
+  },
+  exclbox/.style = {
+    rectangle, rounded corners=4pt,
+    draw=orange!60!black, fill=orange!7, line width=1pt,
+    text width=62mm, minimum height=14mm,
+    align=left, font=\footnotesize, inner sep=5pt
+  },
+  arrow/.style  = {-{Stealth[length=7pt]}, thick, blue!60!black},
+  sarrow/.style = {-{Stealth[length=6pt]}, thick, orange!60!black},
+]
+%% ---- Main column ----
+\node[mainbox] (id) {%
+  \textbf{Identification}\\[3pt]
+  Records identified (OpenAlex / arXiv): \textbf{$\sim$580}\\
+  After deduplication: \textbf{$\sim$380}%
+};
+
+\node[mainbox, below=of id] (screen) {%
+  \textbf{Screening} \textit{(title \& abstract)}\\[3pt]
+  Records screened: \textbf{$\sim$380}\\
+  Records excluded: \textbf{$\sim$227}%
+};
+
+\node[mainbox, below=of screen] (elig) {%
+  \textbf{Eligibility} \textit{(full-text review)}\\[3pt]
+  Full texts assessed: \textbf{$\sim$153}\\
+  Full texts excluded: \textbf{$\sim$47}%
+};
+
+\node[inclbox, below=of elig] (incl) {%
+  \textbf{Included}\\[3pt]
+  Studies in qualitative synthesis and gap mapping: \textbf{200}%
+};
+
+%% ---- Arrows between main boxes ----
+\draw[arrow] (id.south)     -- (screen.north);
+\draw[arrow] (screen.south) -- (elig.north);
+\draw[arrow] (elig.south)   -- (incl.north);
+
+%% ---- Exclusion box: screening ----
+\node[exclbox, right=of screen] (excl1) {%
+  \textbf{Excluded ($\sim$227):}\\[2pt]
+  No EV/BEV charging component: $\sim$110\\
+  No spatial/planning dimension: $\sim$67\\
+  Insufficient methodology: $\sim$31\\
+  Highway-only / non-urban scope: $\sim$12\\
+  Duplicate of included record: $\sim$7%
+};
+
+%% ---- Exclusion box: eligibility ----
+\node[exclbox, right=of elig] (excl2) {%
+  \textbf{Excluded ($\sim$47):}\\[2pt]
+  Pure V2G, no spatial planning: $\sim$15\\
+  No identifiable methodology: $\sim$12\\
+  Irrelevant domain (confirmed): $\sim$20%
+};
+
+%% ---- Side arrows ----
+\draw[sarrow] (screen.east) -- (excl1.west);
+\draw[sarrow] (elig.east)   -- (excl2.west);
+
+\end{tikzpicture}
+\caption{PRISMA 2020 flow diagram for the systematic literature review.}
+\label{fig:prisma}
+\end{figure}
+"""
+
     md = input_path.read_text(encoding="utf-8")
     body = md_to_latex(md)
+
+    # Inject TikZ PRISMA figure
+    body = body.replace("\\%\\%PRISMA\\_TIKZ\\%\\%", PRISMA_TIKZ)
+    # Also handle if markdown left the marker unescaped
+    body = body.replace("%%PRISMA_TIKZ%%", PRISMA_TIKZ)
+
+    # Replace inline References section with BibTeX commands
+    ref_marker = r"\section{References}"
+    idx = body.find(ref_marker)
+    if idx != -1:
+        body = body[:idx] + "\n\\nocite{*}\n\\bibliographystyle{IEEEtran}\n\\bibliography{references}\n"
 
     tex = PREAMBLE + body + POSTAMBLE
     tex = postprocess(tex)

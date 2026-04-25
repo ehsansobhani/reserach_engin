@@ -97,3 +97,11 @@ Markdown system prompts defining Claude agent roles. Each agent is invoked by gi
 ## Writing Style
 
 Academic, concise, evidence-based, synthesis-oriented. Avoid first-person. Prioritize clarity and precision.
+
+## Table Style — Methodological Tables
+
+When presenting methodological or analytical framework tables (e.g., extraction schemas, inclusion criteria, gap frameworks), use three reader-facing columns:
+
+| Dimension | Information Extracted | Purpose in Analysis |
+
+A reader should immediately understand *what* information was collected, *why* it matters, and *how* it supports the research questions — not see internal field names or software notation (e.g., `gap_N_[dimension]`, `equity_measured: boolean`). Column headers and cell text must use natural academic prose, not YAML keys or schema identifiers.
