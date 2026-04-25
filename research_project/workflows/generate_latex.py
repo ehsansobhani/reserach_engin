@@ -586,23 +586,23 @@ def main():
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[
-  node distance = 10mm and 28mm,
+  node distance = 8mm and 12mm,
   mainbox/.style = {
     rectangle, rounded corners=6pt,
     draw=blue!50!black, fill=blue!7, line width=1.2pt,
-    text width=78mm, minimum height=18mm,
+    text width=70mm, minimum height=18mm,
     align=left, font=\small, inner sep=6pt
   },
   inclbox/.style = {
     rectangle, rounded corners=6pt,
     draw=green!50!black, fill=green!8, line width=1.2pt,
-    text width=78mm, minimum height=14mm,
+    text width=70mm, minimum height=14mm,
     align=left, font=\small, inner sep=6pt
   },
   exclbox/.style = {
     rectangle, rounded corners=4pt,
     draw=orange!60!black, fill=orange!7, line width=1pt,
-    text width=62mm, minimum height=14mm,
+    text width=56mm, minimum height=14mm,
     align=left, font=\footnotesize, inner sep=5pt
   },
   arrow/.style  = {-{Stealth[length=7pt]}, thick, blue!60!black},
