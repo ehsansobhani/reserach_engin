@@ -1,0 +1,402 @@
+% Chapter 7 glossary and acronym definitions (extracted from main.tex)
+% These must be loaded BEFORE \begin{document}
+
+\newacronym{ev}{EV}{Electric Vehicle}
+\newacronym{bev}{BEV}{Battery Electric Vehicle}
+\newacronym{soc}{SOC}{State of Charge}
+\newacronym{dcfc}{DCFC}{Direct-Current Fast Chargeing}
+\newacronym{fsa}{FSA}{Forward Sortation Area}
+\newacronym{gis}{GIS}{Geographic Information System}
+\newacronym{wpd}{WPD}{Weighted Proximity Distance}
+\newacronym{fc}{FC}{Fast-charging}
+\newacronym{taz}{TAZ}{Traffic Analysis Zones}
+\newacronym{tcl}{TCL}{Toronto Centreline}
+\newacronym{afdc}{AFDC}{National Renewable Energy Laboratory’s Alternative Fuels Data Center}
+\newglossaryentry{UTMsystem}{
+  name={Universal Transverse Mercator (UTM)},
+  description={A global coordinate system that divides the Earth into 60 longitudinal zones}
+}
+\newglossaryentry{wgs84}{
+  name={WGS 84},
+  description={World Geodetic System 1984}
+}
+\newglossaryentry{Zfsa}{
+  name={$Z^{\mathrm{FSA}}_i$},
+  description={Polygon representing the $i$-th \gls{fsa} zone}
+}
+\newglossaryentry{ZFSA}{
+  name={$\mathcal{Z}^{\mathrm{FSA}}$},
+  description={Set of all \gls{fsa} polygons that define the boundary of the study region}
+}
+\newglossaryentry{I}{
+  name={$\mathcal{I}$},
+  description={Index set of \gls{fsa} zones}
+}
+\newglossaryentry{NFSA}{
+  name={$N_{\mathrm{FSA}}$},
+  description={Total number of \gls{fsa} zones in the study area}
+}
+\newglossaryentry{EVC}{
+  name={$EVC_i$},
+  description={Number of registered \glspl{bev} within the $i$-th \gls{fsa} zone, representing discrete counts of vehicle ownership}
+}
+\newglossaryentry{arterialzones}{
+  name={arterial zones},
+  description={Spatial units delineated along major urban arterial roads, serving as mobility-based planning zones for \gls{bev} \gls{fc} infrastructure}
+}
+\newglossaryentry{ridgepath}{
+  name={ridge path},
+  description={A contiguous sequence of arterial zones exhibiting locally high \gls{bev} density, representing the structural backbone of BEV activity}
+}
+\newglossaryentry{decarbonization}{
+  name={decarbonization},
+  description={The process of reducing carbon emissions from transportation and energy systems to mitigate climate change}
+}
+\newglossaryentry{netzero}{
+  name={net-zero},
+  description={A state in which the amount of greenhouse gas emissions produced is balanced by the amount removed from the atmosphere}
+}
+\newglossaryentry{sustainablemobility}{
+  name={sustainable mobility},
+  description={A transportation system that minimizes environmental impact while ensuring accessibility, equity, and economic efficiency}
+}
+\newglossaryentry{macrolevel}{
+  name={macro},
+  description={The strategic tier of planning concerned with national or regional electrification policies, targets, and long-term climate or energy strategies}
+}
+\newglossaryentry{mesolevel}{
+  name={meso},
+  description={The intermediate spatial and analytical tier linking macro strategies with micro implementations, focusing on zoning, demand estimation, and spatial structuring}
+}
+\newglossaryentry{microlevel}{
+  name={micro},
+  description={The detailed operational tier concerned with charger siting, capacity assignment, queuing behavior, and localized optimization}
+}
+\newglossaryentry{climateenergyagendas}{
+  name={climate and energy agendas},
+  description={High-level policy frameworks that integrate climate objectives with energy transition and electrification strategies}
+}
+\newglossaryentry{ZAr}{
+  name={$\mathcal{Z}^{\mathrm{Ar}}$},
+  description={Set of arterial zones representing the polygonal subdivision derived from the major arterial road network}
+}
+\newglossaryentry{ZArj}{
+  name={$Z^{\mathrm{Ar}}_j$},
+  description={Polygon representing the $j$-th arterial zone, defined as a subset of the Euclidean plane $\mathbb{R}^2$}
+}
+\newglossaryentry{J}{
+  name={$\mathcal{J}$},
+  description={Index set of arterial zones used to enumerate individual polygons in $\mathcal{Z}^{\mathrm{Ar}}$}
+}
+\newglossaryentry{NAr}{
+  name={$N_{\mathrm{Ar}}$},
+  description={Total number of arterial zones in the study area}
+}
+\newglossaryentry{R2}{
+  name={$\mathbb{R}^2$},
+  description={Two-dimensional Euclidean space representing the continuous geographic plane on which spatial polygons (e.g., zones or regions) are defined}
+}
+\newglossaryentry{Zcap}{
+  name={$\mathcal{Z}^{\cap}$},
+  description={Set of intersection regions between \gls{fsa} polygons and arterial zones where each element represents the geometric overlap between the two zoning systems}
+}
+\newglossaryentry{Zcapij}{
+  name={$Z^{\cap}_{i,j}$},
+  description={Polygon representing the intersection between the $i$-th \gls{fsa} zone and the $j$-th arterial zone}
+}
+\newglossaryentry{K}{
+  name={$\mathcal{K}$},
+  description={Index set of all $(i,j)$ pairs corresponding to non-empty intersections between \gls{fsa} and arterial zones}
+}
+\newglossaryentry{Area}{
+  name={$\mathrm{Area}(\cdot)$},
+  description={Area functional $\mathrm{Area} : \mathcal{P}(\mathbb{R}^2) \to \mathbb{R}_{\ge 0}$ that assigns to any planar region $Z \subset \mathbb{R}^2$ its nonnegative area}
+}
+\newglossaryentry{AFSA}{
+  name={$A^{\mathrm{FSA}}_i$},
+  description={Area of the $i$-th Forward Sortation Area (FSA) zone, defined as $A^{\mathrm{FSA}}_i = \mathrm{Area}(Z^{\mathrm{FSA}}_i)$}
+}
+\newglossaryentry{AAr}{
+  name={$A^{\mathrm{Ar}}_j$},
+  description={Area of the $j$-th arterial zone, defined as $A^{\mathrm{Ar}}_j = \mathrm{Area}(Z^{\mathrm{Ar}}_j)$}
+}
+\newglossaryentry{Acap}{
+  name={$A^{\cap}_{i,j}$},
+  description={Area of the intersection between the $i$-th FSA and the $j$-th arterial zone, $A^{\cap}_{i,j} = \mathrm{Area}(Z^{\mathrm{FSA}}_i \cap Z^{\mathrm{Ar}}_j)$, for all $(i,j)\in\mathcal{K}$}
+}
+\newglossaryentry{Acapset}{
+  name={$\mathcal{A}^{\cap}$},
+  description={Set of all intersection areas between \gls{fsa} and arterial zones}
+}
+\newglossaryentry{EVCcap}{
+  name={$\mathrm{EVC}_{i \cap j}$},
+  description={Portion of the \gls{bev} count from FSA~$i$ allocated to the intersection region $Z^{\cap}_{i,j}$, representing the redistributed number of registered vehicles within the overlap between the $i$-th FSA and the $j$-th arterial zone}
+}
+\newglossaryentry{EVCcapset}{
+  name={$\mathcal{E}^{\cap}$},
+  description={Set of \gls{bev} counts allocated to intersection regions}
+}
+\newglossaryentry{EVCAr}{
+  name={$\mathrm{EVC}^{\mathrm{Ar}}_{j}$},
+  description={Aggregate \gls{bev} count assigned to the $j$-th arterial zone}
+}
+\newglossaryentry{EVCArset}{
+  name={$\mathcal{E}^{\mathrm{Ar}}$},
+  description={Set of aggregate \gls{bev} counts for all arterial zones}
+}
+\newglossaryentry{rhoAr}{
+  name={$\rho^{\mathrm{Ar}}_j$},
+  description={BEV density in arterial zone $j$}
+}
+\newglossaryentry{rhoArHat}{
+  name={$\hat{\rho}^{\mathrm{Ar}}_j$},
+  description={Normalized BEV density in arterial zone $j$}
+}
+\newglossaryentry{rhoArNormSet}{
+  name={$\widehat{\mathcal{R}}^{\mathrm{Ar}}$},
+  description={Set of normalized \gls{bev} densities for all arterial zones}
+}
+\newglossaryentry{Centroid}{
+  name={$\mathrm{Centroid}(\cdot)$},
+  description={Geometric centroid functional that returns the centroid point of a polygonal region}
+}
+\newglossaryentry{Length}{
+  name={$\mathrm{Length}(\cdot)$},
+  description={Boundary-length functional used to compute the perimeter of a polygon or the length of a shared edge in the working projection defined in \ref{def:projection}}
+}
+\newglossaryentry{Boundary}{
+  name={$\partial Z$},
+  description={Boundary of a polygonal zone $Z$, used to determine adjacency relationships between arterial zones}
+}
+\newglossaryentry{GraphG}{
+  name={$G$},
+  description={Undirected planar adjacency graph constructed over arterial zones}
+}
+\newglossaryentry{VertexSet}{
+  name={$V$},
+  description={Set of vertices in the urban adjacency graph}
+}
+\newglossaryentry{EdgeSet}{
+  name={$E$},
+  description={Set of undirected edges connecting pairs of adjacent arterial zones that share a boundary of positive length}
+}
+\newglossaryentry{VertexVj}{
+  name={$v_j$},
+  description={Vertex representing the $j$-th arterial zone in the urban adjacency graph, positioned at the centroid of the polygon $Z^{\mathrm{Ar}}_j$}
+}
+\newglossaryentry{WeightMatrix}{
+  name={$W$},
+  description={Edge-weight matrix of the urban adjacency graph, where each element $w_{jk}$ represents the shared boundary length between arterial zones $Z^{\mathrm{Ar}}_j$ and $Z^{\mathrm{Ar}}_k$}
+}
+\newglossaryentry{WeightedElement}{
+  name={$w_{jk}$},
+  description={Element of the weighted adjacency matrix \gls{WeightedMatrix}, defined as $w_{jk} = \mathrm{Length}\!\bigl(\partial Z^{\mathrm{Ar}}_j \cap \partial Z^{\mathrm{Ar}}_k\bigr)$, representing the shared boundary length between arterial zones $j$ and $k$; symmetric such that $w_{jk}=w_{kj}\ge0$ and $w_{jj}=0$}
+}
+\newglossaryentry{AdjacencyAjk}{
+  name={$A_{jk}$},
+  description={Element of the binary adjacency matrix that equals $1$ if arterial zones $Z^{\mathrm{Ar}}_j$ and $Z^{\mathrm{Ar}}_k$ share a boundary of positive length, and $0$ otherwise; used to represent unweighted topological connectivity in the urban adjacency graph}
+}
+\newglossaryentry{AdjacencyMatrix}{
+  name={$A$},
+  description={Binary adjacency matrix of the urban adjacency graph, where $A_{jk}=1$ if arterial zones $Z^{\mathrm{Ar}}_j$ and $Z^{\mathrm{Ar}}_k$ share a boundary of positive length ($j\neq k$), and $A_{jk}=0$ otherwise; represents unweighted topological connectivity among arterial zones}
+}
+\newglossaryentry{HopDistance}{
+  name={$d_G(j,k)$},
+  description={Hop distance between vertices $v_j$ and $v_k$ in the unweighted adjacency graph $(V,E)$, defined as the number of edges in the shortest path connecting them}
+}
+\newglossaryentry{PathPi}{
+  name={$\pi$},
+  description={Path in the graph $G=(V,E)$ connecting vertices $v_j$ and $v_k$, where $|\pi|$ denotes the number of edges in the path; used in the definition of the hop distance $d_G(j,k)$}
+}
+\newglossaryentry{NeighborSetH}{
+  name={$N^{(h)}(j)$},
+  description={$h$-hop neighbor set of vertex $v_j$, represents all arterial zones exactly $h$ edges away from zone $j$}
+}
+\newglossaryentry{rhoArSmooth}{
+  name={$\tilde{\rho}^{\mathrm{Ar}}_{j}$},
+  description={Smoothed \gls{bev} density for arterial zone $j$, computed using an $n$-hop distance-sensitive average of normalized densities $\widehat{\rho}^{\mathrm{Ar}}_{k}$ over neighbouring zones on the adjacency graph}
+}
+\newglossaryentry{nHop}{
+  name={$n$},
+  description={Maximum hop distance used for spatial smoothing, defining the extent of neighbourhood aggregation in the adjacency graph}
+}
+\newglossaryentry{WeightVector}{
+  name={$\mathbf{w}=(w_0,\dots,w_n)$},
+  description={Vector of nonnegative hop weights used in the $n$-hop spatial smoothing process, satisfying $\sum_{h=0}^{n} w_h=1$}
+}
+\newglossaryentry{rhoArSmoothSet}{
+  name={$\widetilde{\mathcal{D}}^{\mathrm{Ar}}(n,\mathbf{w})$},
+  description={Set of smoothed normalized \gls{bev} densities across all arterial zones}
+}
+\newglossaryentry{M}{
+  name={$\mathcal{M}$},
+  description={Set of local maxima, arterial zones whose smoothed density is not smaller than any neighbor}
+}
+\newglossaryentry{NeighborSet}{
+  name={$N(j)$},
+  description={Set of direct neighbors of arterial zone $j$ in the adjacency graph}
+}
+\newglossaryentry{rp_m}{
+    name={$\mathsf{rp_m}$},
+    description={Ridge path originating from local maximum node $v_m$, defined as an ordered sequence of connected nodes $(v_m, \dots, v_\ell)$ that follows the high-density corridor under the drop tolerance $\Delta$}
+}
+\newglossaryentry{Delta}{
+    name={$\Delta$},
+    description={Drop tolerance parameter controlling the maximum allowable decline in smoothed \gls{bev} density between consecutive nodes along a ridge path.}
+}
+\newglossaryentry{RP}{
+    name={$\mathcal{RP}$},
+    description={Set of all ridge paths constructed on the urban graph \gls{GraphG}}
+}
+\newglossaryentry{Nt}{
+    name={$N_t$},
+    description={Feasible neighbor set at iteration $t$ of ridge path walker , containing all unvisited neighboring nodes of the current node $v_t$ in the urban graph \gls{GraphG}}
+}
+\newglossaryentry{Dt}{
+    name={$\mathcal{D}_t$},
+    description={Set of smoothed density values corresponding to the feasible neighbor nodes $u \in N_t$ at iteration $t$}
+}
+\newglossaryentry{Deltat}{
+    name={$\Delta_t$},
+    description={Step-specific drop tolerance at iteration $t$ in the ridge-path walking algorithm, defining the maximum allowable decline in smoothed \gls{bev} density between the current node $v_t$ and its neighboring candidates. It adapts dynamically based on the selected ridge-walking strategy.}
+}
+\newglossaryentry{St}{
+    name={$S_t$},
+    description={Statistic at iteration $t$ representing the aggregated local density measure (average, maximum, median, standard deviation, or Laplacian) used to determine the adaptive drop tolerance \gls{Deltat}}
+}
+\newglossaryentry{eta}{
+    name={$\eta$},
+    description={Scaling hyperparameter that calibrates the step-specific drop tolerance \gls{Deltat} across ridge-walking strategies}
+}
+\newglossaryentry{Ct}{
+    name={$\mathcal{C}_t$},
+    description={Candidate set of admissible neighbors at iteration $t$ of rigd walker algorithm}
+}
+\newglossaryentry{L}{
+    name={$L$},
+    description={Maximum walk length limiting how far a ridge path can extend within the urban graph to maintain interpretability and prevent overly long trajectories}
+}
+\newglossaryentry{dGuv}{
+    name={$d_G(.,.)$},
+    description={Shortest hop distance between two nodes in the graph}
+}
+\newglossaryentry{diamG}{
+    name={$\operatorname{diam}(G)$},
+    description={Graph diameter, representing the maximum extent of the network in hop distance}
+}
+\newglossaryentry{alpha}{
+    name={$\alpha$},
+    description={Proportionality factor controlling the relative extent of ridge paths with respect to the graph diameter}
+}
+\newglossaryentry{rhoMin}{
+    name={$\bar{\rho}_{\min}$},
+    description={Minimum mean density threshold for ridge-path retention, defined as the 75th percentile of the node-density distribution across all arterial zones}
+}
+\newglossaryentry{VRP}{
+    name={$\mathcal{V}_{\mathrm{RP}}$},
+    description={Set of all nodes belonging to ridge paths, obtained as the union of nodes across all ridge paths in $\mathcal{RP}$}
+}
+\newglossaryentry{C}{
+    name={$\mathcal{C}$},
+    description={Set of charger stations deployed within the urban}
+}
+\newglossaryentry{c}{
+    name={$c$},
+    description={Individual charging station element belonging to the charger set $\mathcal{C}$}
+}
+\newglossaryentry{Cj}{
+    name={$\mathcal{C}_j$},
+    description={Subset of chargers assigned to arterial zone $j$}
+}
+\newglossaryentry{CapArj}{
+    name={$\mathrm{Cap}^{\mathrm{Ar}}_{j}$},
+    description={Total charging capacity assigned to arterial zone $j$}
+}
+\newglossaryentry{rhoChj}{
+    name={$\rho^{\mathrm{Ch}}_{j}$},
+    description={Charger capacity density of arterial zone $j$}
+}
+\newglossaryentry{SAr}{
+    name={$\mathcal{S}^{\mathrm{Ar}}$},
+    description={Set of charger capacity densities across all arterial zones}
+}
+\newglossaryentry{rhochhatj}{
+    name={$\widehat{\rho}^{\mathrm{Ch}}_{j}$},
+    description={Normalized charger capacity density for arterial zone $j$}
+}
+\newglossaryentry{SArhat}{
+    name={$\widehat{\mathcal{S}}^{\mathrm{Ar}}$},
+    description={Set of normalized charger capacity densities across all arterial zones}
+}
+\newglossaryentry{cvstar}{
+    name={$c^*(v_j)$},
+    description={Nearest charger node to ridge-path node $v_j$}
+}
+\newglossaryentry{dvvstar}{
+    name={$d(v_j, c^*(v_j))$},
+    description={Hop-based shortest-path distance between ridge-path node $v_j$ and its nearest charger node $c^*(v_j)$}
+}
+\newglossaryentry{VChreal}{
+    name={$\mathcal{V}^{Ch}_{\mathrm{real}}$},
+    description={Set of nodes representing real-world charger locations within the network graph}
+}
+\newglossaryentry{creal}{
+    name={$c_{\mathrm{real}}$},
+    description={Individual real-world charger node element belonging to \gls{VChreal}}
+}
+\newglossaryentry{kcreal}{
+    name={$k^c_{\mathrm{real}}$},
+    description={Rated charging capacity associated with each real-world charger \gls{creal}}
+}
+\newglossaryentry{VChrandom}{
+    name={$\mathcal{V}^{Ch}_{\mathrm{random},r}$},
+    description={Set of nodes representing randomized charger locations in configuration $r$, used to construct null models for spatial benchmarking}
+}
+\newglossaryentry{crandom}{
+    name={$c_{\mathrm{random}}$},
+    description={Individual charger node in the randomized configuration belonging to \gls{VChrandom}}
+}
+\newglossaryentry{kcrandom}{
+    name={$k^c_{\mathrm{random}}$},
+    description={Rated charging capacity assigned to a randomized charger node $c_{\mathrm{random}}$ in configuration $r$}
+}
+\newglossaryentry{Nplus}{
+    name={$\mathbb{N}^+$},
+    description={Set of positive natural numbers}
+}
+\newglossaryentry{rhoChhatRandom}{
+    name={$\widehat{\rho}^{\mathrm{Ch}}_{c_r^*}$},
+    description={Normalized charger capacity density associated with the nearest randomized charger node $c^*$}
+}
+\newglossaryentry{crstar}{
+    name={$c_r^*(\cdot,\cdot)$},
+    description={Nearest randomized charger node function in configuration $r$, which maps each ridge-path node $v_j$ to its closest charger in $\mathcal{V}^{Ch}_{\mathrm{random},r}$ based on hop-distance within the network graph}
+}
+\newglossaryentry{R}{
+    name={$R$},
+    description={Number of independent random realizations used to construct the null distribution of \gls{wpd} values}
+}
+\newglossaryentry{M0}{
+    name={$\mathcal{M}_0$},
+    description={Null distribution composed of \gls{wpd} values across $R$ independent randomized configurations, serving as the statistical baseline for evaluating charger–demand alignment}
+}
+\newglossaryentry{muR}{
+    name={$\mu_R$},
+    description={Sample mean of \gls{wpd}$(\mathcal{V}^{Ch}_{\mathrm{random},r})$ values computed over \gls{R} independent randomized experiments}
+}
+\newglossaryentry{sigmaR}{
+    name={$\sigma_R$},
+    description={Sample standard deviation of \gls{wpd}$(\mathcal{V}^{Ch}_{\mathrm{random},r})$ values computed over \gls{R} independent randomized experiments}
+}
+\newglossaryentry{delta}{
+    name={$\delta$},
+    description={Predefined tolerance threshold used to assess convergence of the null model}
+}
+\newglossaryentry{censustract}{
+  name={census tract},
+  description={A small, relatively stable geographic unit defined by Statistics Canada, typically containing between 2,500 and 8,000 residents, used to present census data for urban areas and designed to be homogeneous with respect to socioeconomic characteristics \cite{StatCan_CT_2011_Def}}
+}
+\newglossaryentry{disseminationarea}{
+  name={dissemination area},
+  description={The smallest standard geographic unit for which Statistics Canada releases census data, representing a compact area of one or more adjacent dissemination blocks with a population of 400 to 700 persons \cite{StatCan_DA_2011_Def}}
+}

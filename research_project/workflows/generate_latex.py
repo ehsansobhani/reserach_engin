@@ -21,7 +21,8 @@ DEFAULT_OUTPUT = PROJECT_ROOT / "outputs" / "proposal_drafts" / "proposal.tex"
 # LaTeX preamble
 # ---------------------------------------------------------------------------
 
-PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
+PREAMBLE = r"""\PassOptionsToPackage{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}{hyperref}
+\documentclass[letterpaper, 12pt, oneside, doublespacing]{Thesis}
 
 % === Encoding & fonts =========================================================
 \usepackage[utf8]{inputenc}
@@ -29,13 +30,6 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 \usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{textgreek}
-
-% === Page geometry ============================================================
-\usepackage[
-  top=2.54cm, bottom=2.54cm,
-  left=3.0cm,  right=2.54cm,
-  headheight=14pt
-]{geometry}
 
 % === Maths ===================================================================
 \usepackage{amsmath,amssymb}
@@ -62,28 +56,6 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 \setlist[itemize]{noitemsep, topsep=4pt}
 \setlist[enumerate]{noitemsep, topsep=4pt}
 
-% === Hyperlinks ==============================================================
-\usepackage[
-  colorlinks=true,
-  linkcolor=black,
-  citecolor=black,
-  urlcolor=blue
-]{hyperref}
-
-% === Headers / footers =======================================================
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead[L]{\small\textit{Urban BEV Fast-Charging Infrastructure --- Research Proposal}}
-\fancyhead[R]{\small\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
-
-% === Section formatting ======================================================
-\usepackage{titlesec}
-\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}[\titlerule]
-\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
-\titleformat{\subsubsection}{\normalsize\itshape}{\thesubsubsection}{0.5em}{}
-
 % === Code / verbatim =========================================================
 \usepackage{listings}
 \lstset{
@@ -95,23 +67,63 @@ PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
 }
 \usepackage{fancyvrb}
 
-% === Abstract formatting =====================================================
-\usepackage{abstract}
-\renewcommand{\abstractnamefont}{\normalfont\bfseries}
-\renewcommand{\abstracttextfont}{\normalfont\small}
-
 % === Misc ====================================================================
 \usepackage{xcolor}
-\usepackage{setspace}
-\onehalfspacing
-\usepackage{parskip}
-\setlength{\parskip}{6pt}
 
-\begin{document}
+% === Chapter 7 (prior work) packages =========================================
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{siunitx}
+\usepackage{colortbl}
+\usepackage{threeparttable}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[acronym,nonumberlist,nomain]{glossaries}
+\makeglossaries
+\input{chapter7_glossary_defs}
+
+% === Thesis metadata =========================================================
+\title{ELECTRICAL VEHICLE FAST CHARGING PLANNING}
+\authors{Ehsan Sobhani}
+\addresses{}
+\date{April 2026}
+\subject{}
+\keywords{BEV; fast-charging infrastructure; urban planning; spatial optimization; equity; phased deployment; meso-micro integration; systematic literature review; PRISMA}
 """
 
 POSTAMBLE = r"""
 \end{document}
+"""
+
+def _build_frontmatter(abstract_tex: str) -> str:
+    return r"""
+\begin{document}
+\frontmatter
+\maketitle
+
+\setstretch{1.3}
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
+
+\addtotoc{Abstract}
+\begin{abstract}
+  \addtocontents{toc}{}
+""" + abstract_tex + r"""
+\end{abstract}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+
+\mainmatter
+\fancyhead{}
+\fancyfoot[C]{\thepage}
+\pagestyle{fancy}
 """
 
 # ---------------------------------------------------------------------------
@@ -242,9 +254,43 @@ def _process_inline(text: str) -> str:
 # Table converter
 # ---------------------------------------------------------------------------
 
+_APPROACH_LABELS = {
+    "optimization": "Mathematical Optimization",
+    "simulation":   "Simulation-Based",
+    "empirical":    "Empirical / Case Study",
+    "mixed":        "Mixed Methods",
+}
+
+# Populated by main() from memory/papers/*_metadata.json
+_KEY_TITLE_MAP: dict[str, str] = {}
+
+
+def _raw_key(cell: str) -> str:
+    """Extract the raw paper key string from a markdown table cell (strip backticks)."""
+    return re.sub(r"^`(.+)`$", r"\1", cell.strip())
+
+
+def _key_to_display(raw_key: str) -> str:
+    """Convert a paper key to a short display title using the metadata title map."""
+    title = _KEY_TITLE_MAP.get(raw_key, "")
+    if title:
+        # Truncate to ~50 chars at a word boundary
+        if len(title) > 52:
+            title = title[:50].rsplit(" ", 1)[0] + "…"
+        return title
+    # Fallback: strip year and underscores/hyphens
+    display = re.sub(r"[_-]\d{4}$", "", raw_key)
+    return display.replace("_", " ").replace("-", " ")
+
+
+def _expand_approach(cell: str) -> str:
+    return _APPROACH_LABELS.get(cell.strip().lower(), cell)
+
+
 def convert_table(lines: list[str]) -> str:
     """Convert a markdown table (list of raw lines) to a LaTeX longtable."""
     rows = []
+    header_cells: list[str] = []
     for line in lines:
         line = line.strip()
         if not line.startswith("|"):
@@ -254,22 +300,46 @@ def convert_table(lines: list[str]) -> str:
             continue
         cells = [c.strip() for c in line.strip("|").split("|")]
         rows.append(cells)
+        if not header_cells:
+            header_cells = [c.lower() for c in cells]
 
     if not rows:
         return ""
 
+    # Detect whether this is a paper-list table (has Key / Authors / Gaps cols)
+    is_paper_table = (
+        len(header_cells) >= 6
+        and "key" in header_cells[0]
+        and any("gap" in h for h in header_cells)
+    )
+
+    # Locate Approach column index for expansion
+    approach_col = next(
+        (i for i, h in enumerate(header_cells) if "approach" in h), -1
+    )
+
     n_cols = max(len(r) for r in rows)
-    # Build column spec: first column wider, rest auto
-    col_spec = "L{4cm}" + " ".join(["L{3cm}"] * (n_cols - 1))
-    # Trim to safe width
-    if n_cols <= 3:
-        col_spec = " ".join(["L{5cm}"] * n_cols)
+    # Column spec — paper tables get a dedicated layout
+    if is_paper_table and n_cols == 6:
+        # Title  Authors  Year  Approach  Scope  Gaps  (total 11.6cm fits ~15cm textwidth with tabcolsep)
+        col_spec = "L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}"
+    elif n_cols <= 2:
+        col_spec = " ".join(["L{6cm}"] * n_cols)
+    elif n_cols == 3:
+        col_spec = "L{3.5cm} L{4.5cm} L{4.5cm}"
     elif n_cols == 4:
         col_spec = "L{4.5cm} L{3.5cm} L{2.5cm} L{4cm}"
     elif n_cols == 5:
         col_spec = "L{3.5cm} L{2.5cm} L{2cm} L{2cm} L{3.5cm}"
-    elif n_cols >= 6:
-        col_spec = " ".join(["L{2.2cm}"] * n_cols)
+    elif n_cols == 7:
+        col_spec = "L{2.0cm} L{1.8cm} L{0.8cm} L{1.8cm} L{1.0cm} L{0.9cm} L{0.9cm}"
+    elif n_cols == 8:
+        # Gap analysis tables: Title Authors Year Approach Scope Equity Util Phased
+        col_spec = "L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}"
+    else:
+        # Generic wide tables: distribute evenly within safe width
+        per_col = min(2.0, 11.5 / max(n_cols, 1))
+        col_spec = " ".join([f"L{{{per_col:.1f}cm}}"] * n_cols)
 
     out = ["\\begin{longtable}{" + col_spec + "}",
            "\\toprule"]
@@ -277,6 +347,12 @@ def convert_table(lines: list[str]) -> str:
     for i, row in enumerate(rows):
         # Pad to n_cols
         row = row + [""] * (n_cols - len(row))
+        if is_paper_table and i > 0:
+            # Replace key slug with descriptive title
+            row[0] = _key_to_display(_raw_key(row[0]))
+            # Expand approach code
+            if approach_col >= 0:
+                row[approach_col] = _expand_approach(row[approach_col])
         cells = [_process_inline(c) for c in row]
         out.append(" & ".join(cells) + r" \\")
         if i == 0:
@@ -360,49 +436,55 @@ def md_to_latex(md: str) -> str:
             i += 1
             continue
 
-        # ── H1 (title) ────────────────────────────────────────────────────────
+        # ── H1 (title) — already in \title{} in PREAMBLE, skip ──────────────
         if line.startswith("# ") and not line.startswith("## "):
-            flush_abstract()
-            title = line[2:].strip()
-            title_lines.append(_process_inline(title))
             i += 1
             continue
 
-        # ── H2 (section) ──────────────────────────────────────────────────────
+        # ── H2 (chapter) ─────────────────────────────────────────────────────
         if line.startswith("## "):
             flush_abstract()
             heading = line[3:].strip()
-            # Abstract gets special treatment
+            # Skip Abstract section body — already placed in frontmatter
             if heading.lower() == "abstract":
-                # Emit title page first if not done
-                if not title_done and title_lines:
-                    _emit_title(out, title_lines, lines, i)
-                    title_done = True
-                out.append("\\begin{abstract}")
-                in_abstract = True
-            else:
-                # Strip leading number for \section if already numbered
-                m = re.match(r"^(\d+)\.\s+(.*)", heading)
-                sec_title = m.group(2) if m else heading
-                out.append(f"\\section{{{_process_inline(sec_title)}}}")
+                i += 1
+                while i < len(lines) and not lines[i].startswith("## "):
+                    i += 1
+                continue
+            m = re.match(r"^(\d+)\.\s+(.*)", heading)
+            ch_title = m.group(2) if m else heading
+            # Chapter 7 (Expected Contributions and Timeline) is commented out
+            COMMENTED_CHAPTERS = {"Expected Contributions and Timeline"}
+            if ch_title.strip() in COMMENTED_CHAPTERS:
+                # Emit \iffalse ... \fi around the entire chapter
+                out.append("\\iffalse % ---- Chapter commented out ----")
+                out.append(f"\\chapter{{{_process_inline(ch_title)}}}")
+                i += 1
+                # Collect chapter body until next ## or end of document
+                while i < len(lines) and not lines[i].startswith("## "):
+                    out.append(_process_inline(lines[i]))
+                    i += 1
+                out.append("\\fi % ---- end of commented-out chapter ----")
+                continue
+            out.append(f"\\chapter{{{_process_inline(ch_title)}}}")
             i += 1
             continue
 
-        # ── H3 (subsection) ───────────────────────────────────────────────────
+        # ── H3 (section) ─────────────────────────────────────────────────────
         if line.startswith("### "):
             flush_abstract()
             heading = line[4:].strip()
             m = re.match(r"^[\d.]+\s+(.*)", heading)
-            sub_title = m.group(1) if m else heading
-            out.append(f"\\subsection{{{_process_inline(sub_title)}}}")
+            sec_title = m.group(1) if m else heading
+            out.append(f"\\section{{{_process_inline(sec_title)}}}")
             i += 1
             continue
 
-        # ── H4 (subsubsection) ────────────────────────────────────────────────
+        # ── H4 (subsection) ──────────────────────────────────────────────────
         if line.startswith("#### "):
             flush_abstract()
             heading = line[5:].strip()
-            out.append(f"\\subsubsection{{{_process_inline(heading)}}}")
+            out.append(f"\\subsection{{{_process_inline(heading)}}}")
             i += 1
             continue
 
@@ -548,6 +630,112 @@ _GREEK_TEXT = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Citation injection: add ~\cite{key} after bold author-year citation spans
+# ---------------------------------------------------------------------------
+
+def _strip_latex_cmds(s: str) -> str:
+    """Remove LaTeX commands to recover approximate plain text."""
+    # \cmd{content} → content  (one level)
+    s = re.sub(r"\\[a-zA-Z@]+\{([^{}]*)\}", r"\1", s)
+    # Standalone accent/symbol commands: \' \` \" \^ \~ \= \. \u \v \H \t \b \c \d \k \r
+    s = re.sub(r"\\[a-zA-Z@'`\"^~=.uvHtbcdkr]+", "", s)
+    return s
+
+
+def _normalize_name(s: str) -> str:
+    """Lowercase + strip accents for fuzzy name matching."""
+    import unicodedata
+    nfd = unicodedata.normalize("NFD", s)
+    return "".join(c for c in nfd if unicodedata.category(c) != "Mn").lower()
+
+
+def _build_cite_map(papers_dir: Path) -> dict[str, str]:
+    """Return {normalized_last_name+year: bibtex_key} from all metadata files."""
+    import json as _json
+    result: dict[str, str] = {}
+    for meta_file in papers_dir.glob("*_metadata.json"):
+        try:
+            data = _json.loads(meta_file.read_text(encoding="utf-8"))
+            key = data.get("key", "")
+            year = str(data.get("year", ""))
+            authors = data.get("authors", [])
+            if key and year and authors:
+                last = authors[0].strip().split()[-1]
+                norm = _normalize_name(last)
+                lookup = norm + year
+                if lookup not in result:        # keep first if collision
+                    result[lookup] = key
+        except Exception:
+            pass
+    return result
+
+
+def _inject_cites(body: str, cite_map: dict[str, str]) -> str:
+    """Append ~\\cite{key} after every \\textbf{Author...(YEAR)} span in LaTeX body.
+
+    Uses manual string parsing (no regex on backslashes) to locate each
+    \\textbf{} span and scan for the matching closing brace.
+    """
+    import unicodedata
+
+    MARKER = "\\textbf{"   # literal Python string with one backslash
+    result: list[str] = []
+    pos = 0
+
+    while True:
+        start = body.find(MARKER, pos)
+        if start == -1:
+            result.append(body[pos:])
+            break
+        result.append(body[pos:start])
+
+        # Walk forward from the opening { to find the matching closing }
+        depth = 0
+        i = start + len(MARKER) - 1  # index of opening {
+        while i < len(body):
+            if body[i] == "{":
+                depth += 1
+            elif body[i] == "}":
+                depth -= 1
+                if depth == 0:
+                    break
+            i += 1
+        end = i   # index of closing }
+
+        full_span = body[start : end + 1]          # \textbf{...}
+        content   = body[start + len(MARKER) : end] # inside the braces
+
+        # Only process spans that end with (YYYY)
+        year_m = re.search(r"\((\d{4})\)\s*$", content)
+        if year_m:
+            year = year_m.group(1)
+            author_raw = content[: year_m.start()].strip()
+            # Strip LaTeX accent/symbol commands to get plain text
+            author_plain = _strip_latex_cmds(author_raw).strip()
+            # Remove trailing "et al."
+            author_plain = re.sub(r"\s+et\s+al\.\s*$", "", author_plain).strip()
+            if author_plain:
+                last_name = author_plain.split()[-1]
+                nfd = unicodedata.normalize("NFD", last_name)
+                norm = "".join(
+                    c for c in nfd if unicodedata.category(c) != "Mn"
+                ).lower()
+                key = cite_map.get(norm + year, "")
+                # Skip if a \cite already follows immediately
+                tail = body[end + 1 : end + 8]
+                already_cited = "cite{" in tail
+                if key and not already_cited:
+                    result.append(full_span + "~\\cite{" + key + "}")
+                    pos = end + 1
+                    continue
+
+        result.append(full_span)
+        pos = end + 1
+
+    return "".join(result)
+
+
 def postprocess(tex: str) -> str:
     """Replace non-ASCII chars in non-verbatim regions."""
     segments = re.split(r'(\\begin\{(?:Verbatim|lstlisting|verbatim)\}.*?\\end\{(?:Verbatim|lstlisting|verbatim)\})',
@@ -581,6 +769,24 @@ def main():
 
     input_path  = Path(args.input)
     output_path = Path(args.output)
+
+    # Build key → title lookup from all metadata files
+    papers_dir = PROJECT_ROOT / "memory" / "papers"
+    import json as _json
+    for meta_file in papers_dir.glob("*_metadata.json"):
+        try:
+            data = _json.loads(meta_file.read_text(encoding="utf-8"))
+            key = data.get("key", "")
+            title = data.get("title", "")
+            if key and title:
+                _KEY_TITLE_MAP[key] = title
+        except Exception:
+            pass
+    print(f"[info] Loaded {len(_KEY_TITLE_MAP)} paper titles for table rendering")
+
+    # Build cite map: normalized_last_name+year → bibtex key
+    cite_map = _build_cite_map(papers_dir)
+    print(f"[info] Built cite map with {len(cite_map)} entries")
 
     PRISMA_TIKZ = r"""
 \begin{figure}[H]
@@ -666,20 +872,34 @@ def main():
 """
 
     md = input_path.read_text(encoding="utf-8")
+
+    # Extract abstract text from proposal.md for frontmatter
+    abstract_tex = ""
+    abs_match = re.search(r"^## Abstract\s*\n(.*?)(?=^## )", md, re.MULTILINE | re.DOTALL)
+    if abs_match:
+        abs_md = abs_match.group(1).strip()
+        abstract_tex = md_to_latex(abs_md)
+
     body = md_to_latex(md)
 
     # Inject TikZ PRISMA figure
     body = body.replace("\\%\\%PRISMA\\_TIKZ\\%\\%", PRISMA_TIKZ)
-    # Also handle if markdown left the marker unescaped
     body = body.replace("%%PRISMA_TIKZ%%", PRISMA_TIKZ)
 
-    # Replace inline References section with BibTeX commands
-    ref_marker = r"\section{References}"
-    idx = body.find(ref_marker)
-    if idx != -1:
-        body = body[:idx] + "\n\\nocite{*}\n\\bibliographystyle{IEEEtran}\n\\bibliography{references}\n"
+    # Inject ~\cite{key} after bold author-year citation spans
+    body = _inject_cites(body, cite_map)
+    n_cites = body.count(r"\cite{")
+    print(f"[info] Injected {n_cites} \\cite{{}} links into body")
 
-    tex = PREAMBLE + body + POSTAMBLE
+    # Replace References chapter with BibTeX commands
+    for ref_marker in (r"\chapter{References}", r"\section{References}"):
+        idx = body.find(ref_marker)
+        if idx != -1:
+            body = body[:idx] + "\n\\input{chapter7_prior_work}\n\n\\nocite{*}\n\\bibliographystyle{IEEEtran}\n\\bibliography{references,refs_chapter7}\n"
+            break
+
+    frontmatter = _build_frontmatter(abstract_tex)
+    tex = PREAMBLE + frontmatter + body + POSTAMBLE
     tex = postprocess(tex)
     output_path.write_text(tex, encoding="utf-8")
 

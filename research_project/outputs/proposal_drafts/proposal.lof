@@ -1,0 +1,18 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces PRISMA 2020 flow diagram for the systematic literature review.}}{7}{figure.caption.19}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Workflow of the arterial zoning algorithm. Road centrelines and \gls {fsa} polygons are processed to produce a set of finalized arterial zones, \gls {ZAr}.}}{118}{figure.caption.61}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Input geospatial datasets for the arterial zoning algorithm: (a) \gls {tcl} dataset; (b) \gls {fsa} boundaries.}}{133}{figure.caption.138}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Derived arterial zones for the City of Toronto.}}{134}{figure.caption.139}%
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Intersection between \glspl {fsa} and arterial zones for redistributing \gls {bev} ownership counts.}}{135}{figure.caption.141}%
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Spatial and statistical representation of smoothed \gls {bev} densities across arterial zones: (a) heatmap of $\tilde {\rho }^{\mathrm {Ar}}_{j}$ values; (b) corresponding empirical distribution.}}{135}{figure.caption.142}%
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Adjacency graph of Toronto's arterial zones, local maxima of smoothed \gls {bev} density across Toronto’s arterial zones.}}{138}{figure.caption.146}%
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Ridge-path results (a) Average-based ridges; (b) Maximum-based ridges; (c) Median-based ridges; (d) Standard-deviation–based ridges; (e) Laplacian-based ridges; (f) Overlay of all strategies' ridge paths drawn in a single ridge color for visual comparison. }}{139}{figure.caption.147}%
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Spatial distribution of FLO \gls {dcfc} stations across Toronto. Each point represents a station, scaled by its aggregate charging capacity (kW).}}{140}{figure.caption.150}%
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Average WPD vs. number of experiments. The curve flattens beyond 100 simulations, indicating convergence.}}{141}{figure.caption.151}%
+\contentsline {figure}{\numberline {7.10}{\ignorespaces Representative random charger layouts corresponding to the lowest and highest computed proximity metrics.}}{142}{figure.caption.152}%
