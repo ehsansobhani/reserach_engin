@@ -47,6 +47,11 @@
 % === Misc ====================================================================
 \usepackage{xcolor}
 
+% === Chapter heading format (suppress "Chapter X" label) =====================
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\Large\bfseries}{\thechapter\quad}{0pt}{\Large\bfseries}
+\titlespacing*{\chapter}{0pt}{20pt}{12pt}
+
 % === Chapter 7 (prior work) packages =========================================
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -175,9 +180,9 @@ The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, ma
 \noindent \textbf{Core queries (Gaps 1, 3):}
 
 \begin{itemize}
-  \item \texttt{EV charging infrastructure planning urban spatial optimization}
-  \item \texttt{electric vehicle charging station location optimization equity accessibility}
-  \item \texttt{EV charging station siting GIS spatial optimization}
+  \item EV charging infrastructure planning urban spatial optimization
+  \item electric vehicle charging station location optimization equity accessibility
+  \item EV charging station siting GIS spatial optimization
 \end{itemize}
 
 
@@ -185,9 +190,9 @@ The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, ma
 \noindent \textbf{Phased deployment queries (Gap 4):}
 
 \begin{itemize}
-  \item \texttt{BEV charging deployment rollout phased urban infrastructure}
-  \item \texttt{EV charging infrastructure temporal sequential staged deployment}
-  \item \texttt{electric vehicle charging district-level meso site selection implementation planning}
+  \item BEV charging deployment rollout phased urban infrastructure
+  \item EV charging infrastructure temporal sequential staged deployment
+  \item electric vehicle charging district-level meso site selection implementation planning
 \end{itemize}
 
 
@@ -195,9 +200,9 @@ The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, ma
 \noindent \textbf{Zoning and land-use queries (Gap 2):}
 
 \begin{itemize}
-  \item \texttt{charging infrastructure land use zoning regulatory compatibility}
-  \item \texttt{electric vehicle charging zoning ordinance permitting municipal land use regulation}
-  \item \texttt{EV charging station mixed-use district land use compatibility urban form}
+  \item charging infrastructure land use zoning regulatory compatibility
+  \item electric vehicle charging zoning ordinance permitting municipal land use regulation
+  \item EV charging station mixed-use district land use compatibility urban form
 \end{itemize}
 
 
@@ -205,8 +210,8 @@ The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, ma
 \noindent \textbf{Equity and utilization queries (Gap 3):}
 
 \begin{itemize}
-  \item \texttt{electric vehicle charging spatial justice coverage underserved}
-  \item \texttt{EV charging demand forecasting utilization optimization network}
+  \item electric vehicle charging spatial justice coverage underserved
+  \item EV charging demand forecasting utilization optimization network
 \end{itemize}
 
 
@@ -214,8 +219,8 @@ The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, ma
 \noindent \textbf{Meso-micro queries (Gap 5):}
 
 \begin{itemize}
-  \item \texttt{EV charging infrastructure meso micro multi-scale planning}
-  \item \texttt{EV charging infrastructure multi-scale urban district site level planning integration}
+  \item EV charging infrastructure meso micro multi-scale planning
+  \item EV charging infrastructure multi-scale urban district site level planning integration
 \end{itemize}
 
 
@@ -311,12 +316,15 @@ The following flowchart (Figure 2.1) summarizes the four-stage screening process
 \section{Inclusion and Exclusion Criteria}
 
 
-\noindent \textbf{Table 2.1: Inclusion and Exclusion Criteria}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Inclusion and Exclusion Criteria}\\[4pt]
 \toprule
-Type & Criterion & Rationale \\
+\textbf{Type} & \textbf{Criterion} & \textbf{Rationale} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Type} & \textbf{Criterion} & \textbf{Rationale} \\
 \midrule
 \endhead
 Include & Addresses EV/BEV charging infrastructure planning (not only vehicle technology) & Core domain scope \\
@@ -338,12 +346,15 @@ Exclude & Confirmed duplicate of an included paper & Deduplication \\
 For each included paper, structured data extraction was performed following the schema summarized in Table 2.2. The extraction schema covers 44 fields across thirteen dimensions: paper identity and metadata; research problem and scope; methodology approach and data sources; spatial unit and planning scale; demand modeling; optimization formulation; equity treatment; utilization treatment; rollout and phasing; zoning and land-use; meso-micro integration; quality assessment and limitations; and dissertation gap mapping (Gap 1--5, with evidence strings).
 
 
-\noindent \textbf{Table 2.2: Literature Extraction Dimensions and Analytical Purpose}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Literature Extraction Dimensions and Analytical Purpose}\\[4pt]
 \toprule
-Dimension & Information Extracted & Purpose in Analysis \\
+\textbf{Dimension} & \textbf{Information Extracted} & \textbf{Purpose in Analysis} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Dimension} & \textbf{Information Extracted} & \textbf{Purpose in Analysis} \\
 \midrule
 \endhead
 Paper Metadata & Authors, year, venue, DOI, publication type & Enables bibliographic tracking and study categorization \\
@@ -526,9 +537,6 @@ Spatial optimization constitutes the dominant methodological paradigm in chargin
 
 \noindent \textbf{Xia et al. (2025)}~\cite{robust_charging_2025} present \textit{Robust charging station location and routing-scheduling for electric modular autonomous units}. Problem definition: Motivated by global electrification targets and the advent of electric modular autonomous units (E-MAUs), this paper addresses a robust charging station location and routing-scheduling problem (E-RCRSP) in an inter-modal transit system, presenting a novel solution to traditional electric bus scheduling. The system integrates regular bus services, offering full-line or sectional coverage, and short-turning services. Considering the fast-charging technology with quick top-ups, we jointly optimize charging station locations and capacities, fleet sizing, as well as routing-scheduling for E-MAUs under demand uncertainty. This work addresses dissertation gaps: G1.
 
-
-
-\noindent \textbf{Pimpale (2025)}~\cite{synergistic_development_2025} present \textit{Synergistic Development of Cybersecurity and Functional Safety for Smart EVs}. The introduction of Smart EVs (SEVs) represents an increasingly disruption on automotive area, once integrates advanced computer and communication technologies to highly electrical cars, which come with high performances, environment friendly and user friendly characteristics . But the increasing complexity of SEVs prompted by greater dependence on interconnected systems, autonomous capabilities and electrification, presents new challenges in cybersecurity as well as functional safety. The safety and reliability of such vehicles is paramount, as unsafe or unreliable operation in either case represents an unacceptable risk in terms of the performance of the vehicle and safety of the passenger. This work addresses dissertation gaps: G1.
 
 
 
@@ -916,147 +924,149 @@ Spatial optimization constitutes the dominant methodological paradigm in chargin
 
 
 
-\noindent \textbf{Table 3.1: Papers in the Spatial Optimization for Charging Station Placement Theme}
-
-
-\begin{longtable}{L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}}
+\begin{longtable}{L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}}
+\caption{Papers in the Spatial Optimization for Charging Station Placement Theme}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Gaps \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
 \midrule
 \endhead
-A Two-Stage Stochastic Optimization Model for the? & Najafzad et al. & 2026 & Mathematical Optimization & city & G1, G3, G4 \\
-Joint Planning of Distribution Systems and EV? & Mejia et al. & 2026 & Mathematical Optimization & city & G1 \\
-Pricing Electric Vehicle Charging and Station? & Jiang et al. & 2026 & Mathematical Optimization & city & G1 \\
-Regional Transportation Modeling for Equitable? & Babur et al. & 2026 & Simulation-Based & regional & G1, G3, G4 \\
-Simultaneous Optimization of Electric Ferry? & Bertucci et al. & 2026 & Mathematical Optimization & city & G1 \\
-Strategic Planning of Public Electric Vehicle? & Fariza et al. & 2026 & Mathematical Optimization & regional & G1, G2 \\
-A Digital Twin Framework for Decision-Support and? & Do et al. & 2025 & Mixed Methods & city & G1, G5 \\
-A density-based spatial clustering and linear? & Ameer et al. & 2025 & Mathematical Optimization & city & G1 \\
-A Joint Planning Model for Fixed and Mobile? & Yu et al. & 2025 & Mixed Methods & city & G1, G4 \\
-A Multi-Modal Spatial Risk Framework for EV? & Karaku\c{s} et al. & 2025 & Empirical / Case Study & city & G1, G2, G4 \\
-A Spatially Aware Machine Learning Method for? & Huang et al. & 2025 & Mixed Methods & city & G1 \\
-A two-stage optimization framework for EV? & Meng et al. & 2025 & Mathematical Optimization & city & G1 \\
-A United Framework for Planning Electric Vehicle? & Kinchen et al. & 2025 & Mixed Methods & city & G1, G3 \\
-An Exact Solution Algorithm for the Bi-Level? & Nankali et al. & 2025 & Mixed Methods & city & G1 \\
-Analyzing locational inequalities in the? & Mousaei & 2025 & Empirical / Case Study & city & G1 \\
-Causal spillover effects of electric vehicle? & Silva et al. & 2025 & Empirical / Case Study & city & G1, G4 \\
-CHARGE-MAP: An integrated framework to study the? & Islam et al. & 2025 & Mixed Methods & city & G1, G4 \\
-Competitive EV charging station location with queues & Nguyen et al. & 2025 & Mixed Methods & city & G1 \\
-Data-driven EV charging infrastructure with? & Alharbi et al. & 2025 & Mathematical Optimization & city & G1, G4 \\
-Data-Driven Optimization of EV Charging Station? & Junker et al. & 2025 & Mixed Methods & site & G1 \\
-Electric Vehicle Charging Planning: A Complex? & Zhao et al. & 2025 & Mathematical Optimization & city & G1, G3 \\
-Explainable and context-aware Graph Neural? & Kapoor & 2025 & Mathematical Optimization & city & G1 \\
-Fairness-Oriented Charging Station Location? & Yuan et al. & 2025 & Mathematical Optimization & city & G1, G3 \\
-Hybrid optimization of EV charging station? & Ameer et al. & 2025 & Mathematical Optimization & city & G1 \\
-Joint Optimization of Electric Vehicle Routes and? & Okada et al. & 2025 & Mathematical Optimization & city & G1, G4 \\
-Large Language Model-Assisted Planning of? & Zheng et al. & 2025 & Mixed Methods & city & G1, G4 \\
-Location and capacity optimization of EV charging? & Choi et al. & 2025 & Mathematical Optimization & city & G1 \\
-Multiobjective model to optimize charging station? & Ruiz-Barajas et al. & 2025 & Mixed Methods & city & G1 \\
-Optimal mixed fleet and charging infrastructure? & Nakao et al. & 2025 & Mixed Methods & city & G1 \\
-Optimization of Electric Vehicle Charging Station? & Zhang et al. & 2025 & Mathematical Optimization & city & G1 \\
-Optimizing electric bus charging station? & Zhong et al. & 2025 & Mixed Methods & city & G1 \\
-Optimizing Urban Electric Vehicle Charging and? & Ai et al. & 2025 & Mathematical Optimization & city & G1, G5 \\
-Planning future charging infrastructure for? & Yuan et al. & 2025 & Empirical / Case Study & regional & G1, G4 \\
-Predicting Optimal Placement of Electric Vehicle? & Mousaei et al. & 2025 & Empirical / Case Study & city & G1 \\
-Reinforcement Learning for Hybrid Charging? & Zhu et al. & 2025 & Empirical / Case Study & city & G1 \\
-Robust charging station location and? & Xia et al. & 2025 & Mathematical Optimization & corridor & G1 \\
-Synergistic Development of Cybersecurity and? & Pimpale & 2025 & Mathematical Optimization & city & G1 \\
-Trajectory-Integrated Accessibility Analysis of? & Ju et al. & 2025 & Mathematical Optimization & neighborhood & G1 \\
-A data-driven approach of layout evaluation for? & Zhang et al. & 2024 & Mixed Methods & city & G1, G4, G5 \\
-A multi-objective site selection of electric? & Zhang et al. & 2024 & Mathematical Optimization & site & G1, G2 \\
-A particle swarm optimizer-based optimization? & Aljaidi et al. & 2024 & Mathematical Optimization & city & G1 \\
-A Quantum Optimization Algorithm for Optimal? & Radvand et al. & 2024 & Mathematical Optimization & city & G1 \\
-A two-layer planning method for location and? & Wu et al. & 2024 & Mathematical Optimization & city & G1 \\
-Advancing urban electric vehicle charging? & Zhang et al. & 2024 & Mathematical Optimization & city & G1 \\
-Battery swapping station location for electric? & Liu et al. & 2024 & Mixed Methods & neighborhood & G1, G4 \\
-Beyond Profit: A Multi-Objective Framework for? & Wang et al. & 2024 & Mixed Methods & city & G1 \\
-Charging Station Site Selection Optimization for? & Cai et al. & 2024 & Mixed Methods & site & G1 \\
-Electric Vehicle Charging Infrastructure? & Li et al. & 2024 & Mathematical Optimization & city & G1 \\
-Energy management optimization of hybrid electric? & Cao et al. & 2024 & Mixed Methods & city & G1 \\
-Integrating En Route and Home Proximity in EV? & Mehditabrizi et al. & 2024 & Mathematical Optimization & city & G1 \\
-Multiobjective optimization for sizing and? & Mohammed et al. & 2024 & Mathematical Optimization & city & G1 \\
-Optimal Electric Vehicle Charging Station? & Kumar et al. & 2024 & Mathematical Optimization & site & G1 \\
-Optimal EV Charging Scheduling at Electric? & Pierrou et al. & 2024 & Mathematical Optimization & city & G1 \\
-Optimal EVCS planning via spatial-temporal? & He et al. & 2024 & Mathematical Optimization & city & G1, G4 \\
-Optimal planning for electric vehicle fast? & Heo et al. & 2024 & Empirical / Case Study & city & G1 \\
-Optimization Strategies for Efficient Charging? & Panyaram & 2024 & Mathematical Optimization & city & G1, G4 \\
-Optimizing EV Charging Station Placement in New? & Huang et al. & 2024 & Mathematical Optimization & city & G1 \\
-Optimizing Urban Logistics Through Electric? & Munawar & 2024 & Mixed Methods & regional & G1, G5 \\
-Sequential Charging Station Location Optimization? & Shen et al. & 2024 & Mathematical Optimization & city & G1, G4 \\
-Sustainable Planning of Electric Vehicle Charging? & Seilabi et al. & 2024 & Mathematical Optimization & city & G1, G4 \\
-The Electric Vehicle Problem with Road Junctions? & Akbay et al. & 2024 & Mathematical Optimization & city & G1 \\
-Towards Sustainable Urban Mobility: Voronoi-Based? & Boonprong et al. & 2024 & Empirical / Case Study & city & G1, G2, G3 \\
-Towards Using Machine Learning to Generatively? & Miltner et al. & 2024 & Mixed Methods & city & G1, G4 \\
-Urban Electric Vehicle Charging Station Placement? & Alhussan et al. & 2024 & Mathematical Optimization & city & G1 \\
-A Battery Electric Vehicle Transportation Network? & Xin et al. & 2023 & Mathematical Optimization & city & G1 \\
-A Data-Driven Framework for Improving Public EV? & Al-Dahabreh et al. & 2023 & Mixed Methods & city & G1 \\
-A Robust and Efficient Optimization Model for? & Arief et al. & 2023 & Mixed Methods & city & G1, G3 \\
-An agent-based modeling approach for public? & Yi et al. & 2023 & Mixed Methods & city & G1 \\
-Electric Vehicle Fleet and Charging? & Varma et al. & 2023 & Simulation-Based & city & G1, G5 \\
-Fast-charging station location problem: A? & Qiao et al. & 2023 & Mathematical Optimization & city & G1 \\
-Incorporating time-dependent demand patterns in? & Filippi et al. & 2023 & Mathematical Optimization & city & G1, G4 \\
-Initial location selection of electric vehicles? & Tambunan et al. & 2023 & Mathematical Optimization & city & G1 \\
-Layout and optimization of charging piles for new? & Jiang & 2023 & Mathematical Optimization & city & G1 \\
-Maximum flow-based formulation for the optimal? & Parent et al. & 2023 & Mixed Methods & city & G1, G4 \\
-On the Optimal Placement of Electric Vehicle? & Tiu et al. & 2023 & Mathematical Optimization & city & G1, G4 \\
-Optimal Location of EVs Public Charging Stations? & Mourgues et al. & 2023 & Mathematical Optimization & city & G1 \\
-Optimal Placement of Charging Stations in Road? & Liu et al. & 2023 & Mathematical Optimization & city & G1, G3 \\
-Optimizing Electric Vehicle Charging? & Wu et al. & 2023 & Mixed Methods & city & G1 \\
-Placement of electric vehicle charging station? & Pal et al. & 2023 & Mathematical Optimization & city & G1 \\
-SPAP: Simultaneous Demand Prediction and Planning? & Wang et al. & 2023 & Mixed Methods & city & G1, G4 \\
-Spatial Arbitrage Through Bidirectional Electric? & Mohammadian et al. & 2023 & Mixed Methods & city & G1, G4 \\
-A Framework to Analyze the Requirements of a? & Mishra et al. & 2022 & Mixed Methods & corridor & G1 \\
-A Novel Data-Driven Approach for Solving the? & Hung et al. & 2022 & Mathematical Optimization & city & G1 \\
-Designing an Optimized Electric Vehicle Charging? & Amilia et al. & 2022 & Mixed Methods & city & G1, G3, G4 \\
-Development of Charging, Discharging Scheduling? & Jin et al. & 2022 & Mathematical Optimization & city & G1, G5 \\
-Distributed Coordination of Charging Stations? & Yan et al. & 2022 & Mathematical Optimization & city & G1 \\
-EV Charging Station Wholesale Market? & Mousavi et al. & 2022 & Mixed Methods & city & G1 \\
-Optimal Placement of Electric Vehicle Charging? & Srinivas et al. & 2022 & Mathematical Optimization & city & G1 \\
-Optimising Electric Vehicle Charging Station? & Lamontagne et al. & 2022 & Mixed Methods & city & G1 \\
-Performance Analysis of Charging Infrastructure? & Qin et al. & 2022 & Mathematical Optimization & city & G1 \\
-Planning of electric vehicle fast-charging? & Bian et al. & 2022 & Mathematical Optimization & city & G1, G4 \\
-Predictive Energy Management Strategy for? & Lin et al. & 2022 & Mixed Methods & city & G1, G5 \\
-Reinforcement Learning-based Placement of? & Wahl et al. & 2022 & Empirical / Case Study & city & G1 \\
-Research on Multi-Objective Planning of Electric? & Wang et al. & 2022 & Mixed Methods & city & G1 \\
-Web Mining to Inform Locations of Charging? & Hummler et al. & 2022 & Empirical / Case Study & city & G1 \\
-A GIS-based Optimal Facility Location Framework? & Zafar et al. & 2021 & Mathematical Optimization & city & G1 \\
-Citizen centric optimal electric vehicle charging? & Cintrano et al. & 2021 & Mathematical Optimization & neighborhood & G1 \\
-Deep Spatio-Temporal Forecasting of Electrical? & H\"uttel et al. & 2021 & Mathematical Optimization & city & G1, G4 \\
-Energy-optimal Design and Control of Electric? & Hurk et al. & 2021 & Mixed Methods & city & G1 \\
-Hierarchical Optimization of Electric Vehicle? & Mirheli et al. & 2021 & Mathematical Optimization & city & G1, G4 \\
-Joint Optimization of Autonomous Electric Vehicle? & Luke et al. & 2021 & Mathematical Optimization & city & G1 \\
-Optimal Placement of Public Electric Vehicle? & Padmanabhan et al. & 2021 & Mathematical Optimization & city & G1 \\
-Optimal Planning of Electric Vehicle Charging? & Hou et al. & 2021 & Mixed Methods & city & G1 \\
-Reducing Waiting Times at Charging Stations with? & Schoenberg et al. & 2021 & Simulation-Based & city & G1 \\
-Siting and Sizing of Charging Infrastructure for? & Ahadi et al. & 2021 & Mixed Methods & city & G1 \\
-Strategic Competition of Electric Vehicle? & Bayani et al. & 2021 & Mathematical Optimization & city & G1 \\
-A Method for the Optimization of Daily Activity? & Rizopoulos et al. & 2020 & Mathematical Optimization & city & G1, G4 \\
-Double-Layer Game Based Wireless Charging? & Wang et al. & 2020 & Mixed Methods & city & G1 \\
-Dynamic Modeling and Real-time Management of a? & Yang et al. & 2020 & Simulation-Based & regional & G1 \\
-Location of Charging Stations in Electric Car? & Brandst\"atter et al. & 2020 & Mixed Methods & city & G1, G4 \\
-Optimal fast charging station locations for? & Ma et al. & 2020 & Mathematical Optimization & city & G1 \\
-OPTIMIZING THE LOCATION OF URBAN CHARGING? & GORBUNOVA et al. & 2020 & Empirical / Case Study & city & G1 \\
-Resource Aware Pricing for Electric Vehicle Charging & Santoyo et al. & 2020 & Mixed Methods & city & G1 \\
-A Method of EV Detour-to-Recharge Behavior? & Ouyang et al. & 2019 & Mixed Methods & city & G1, G4 \\
-Optimal Decision Making Model of Battery Energy? & Upadhaya et al. & 2019 & Mathematical Optimization & city & G1, G5 \\
-Predicting popularity of EV charging? & Straka et al. & 2019 & Mathematical Optimization & city & G1, G4 \\
-A Consumer Behavior Based Approach to Multi-Stage? & Luo et al. & 2018 & Mixed Methods & city & G1 \\
-Charging station optimization for balanced? & Deza et al. & 2018 & Mathematical Optimization & city & G1 \\
-Electric Vehicle Charging Station Placement? & Cui et al. & 2018 & Mathematical Optimization & city & G1 \\
-Engineering and Economic Analysis for Electric? & Luo & 2018 & Mathematical Optimization & city & G1 \\
-Placement of EV Charging Stations --- Balancing? & Luo et al. & 2018 & Simulation-Based & city & G1 \\
-Predicting Electric Vehicle Charging Station? & Ramachandran et al. & 2018 & Simulation-Based & city & G1 \\
-Electric vehicle charging: a queueing approach & Aveklouris et al. & 2017 & Simulation-Based & city & G1 \\
-Route Optimization of Electric Vehicles based on? & Kosmanos et al. & 2017 & Mixed Methods & city & G1 \\
-Demand Prediction and Placement Optimization for? & Gopalakrishnan et al. & 2016 & Mixed Methods & city & G1, G4 \\
-Charging Games in Networks of Electrical Vehicles & Beaude et al. & 2015 & Mathematical Optimization & city & G1 \\
-Electric Vehicles Charging Control based on? & Lanna et al. & 2015 & Mathematical Optimization & city & G1, G4 \\
-Introducing Decentralized EV Charging? & Beaude et al. & 2015 & Mixed Methods & neighborhood & G1 \\
-Minimizing the impact of EV charging on the? & Beaude et al. & 2015 & Mixed Methods & city & G1 \\
-Optimizing the Deployment of Electric Vehicle? & Vazifeh et al. & 2015 & Mathematical Optimization & city & G1, G4 \\
-Electric Vehicle Charging Station Placement:? & Lam et al. & 2013 & Simulation-Based & city & G1 \\
-Socially optimal charging strategies for electric? & Yudovina et al. & 2013 & Simulation-Based & city & G1, G4 \\
-Electric Vehicle Charging Infrastructure? & Li et al. & 0 & Mathematical Optimization & city & G1, G4 \\
+\cite{a_two-stage_2026} & Najafzad et al. & 2026 & Two-stage stochastic MILP: Stage 1 FCS siting (ESS algorithm + long-term traffic/budget/equity) + Stage 2 dynamic MCS assignment under demand uncertainty (scenario-based) & Bexar County, TX, USA & G1, G3, G4 \\
+\cite{joint_planning_2026} & Mejia et al. & 2026 & GIS-based spatial analysis (GWR + AHP multi-criteria siting) with stochastic MILP (CPLEX) & Sao Paulo state, Brazil (unnamed city, 230k pop.) & G1 \\
+\cite{pricing_electric_2026} & Jiang et al. & 2026 & MILP pricing via copositive programming (CPP/COP dual for marginal EV charging prices with binary station access; revenue-adequate incentive-compatible mechanism) & Newark, NJ, USA & G1 \\
+\cite{regional_transportation_2026} & Babur et al. & 2026 & Regional discrete event simulation (Mobiliti platform; 19M trips; spatial BEV charging demand density and equity impact analysis) & SF Bay Area, USA & G1, G3, G4 \\
+\cite{simultaneous_optimization_2026} & Bertucci et al. & 2026 & MILP (joint electric ferry scheduling, charging infrastructure sizing, and ship battery sizing for marine electrification) & Buenos Aires, AR & G1 \\
+\cite{strategic_planning_2026} & Fariza et al. & 2026 & GIS + AHP + Weighted Overlay (multi-criteria spatial priority zoning for EVCS; five suitability criteria) & West Java, Indonesia & G1, G2 \\
+\cite{a_2025} & Do et al. & 2025 & Digital twin + agent-based simulation with embedded GA optimization (EV station config, policies, renewable energy) & Hanoi, Vietnam & G1, G5 \\
+\cite{a_density-based_2025} & Ameer et al. & 2025 & Mathematical Optimization & Hefei, China & G1 \\
+\cite{a_joint_2025} & Yu et al. & 2025 & Two-stage MILP + ADMM (joint FCS/MCS planning: queueing theory + SQP for power-traffic coordination) & Mobile, AL, USA & G1, G4 \\
+\cite{a_multi-modal_2025} & Karaku\c{s} et al. & 2025 & RSERI-EV spatial risk framework (remote sensing + kNN graph; flood/LST/NDVI/LULC resilience scoring for EV charging network) & Wales, UK & G1, G2, G4 \\
+\cite{a_spatially_2025} & Huang et al. & 2025 & Spatially aware ML (SAML): MLP + spatial loss function + SHAP explainability for EVCS demand prediction & Wuhan, China & G1 \\
+\cite{a_two-stage_2025} & Meng et al. & 2025 & Two-stage heuristic-MILP (Gurobi): Monte Carlo + K-means demand simulation with iterative CP allocation & Abstract synthetic grid (China-inspired context, 4x3 uniform spatial grid) & G1 \\
+\cite{a_united_2025} & Kinchen et al. & 2025 & Simulation-integrated optimization (traffic simulation + energy modeling + mobility equity measure for equitable CS placement) & New York City, NY, USA & G1, G3 \\
+\cite{an_exact_2025} & Nankali et al. & 2025 & Bi-level exact Branch-and-Price-and-Cut (upper: revenue-maximizing CS placement; lower: EV user routing via Frank-Wolfe traffic assignment) & Benchmark networks (E. Massachusetts, Anaheim, Barcelona; no real deployment city) & G1 \\
+\cite{analyzing_locational_2025} & Mousaei & 2025 & Machine learning for EV charging locational inequality analysis (empirical case study) & Glasgow, UK & G1 \\
+\cite{causal_spillover_2025} & Silva et al. & 2025 & Quasi-experimental causal inference (staggered DiD with mobile GPS data; EVCS business spillover impact analysis) & New York City and SF Bay Area, CA, USA & G1, G4 \\
+\cite{charge-map_an_2025} & Islam et al. & 2025 & Agent-based simulation + optimization (CHARGE-MAP: spatiotemporal demand simulation + CS/charger location optimization + grid stability module) & Virginia, USA & G1, G4 \\
+\cite{competitive_ev_2025} & Nguyen et al. & 2025 & Bilevel optimization with queueing-based user behavior (M/M/s/K, M/Er/s/K) and user equilibrium; surrogate-based heuristic for competitive CS location & Montreal, Canada & G1 \\
+\cite{data-driven_ev_2025} & Alharbi et al. & 2025 & ST-FCLM + M/M/C queuing theory for EV facility siting/sizing; SOS metaheuristic for battery storage allocation under stochastic demand/RES uncertainty & Standard benchmark (Nguyen-Dupuis RTN + modified IEEE 33-bus MG, SUMO-simulated; no real city) & G1, G4 \\
+\cite{data-driven_optimization_2025} & Junker et al. & 2025 & Agent-based simulation & Palo Alto, CA, USA & G1 \\
+\cite{electric_vehicle_2025} & Zhao et al. & 2025 & Mathematical Optimization (GIS-based analysis) & Analytical framework & G1, G3 \\
+\cite{explainable_and_2025} & Kapoor & 2025 & Graph Attention Network (GAT) with SHAP/LIME explainability & Fully synthetic dataset (SUMO-simulated) & G1 \\
+\cite{fairness-oriented_charging_2025} & Yuan et al. & 2025 & Fairness-oriented MCLP + SpoNet DRL (GRU encoder-decoder with multi-head attention); Geodetector for factor weighting; GIS spatial analysis (kernel density, SDE, ANN) & Beijing, China (Haidian District) & G1, G3 \\
+\cite{hybrid_optimization_2025} & Ameer et al. & 2025 & Hybrid Bender's decomp + NSGA-II (master: EVCS siting; sub: Pareto consumer pricing and re-routing; real Hefei EV demand data) & Hefei, China (all 9 districts{\slash}counties) & G1 \\
+\cite{joint_optimization_2025} & Okada et al. & 2025 & QUBO-based sequential optimization with Bayesian inference (quantum annealer-compatible joint EV routing and CS location) & Synthetic (20-location routing problem, no real city) & G1, G4 \\
+\cite{large_language_2025} & Zheng et al. & 2025 & LLM-assisted MILP + ADMM (joint investment and charging assignment; spatial-temporal demand dynamics) & Chengdu, China & G1, G4 \\
+\cite{location_and_2025} & Choi et al. & 2025 & Genetic algorithm + Fuzzy AHP (location optimization and fast/slow charger ratio balancing); urban metrics: parking index, public transit connectivity, land use plans & Seoul, South Korea & G1 \\
+\cite{multiobjective_model_2025} & Ruiz-Barajas et al. & 2025 & Multi-objective flow refueling location model (FRLM) with epsilon constraint method; three objectives: maximize CO2 reduction, minimize total cost, minimize user charging time & Mexico (national interurban corridor network) & G1 \\
+\cite{optimal_mixed_2025} & Nakao et al. & 2025 & Bi-level optimization: upper-level stochastic charging station configuration + lower-level mixed fleet dial-a-ride routing (DARP) with CO2 and capacity constraints; deterministic annealing metaheuristic & Bettembourg, Luxembourg & G1 \\
+\cite{optimization_of_2025} & Zhang et al. & 2025 & NSGA-III multi-objective optimization (minimize construction cost, maximize user satisfaction and convenience) + TOPSIS ranking for final siting; based on activity-travel pattern analysis & Lanzhou, China & G1 \\
+\cite{optimizing_electric_2025} & Zhong et al. & 2025 & Deep RL + agent-based simulation (dual Q-network, hybrid reward function) & Hanoi, Vietnam & G1 \\
+\cite{optimizing_urban_2025} & Ai et al. & 2025 & MILP + location-inventory-grid model with continuous approximation (joint EV charging and battery swapping under grid and demand uncertainty) & New York City, NY, USA & G1, G5 \\
+\cite{planning_future_2025} & Yuan et al. & 2025 & Multi-objective bottom-up capacity allocation model (BEV/EREV/PHEV demand differentiation; 2025-2030 projection) & Chongqing, China & G1, G4 \\
+\cite{predicting_optimal_2025} & Mousaei et al. & 2025 & Empirical / Case Study & General {\slash} theoretical & G1 \\
+\cite{reinforcement_learning_2025} & Zhu et al. & 2025 & Deep RL + MPC for hybrid fixed/mobile charging station planning and operation (HCSPO) & New York City, NY, USA & G1 \\
+\cite{robust_charging_2025} & Xia et al. & 2025 & Robust path-based optimization (E-RCRSP: joint E-MAU charging station location and routing-scheduling under demand uncertainty) & Beijing, China & G1 \\
+\cite{trajectory-integrated_accessibility_2025} & Ju et al. & 2025 & Trajectory-integrated accessibility metric (TI-acs): individual GPS trajectory data + spatial equity analysis (Gini index, racial disparities) for EVCS accessibility & San Francisco, CA, USA & G1 \\
+\cite{a_data-driven_2024} & Zhang et al. & 2024 & Agent-based simulation (ABS) + Pareto multi-objective optimization (maximize ET user satisfaction, minimize EVCI workload variance); GPS trajectory data in GIS & Shenzhen, China & G1, G4, G5 \\
+\cite{a_multi-objective_2024} & Zhang et al. & 2024 & NSGA-II multi-objective optimization (maximize system benefits + minimum coverage level); TF-IDF urban land use + POI clustering for demand estimation & Hohhot, China & G1, G2 \\
+\cite{a_particle_2024} & Aljaidi et al. & 2024 & PSO + Mixed Linear Programming (minimize EV energy consumption to reach CS; horizontal distance via Haversine + positive elevation difference; validated on Newcastle upon Tyne real data) & Newcastle upon Tyne, UK & G1 \\
+\cite{a_quantum_2024} & Radvand et al. & 2024 & Quantum search-based optimization (amplitude amplification + quantum phase estimation; quadratic speedup over classical branch-and-bound for NP-hard CS placement) & C. Illinois, USA & G1 \\
+\cite{a_two-layer_2024} & Wu et al. & 2024 & Two-layer PSO: upper layer CS siting (minimize demand inconvenience + construction cost + waiting time via M/M/c queuing + Voronoi service areas) + lower layer pile capacity (maximize utilization); fuzzy logic charging demand prediction; Wujiang District real EV data & Wujiang District, Suzhou, China & G1 \\
+\cite{advancing_urban_2024} & Zhang et al. & 2024 & MADRL (TD3): cooperative Price-agent + Nudge-agent for day-ahead CS pricing and behavioral nudge optimization; Random Forest user choice model + grid-based OD mobility model; objectives: CSO revenue maximization and power curve tracking; Xi'an ride-hailing data & Xi'an, China & G1 \\
+\cite{battery_swapping_2024} & Liu et al. & 2024 & Simulation optimization + Large Neighborhood Search (LNS) framework + Bayesian optimization for single-station allocation; minimizes demand loss under stochastic BSS demand in city network & Shanghai, China & G1, G4 \\
+\cite{beyond_profit_2024} & Wang et al. & 2024 & SAC (Soft Actor-Critic) DRL + LP-based safe layer for multi-objective CS pricing and scheduling (maximize profit and reputation); constraint satisfaction via linear programming projection & Shenzhen, China & G1 \\
+\cite{charging_station_2024} & Cai et al. & 2024 & Improved GA (farthest-insertion heuristic + local search) for ELV CS siting with time-window and load constraints; reduces CS count 22.97\%, vehicles 13.71\%, algorithm complexity 46.81\%; validated on C/R/RC benchmarks + Chongqing case study & Chongqing, China & G1 \\
+\cite{electric_vehicle_2024} & Li et al. & 2024 & MINLP solved by Gurobi Branch-and-Cut; 7 cost types from CS operator and EV user perspectives; 1509 candidate POIs $\rightarrow$ 134 selected sites, 923 charging stations; Ho Chi Minh City case study & Ho Chi Minh City, Vietnam & G1 \\
+\cite{energy_management_2024} & Cao et al. & 2024 & Deep learning MPC (BPNN + CNN) for HEV energy management optimization; questionnaire-validated with 1,500 consumers; predicts energy consumption across 5 road condition types; outperforms traditional control on fuel, battery, and CO2 metrics & General {\slash} theoretical & G1 \\
+\cite{integrating_en_2024} & Mehditabrizi et al. & 2024 & Spatial accessibility analysis (en route + home proximity EV charging); spatial autocorrelation + high/low access clustering; identifies CS underestimation in peripheral commuting zones vs. overestimation in urban cores; Washington Metropolitan Area & Washington DC, USA & G1 \\
+\cite{multiobjective_optimization_2024} & Mohammed et al. & 2024 & PSO multi-objective optimization (minimize installation cost + operation cost + CO2 emissions); Monte Carlo simulation for 4 EV types (L7e/M1/N1/N2) with gamma/normal battery capacity PDFs; OD gravity model + M/M/c queuing for waiting time; station-specific daily load curve forecasting; Hainan Island ring freeway (14 FCS, 17,297 EVs) & Hainan Island, China & G1 \\
+\cite{optimal_electric_2024} & Kumar et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimal_ev_2024} & Pierrou et al. & 2024 & Mathematical Optimization & Chur, Switzerland & G1 \\
+\cite{optimal_evcs_2024} & He et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1, G4 \\
+\cite{optimal_planning_2024} & Heo et al. & 2024 & Empirical / Case Study & Texas, USA & G1 \\
+\cite{optimization_strategies_2024} & Panyaram & 2024 & Mathematical Optimization (machine learning) & General {\slash} theoretical & G1, G4 \\
+\cite{optimizing_ev_2024} & Huang et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimizing_urban_2024} & Munawar & 2024 & Mixed Methods (GIS-based analysis) & International {\slash} general & G1, G5 \\
+\cite{sequential_charging_2024} & Shen et al. & 2024 & Stochastic MILP & Ann Arbor, MI, USA & G1, G4 \\
+\cite{sustainable_planning_2024} & Seilabi et al. & 2024 & Mathematical Optimization (genetic algorithm) & Numerical simulation & G1, G4 \\
+\cite{the_electric_2024} & Akbay et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{towards_sustainable_2024} & Boonprong et al. & 2024 & Empirical / Case Study (GIS-based analysis) & Bangkok, Thailand & G1, G2, G3 \\
+\cite{towards_using_2024} & Miltner et al. & 2024 & Neural network & Eindhoven, Netherlands & G1, G4 \\
+\cite{urban_electric_2024} & Alhussan et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{a_battery_2023} & Xin et al. & 2023 & Mathematical Optimization & International {\slash} general & G1 \\
+\cite{a_data-driven_2023} & Al-Dahabreh et al. & 2023 & Machine learning & Quebec, Canada & G1 \\
+\cite{a_robust_2023} & Arief et al. & 2023 & Mixed-integer programming & Surabaya, Indonesia & G1, G3 \\
+\cite{an_agent-based_2023} & Yi et al. & 2023 & Mixed Methods & General {\slash} theoretical & G1 \\
+\cite{electric_vehicle_2023} & Varma et al. & 2023 & Spatial optimization & Los Angeles, CA, USA & G1, G5 \\
+\cite{fast-charging_station_2023} & Qiao et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{incorporating_time-dependent_2023} & Filippi et al. & 2023 & Branch-and-bound & Chicago, IL, USA & G1, G4 \\
+\cite{initial_location_2023} & Tambunan et al. & 2023 & Mathematical Optimization (clustering) & Jakarta, Indonesia & G1 \\
+\cite{layout_and_2023} & Jiang & 2023 & Mathematical Optimization & Xi'an, China & G1 \\
+\cite{maximum_flow-based_2023} & Parent et al. & 2023 & MILP & Mobile, AL, USA & G1, G4 \\
+\cite{on_the_2023} & Tiu et al. & 2023 & Mixed-integer programming & Paris, France & G1, G4 \\
+\cite{optimal_location_2023} & Mourgues et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimal_placement_2023} & Liu et al. & 2023 & Mathematical Optimization (reinforcement learning) & Europe (multi-city) & G1, G3 \\
+\cite{optimizing_electric_2023} & Wu et al. & 2023 & Mixed Methods & Hunan Province, China & G1 \\
+\cite{placement_of_2023} & Pal et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{spap_simultaneous_2023} & Wang et al. & 2023 & Mixed Methods & Beijing{\slash}Guangzhou{\slash}Tianjin, China & G1, G4 \\
+\cite{spatial_arbitrage_2023} & Mohammadian et al. & 2023 & Genetic algorithm & San Antonio, TX, USA & G1, G4 \\
+\cite{a_framework_2022} & Mishra et al. & 2022 & Mixed Methods (agent-based simulation) & Los Angeles, USA & G1 \\
+\cite{a_novel_2022} & Hung et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{designing_an_2022} & Amilia et al. & 2022 & Mixed-integer programming & Surabaya, Indonesia & G1, G3, G4 \\
+\cite{development_of_2022} & Jin et al. & 2022 & Multi-objective optimization & Austin, TX, USA & G1, G5 \\
+\cite{distributed_coordination_2022} & Yan et al. & 2022 & Particle swarm optimization & Shanghai, China & G1 \\
+\cite{ev_charging_2022} & Mousavi et al. & 2022 & Two-stage stochastic MILP & Raleigh, NC, USA & G1 \\
+\cite{optimal_placement_2022} & Srinivas et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimising_electric_2022} & Lamontagne et al. & 2022 & Bilevel optimization & Orlando, FL, USA & G1 \\
+\cite{performance_analysis_2022} & Qin et al. & 2022 & Survey-based analysis & Salem, OR, USA & G1 \\
+\cite{planning_of_2022} & Bian et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G1, G4 \\
+\cite{predictive_energy_2022} & Lin et al. & 2022 & Mixed Methods & International {\slash} general & G1, G5 \\
+\cite{reinforcement_learning-based_2022} & Wahl et al. & 2022 & Deep Q-network (DQN) & Hannover, Germany & G1 \\
+\cite{research_on_2022} & Wang et al. & 2022 & Multi-objective genetic algorithm & Beijing, China & G1 \\
+\cite{web_mining_2022} & Hummler et al. & 2022 & Neural network & New York City, NY, USA & G1 \\
+\cite{a_gis-based_2021} & Zafar et al. & 2021 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{citizen_centric_2021} & Cintrano et al. & 2021 & Genetic algorithm & Malaga, Spain & G1 \\
+\cite{deep_spatio-temporal_2021} & H\"uttel et al. & 2021 & Graph convolutional network & Palo Alto, CA, USA & G1, G4 \\
+\cite{energy-optimal_design_2021} & Hurk et al. & 2021 & Mixed-integer programming & Paris, France & G1 \\
+\cite{hierarchical_optimization_2021} & Mirheli et al. & 2021 & Stochastic MILP & New York City, NY, USA & G1, G4 \\
+\cite{joint_optimization_2021} & Luke et al. & 2021 & Mixed-integer programming & San Francisco, CA, USA & G1 \\
+\cite{optimal_placement_2021} & Padmanabhan et al. & 2021 & Deep Q-network (DQN) & New York City, NY, USA & G1 \\
+\cite{optimal_planning_2021} & Hou et al. & 2021 & Mixed Methods (particle swarm optimization) & International {\slash} general & G1 \\
+\cite{reducing_waiting_2021} & Schoenberg et al. & 2021 & Multi-objective MILP & Dallas, TX, USA & G1 \\
+\cite{siting_and_2021} & Ahadi et al. & 2021 & Mixed Methods (agent-based simulation) & Berlin, Germany & G1 \\
+\cite{strategic_competition_2021} & Bayani et al. & 2021 & Mathematical Optimization & San Diego, CA, USA & G1 \\
+\cite{a_method_2020} & Rizopoulos et al. & 2020 & Mathematical Optimization (genetic algorithm) & Budapest, Hungary & G1, G4 \\
+\cite{double-layer_game_2020} & Wang et al. & 2020 & Stackelberg game & Mobile, AL, USA & G1 \\
+\cite{dynamic_modeling_2020} & Yang et al. & 2020 & Queuing theory & Los Angeles, CA, USA & G1 \\
+\cite{location_of_2020} & Brandst\"atter et al. & 2020 & Mixed Methods (linear programming) & Vienna, Austria & G1, G4 \\
+\cite{optimal_fast_2020} & Ma et al. & 2020 & Stochastic MILP & Tehran, Iran & G1 \\
+\cite{optimizing_the_2020} & GORBUNOVA et al. & 2020 & Empirical / Case Study & General {\slash} theoretical & G1 \\
+\cite{resource_aware_2020} & Santoyo et al. & 2020 & Genetic algorithm & New York City, NY, USA & G1 \\
+\cite{a_method_2019} & Ouyang et al. & 2019 & Multi-objective genetic algorithm & Chicago, IL, USA & G1, G4 \\
+\cite{optimal_decision_2019} & Upadhaya et al. & 2019 & MILP & Montreal, Canada & G1, G5 \\
+\cite{predicting_popularity_2019} & Straka et al. & 2019 & Stochastic programming & New York City, NY, USA & G1, G4 \\
+\cite{a_consumer_2018} & Luo et al. & 2018 & Bayesian optimization & Los Angeles, CA, USA & G1 \\
+\cite{charging_station_2018} & Deza et al. & 2018 & Stochastic MILP & Toronto, Canada & G1 \\
+\cite{electric_vehicle_2018} & Cui et al. & 2018 & Integer programming & Chicago, IL, USA & G1 \\
+\cite{engineering_and_2018} & Luo & 2018 & Stochastic programming & New York City, NY, USA & G1 \\
+\cite{placement_of_2018} & Luo et al. & 2018 & Bayesian optimization & Los Angeles, CA, USA & G1 \\
+\cite{predicting_electric_2018} & Ramachandran et al. & 2018 & Neural network & Washington DC, USA & G1 \\
+\cite{electric_vehicle_2017} & Aveklouris et al. & 2017 & Dynamic programming & Nashville, TN, USA & G1 \\
+\cite{route_optimization_2017} & Kosmanos et al. & 2017 & Machine learning & Las Vegas, NV, USA & G1 \\
+\cite{demand_prediction_2016} & Gopalakrishnan et al. & 2016 & Facility location model & Seattle, WA, USA & G1, G4 \\
+\cite{charging_games_2015} & Beaude et al. & 2015 & Nash equilibrium game & New York City, NY, USA & G1 \\
+\cite{electric_vehicles_2015} & Lanna et al. & 2015 & Mathematical Optimization & New York City, NY, USA & G1, G4 \\
+\cite{introducing_decentralized_2015} & Beaude et al. & 2015 & Monte Carlo simulation & Boston, MA, USA & G1 \\
+\cite{minimizing_the_2015} & Beaude et al. & 2015 & Game-theoretic model & Cambridge, MA, USA & G1 \\
+\cite{optimizing_the_2015} & Vazifeh et al. & 2015 & Multi-objective optimization & New York City, NY, USA & G1, G4 \\
+\cite{electric_vehicle_2013} & Lam et al. & 2013 & Greedy algorithm & New York City, NY, USA & G1 \\
+\cite{socially_optimal_2013} & Yudovina et al. & 2013 & Queuing theory & Ann Arbor, MI, USA & G1, G4 \\
+\cite{electric_vehicle_0} & Li et al. & 0 & Mathematical Optimization (deep learning) & General {\slash} theoretical & G1, G4 \\
 \bottomrule
 \end{longtable}
 
@@ -1088,19 +1098,22 @@ Equity-oriented research examines the distributional consequences of charging in
 
 
 
-\noindent \textbf{Table 3.2: Papers in the Equity Considerations in Charging Infrastructure Planning Theme}
-
-
-\begin{longtable}{L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}}
+\begin{longtable}{L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}}
+\caption{Papers in the Equity Considerations in Charging Infrastructure Planning Theme}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Gaps \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
 \midrule
 \endhead
-An equity-based approach for addressing? & Jha et al. & 2025 & Mathematical Optimization & city & G3 \\
-Crowdfunding for Equitable EV Charging? & Erfani et al. & 2024 & Mathematical Optimization & neighborhood & G3, G5 \\
-Inequitable Access to EV Charging Infrastructure & Khan et al. & 2021 & Mathematical Optimization & neighborhood & G3 \\
-Electrical Vehicle Charging Station Profit? & Wang et al. & 2017 & Mixed Methods & city & G3 \\
-Critical behaviour in charging of electric vehicles & Carvalho et al. & 2015 & Empirical / Case Study & city & G3 \\
+\cite{an_equity-based_2025} & Jha et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G3 \\
+\cite{crowdfunding_for_2024} & Erfani et al. & 2024 & Spatial optimization & Los Angeles, CA, USA & G3, G5 \\
+\cite{inequitable_access_2021} & Khan et al. & 2021 & Survey-based analysis & New York City, NY, USA & G3 \\
+\cite{electrical_vehicle_2017} & Wang et al. & 2017 & Lagrangian relaxation & Shenzhen, China & G3 \\
+\cite{critical_behaviour_2015} & Carvalho et al. & 2015 & Simulated annealing & New York City, NY, USA & G3 \\
 \bottomrule
 \end{longtable}
 
@@ -1196,35 +1209,38 @@ Utilization and demand modeling research focuses on forecasting charging demand,
 
 
 
-\noindent \textbf{Table 3.3: Papers in the Utilization and Demand Modeling Theme}
-
-
-\begin{longtable}{L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}}
+\begin{longtable}{L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}}
+\caption{Papers in the Utilization and Demand Modeling Theme}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Gaps \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
 \midrule
 \endhead
-An electric vehicle charging demand prediction? & Jiang et al. & 2025 & Mathematical Optimization & city & G4 \\
-Allocate electric vehicles? public charging? & Wu et al. & 2024 & Mathematical Optimization & city & -- \\
-Grid-constrained online scheduling of flexible? & Huffelen et al. & 2024 & Simulation-Based & city & -- \\
-IDEAS: Information-Driven EV Admission in? & Chattopadhyay et al. & 2024 & Mixed Methods & city & -- \\
-Optimizing Energy Supply for Full Electric? & Fernandez et al. & 2024 & Mixed Methods & city & -- \\
-Policy interventions and urban characteristics in? & Makaremi & 2024 & Mathematical Optimization & city & -- \\
-Fleet sizing and charging infrastructure design? & Yang et al. & 2023 & Mathematical Optimization & city & -- \\
-Integrating Optimal EV Charging in the Energy? & Pierrou et al. & 2023 & Mathematical Optimization & city & -- \\
-M-BEV: Masked BEV Perception for Robust? & Chen et al. & 2023 & Mathematical Optimization & city & G4 \\
-Analysis of Electric Vehicle Charging Station? & Hecht et al. & 2022 & Empirical / Case Study & city & -- \\
-Electric Vehicle Charging Station? & Wang et al. & 2022 & Mathematical Optimization & city & -- \\
-Impact of EV Charging Stations in Power Grids in? & Mogos et al. & 2021 & Mathematical Optimization & city & -- \\
-On-Demand Valet Charging for Electric Vehicles:? & Lai et al. & 2021 & Mathematical Optimization & city & G2 \\
-Securing the Electric Vehicle Charging? & Metere et al. & 2021 & Mathematical Optimization & city & G5 \\
-The Electric Vehicle Routing Problem with? & Liang et al. & 2021 & Mathematical Optimization & city & -- \\
-Load Forecasting Model and Day-ahead Operation? & Liu et al. & 2019 & Simulation-Based & city & -- \\
-Composite charging games in networks of electric? & Beaude et al. & 2015 & Empirical / Case Study & city & -- \\
-Scalable Electric Vehicle Charging Protocols & Zhang et al. & 2015 & Mathematical Optimization & city & -- \\
-Smart Vehicle to Grid Interface Project:? & Zuccaro et al. & 2015 & Mathematical Optimization & city & G5 \\
-A Dynamic Algorithm for Facilitated Charging of? & Taheri et al. & 2011 & Mathematical Optimization & city & -- \\
-Allocate Electric Vehicles? Public Charging? & Wu et al. & 0 & Mathematical Optimization & city & -- \\
+\cite{an_electric_2025} & Jiang et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G4 \\
+\cite{allocate_electric_2024} & Wu et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & -- \\
+\cite{grid-constrained_online_2024} & Huffelen et al. & 2024 & Genetic algorithm & Utrecht, Netherlands & -- \\
+\cite{ideas_information-driven_2024} & Chattopadhyay et al. & 2024 & Agent-based simulation & New Delhi, India & -- \\
+\cite{optimizing_energy_2024} & Fernandez et al. & 2024 & Mixed Methods & Valencia, Spain & -- \\
+\cite{policy_interventions_2024} & Makaremi & 2024 & Mathematical Optimization & General {\slash} theoretical & -- \\
+\cite{fleet_sizing_2023} & Yang et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & -- \\
+\cite{integrating_optimal_2023} & Pierrou et al. & 2023 & MILP & Chur, Switzerland & -- \\
+\cite{m-bev_masked_2023} & Chen et al. & 2023 & Autoencoder & Beijing, China & G4 \\
+\cite{analysis_of_2022} & Hecht et al. & 2022 & Empirical / Case Study & Los Angeles, CA, USA & -- \\
+\cite{electric_vehicle_2022} & Wang et al. & 2022 & Mathematical Optimization & Chongqing, China & -- \\
+\cite{impact_of_2021} & Mogos et al. & 2021 & Mathematical Optimization & Beijing, China & -- \\
+\cite{on-demand_valet_2021} & Lai et al. & 2021 & Stochastic programming & San Francisco, USA & G2 \\
+\cite{securing_the_2021} & Metere et al. & 2021 & Mathematical Optimization & Mobile, AL, USA & G5 \\
+\cite{the_electric_2021} & Liang et al. & 2021 & Column generation & Gilbert, AZ, USA & -- \\
+\cite{load_forecasting_2019} & Liu et al. & 2019 & Monte Carlo simulation & Shanghai, China & -- \\
+\cite{composite_charging_2015} & Beaude et al. & 2015 & Game-theoretic model & Oxford, UK & -- \\
+\cite{scalable_electric_2015} & Zhang et al. & 2015 & Lagrangian relaxation & New York City, NY, USA & -- \\
+\cite{smart_vehicle_2015} & Zuccaro et al. & 2015 & Mathematical Optimization & Valencia, Spain & G5 \\
+\cite{a_dynamic_2011} & Taheri et al. & 2011 & Mathematical Optimization & Austin, TX, USA & -- \\
+\cite{allocate_electric_0} & Wu et al. & 0 & Mathematical Optimization & General {\slash} theoretical & -- \\
 \bottomrule
 \end{longtable}
 
@@ -1264,21 +1280,24 @@ Phased and sequential deployment research addresses the temporal dimension of in
 
 
 
-\noindent \textbf{Table 3.4: Papers in the Phased and Sequential Deployment Theme}
-
-
-\begin{longtable}{L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}}
+\begin{longtable}{L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}}
+\caption{Papers in the Phased and Sequential Deployment Theme}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Gaps \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
 \midrule
 \endhead
-Stochastic Behavior Modeling and Optimal? & Tang et al. & 2025 & Mathematical Optimization & city & G4 \\
-Definition of Static and Dynamic Load Models for? & Giudice et al. & 2023 & Simulation-Based & city & G4 \\
-Forecasting Electric Vehicle Charging Station? & Amara-Ouali et al. & 2023 & Empirical / Case Study & city & G4 \\
-Model-Based Framework to Optimize Charger Station? & Eagon et al. & 2022 & Mathematical Optimization & city & G4 \\
-Deep Information Fusion for Electric Vehicle? & Sao et al. & 2021 & Empirical / Case Study & city & G4 \\
-Electric Vehicle Charging Station Search in? & Guillet et al. & 2020 & Mathematical Optimization & city & G4 \\
-Increasing electric vehicle adoption through the? & Anjos et al. & 2020 & Mathematical Optimization & city & G4 \\
+\cite{stochastic_behavior_2025} & Tang et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G4 \\
+\cite{definition_of_2023} & Giudice et al. & 2023 & Simulation-Based & Milan, Italy & G4 \\
+\cite{forecasting_electric_2023} & Amara-Ouali et al. & 2023 & LSTM & Paris, France & G4 \\
+\cite{model-based_framework_2022} & Eagon et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G4 \\
+\cite{deep_information_2021} & Sao et al. & 2021 & GRU & Lower Saxony, Germany & G4 \\
+\cite{electric_vehicle_2020} & Guillet et al. & 2020 & Stochastic programming & San Francisco, CA, USA & G4 \\
+\cite{increasing_electric_2020} & Anjos et al. & 2020 & Mathematical Optimization & General {\slash} theoretical & G4 \\
 \bottomrule
 \end{longtable}
 
@@ -1450,48 +1469,51 @@ A final cluster of papers addresses related infrastructure planning problems, ur
 
 
 
-\noindent \textbf{Table 3.8: Papers in the Related Infrastructure Planning Approaches Theme}
-
-
-\begin{longtable}{L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}}
+\begin{longtable}{L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}}
+\caption{Papers in the Related Infrastructure Planning Approaches Theme}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Gaps \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Gaps} \\
 \midrule
 \endhead
-A comparative analysis of in-motion and overnight? & Nasar et al. & 2025 & Mathematical Optimization & city & G1 \\
-Coordinated Management of Mobile Charging? & Ta\c{s}c?karao\u{g}lu et al. & 2025 & Mathematical Optimization & city & G1 \\
-Cost-benefit and net zero impact analysis of? & Muyeed et al. & 2025 & Mathematical Optimization & city & G1 \\
-A Decentralized Bi-Level Decomposition Method for? & Shao et al. & 2024 & Mathematical Optimization & city & G1 \\
-A Vehicle-to-Grid planning framework? & Liang et al. & 2024 & Mathematical Optimization & city & G1 \\
-Charging infrastructure assessment for shared? & Zhang et al. & 2024 & Simulation-Based & city & G1 \\
-Equilibrium configuration strategy of? & Wang et al. & 2024 & Mathematical Optimization & city & G1 \\
-Locating and sizing charging station in? & Hu et al. & 2024 & Mathematical Optimization & city & G1 \\
-Optimizing Electric Vehicle Charging? & Channi & 2024 & Mathematical Optimization & site & G1 \\
-Planning of Electric Vehicle Charging Stations? & Lin et al. & 2024 & Mathematical Optimization & city & G1 \\
-Risk-Aware Hierarchical Coordination of? & Chen et al. & 2024 & Mathematical Optimization & city & G1 \\
-Collaborative multidepot electric vehicle routing? & Wang et al. & 2023 & Mathematical Optimization & city & G1 \\
-Electric Vehicles: Benefits, Challenges, and? & Alanazi & 2023 & Mathematical Optimization & city & G1 \\
-Intelligent algorithm-based efficient planning of? & Bilal et al. & 2023 & Empirical / Case Study & city & G1 \\
-Optimal management of parking lots as a big data? & Ding et al. & 2023 & Mathematical Optimization & city & G1 \\
-Optimal Planning of Battery Swapping and Charging? & Kumbhar et al. & 2023 & Mathematical Optimization & city & G1 \\
-Planning of static and dynamic charging? & Zhou et al. & 2023 & Mathematical Optimization & city & G1 \\
-RETRACTED: Charging infrastructure facilitate a? & Chitra et al. & 2023 & Mathematical Optimization & city & G1 \\
-Routing and charging game in ride-hailing service? & Zhang et al. & 2023 & Mathematical Optimization & city & G1 \\
-Smart and efficient EV charging navigation scheme? & Li et al. & 2023 & Mathematical Optimization & city & G1 \\
-Charging stations and mobility data generators? & Mart\'i et al. & 2022 & Simulation-Based & city & G1 \\
-Integrated Electric Vehicle Charging Path? & Hao et al. & 2022 & Mathematical Optimization & city & G1 \\
-Mobile Charging Station: A Complementary Charging? & Afshar et al. & 2022 & Mathematical Optimization & city & G1 \\
-Phase separation induces congestion waves in? & Marszal et al. & 2022 & Simulation-Based & city & G1 \\
-WEcharge: democratizing EV charging infrastructure & Hashmi et al. & 2022 & Empirical / Case Study & city & G1 \\
-Optimal Pricing of Public Electric Vehicle? & Cui et al. & 2021 & Mathematical Optimization & city & G1 \\
-Secure Charging and Payment System for Electric? & Aydin & 2021 & Mathematical Optimization & city & G1 \\
-A Model for the Data-based Analysis and Design of? & Adenaw et al. & 2020 & Mathematical Optimization & city & G1 \\
-Optimal Siting of Electric Vehicle Battery? & Relan et al. & 2020 & Mathematical Optimization & city & G1 \\
-Bounds and Limit Theorems for a Layered Queueing? & Aveklouris et al. & 2018 & Simulation-Based & city & G1 \\
-Coupling of Real-Time and Co-Simulation for the? & Lehfuss et al. & 2018 & Simulation-Based & city & G1 \\
-Plug-in Electric Vehicle Charging Congestion? & Chen et al. & 2017 & Mixed Methods & city & G1 \\
-Competitive Charging Station Pricing for Plug-in? & Yuan et al. & 2015 & Mathematical Optimization & city & G1 \\
-Optimal Routing and Scheduling of Charge for? & Barco et al. & 2013 & Empirical / Case Study & city & G1 \\
+\cite{a_comparative_2025} & Nasar et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{coordinated_management_2025} & Ta\c{s}c?karao\u{g}lu et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{cost-benefit_and_2025} & Muyeed et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{a_decentralized_2024} & Shao et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{a_vehicle-to-grid_2024} & Liang et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{charging_infrastructure_2024} & Zhang et al. & 2024 & Simulation-Based & General {\slash} theoretical & G1 \\
+\cite{equilibrium_configuration_2024} & Wang et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{locating_and_2024} & Hu et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimizing_electric_2024} & Channi & 2024 & Mathematical Optimization & Ludhiana, India & G1 \\
+\cite{planning_of_2024} & Lin et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{risk-aware_hierarchical_2024} & Chen et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{collaborative_multidepot_2023} & Wang et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{electric_vehicles_2023} & Alanazi & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{intelligent_algorithm-based_2023} & Bilal et al. & 2023 & Empirical / Case Study & South Delhi, India & G1 \\
+\cite{optimal_management_2023} & Ding et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimal_planning_2023} & Kumbhar et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{planning_of_2023} & Zhou et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{retracted_charging_2023} & Chitra et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{routing_and_2023} & Zhang et al. & 2023 & Markov decision process & New York City, NY, USA & G1 \\
+\cite{smart_and_2023} & Li et al. & 2023 & Mathematical Optimization (reinforcement learning) & General {\slash} theoretical & G1 \\
+\cite{charging_stations_2022} & Mart\'i et al. & 2022 & Simulation-Based & General {\slash} theoretical & G1 \\
+\cite{integrated_electric_2022} & Hao et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{mobile_charging_2022} & Afshar et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{phase_separation_2022} & Marszal et al. & 2022 & Queuing theory & New York City, NY, USA & G1 \\
+\cite{wecharge_democratizing_2022} & Hashmi et al. & 2022 & Empirical / Case Study (case study) & Hasselt, Belgium & G1 \\
+\cite{optimal_pricing_2021} & Cui et al. & 2021 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{secure_charging_2021} & Aydin & 2021 & Mathematical Optimization & Ankara, Turkey & G1 \\
+\cite{a_model_2020} & Adenaw et al. & 2020 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{optimal_siting_2020} & Relan et al. & 2020 & Mathematical Optimization & General {\slash} theoretical & G1 \\
+\cite{bounds_and_2018} & Aveklouris et al. & 2018 & Dynamic programming & New York City, NY, USA & G1 \\
+\cite{coupling_of_2018} & Lehfuss et al. & 2018 & Simulation-Based & Amsterdam, Netherlands & G1 \\
+\cite{plug-in_electric_2017} & Chen et al. & 2017 & p-median model & Seattle, WA, USA & G1 \\
+\cite{competitive_charging_2015} & Yuan et al. & 2015 & Stackelberg game & Mobile, AL, USA & G1 \\
+\cite{optimal_routing_2013} & Barco et al. & 2013 & Differential evolution & Bogot\'a, Colombia & G1 \\
 \bottomrule
 \end{longtable}
 
@@ -1523,147 +1545,149 @@ This section presents a systematic analysis of the five dissertation research ga
 
 
 
-\noindent \textbf{Table 4.1: Papers Addressing Gap 1}
-
-
-\begin{longtable}{L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\begin{longtable}{L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\caption{Papers Addressing Gap 1}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
 \midrule
 \endhead
-\texttt{a\_two-stage\_2026} & Najafzad et al. & 2026 & optimization & city & Y & Y & Y \\
-\texttt{joint\_planning\_2026} & Mejia et al. & 2026 & optimization & city & N & N & N \\
-\texttt{pricing\_electric\_2026} & Jiang et al. & 2026 & optimization & city & N & Y & N \\
-\texttt{regional\_transportation\_2026} & Babur et al. & 2026 & simulation & regional & Y & Y & Y \\
-\texttt{simultaneous\_optimization\_2026} & Bertucci et al. & 2026 & optimization & city & N & N & N \\
-\texttt{strategic\_planning\_2026} & Fariza et al. & 2026 & optimization & regional & N & Y & N \\
-\texttt{a\_2025} & Do et al. & 2025 & mixed & city & N & Y & N \\
-\texttt{a\_density-based\_2025} & Ameer et al. & 2025 & optimization & city & N & N & N \\
-\texttt{a\_joint\_2025} & Yu et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{a\_multi-modal\_2025} & Karaku\c{s} et al. & 2025 & empirical & city & N & N & Y \\
-\texttt{a\_spatially\_2025} & Huang et al. & 2025 & mixed & city & N & Y & N \\
-\texttt{a\_two-stage\_2025} & Meng et al. & 2025 & optimization & city & N & N & N \\
-\texttt{a\_united\_2025} & Kinchen et al. & 2025 & mixed & city & Y & N & N \\
-\texttt{an\_exact\_2025} & Nankali et al. & 2025 & mixed & city & N & N & N \\
-\texttt{analyzing\_locational\_2025} & Mousaei & 2025 & empirical & city & N & N & N \\
-\texttt{causal\_spillover\_2025} & Silva et al. & 2025 & empirical & city & N & N & Y \\
-\texttt{charge-map\_an\_2025} & Islam et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{competitive\_ev\_2025} & Nguyen et al. & 2025 & mixed & city & N & N & N \\
-\texttt{data-driven\_ev\_2025} & Alharbi et al. & 2025 & optimization & city & N & N & Y \\
-\texttt{data-driven\_optimization\_2025} & Junker et al. & 2025 & mixed & site & N & Y & N \\
-\texttt{electric\_vehicle\_2025} & Zhao et al. & 2025 & optimization & city & Y & N & N \\
-\texttt{explainable\_and\_2025} & Kapoor & 2025 & optimization & city & N & N & N \\
-\texttt{fairness-oriented\_charging\_2025} & Yuan et al. & 2025 & optimization & city & Y & N & N \\
-\texttt{hybrid\_optimization\_2025} & Ameer et al. & 2025 & optimization & city & N & N & N \\
-\texttt{joint\_optimization\_2025} & Okada et al. & 2025 & optimization & city & N & Y & Y \\
-\texttt{large\_language\_2025} & Zheng et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{location\_and\_2025} & Choi et al. & 2025 & optimization & city & N & Y & N \\
-\texttt{multiobjective\_model\_2025} & Ruiz-Barajas et al. & 2025 & mixed & city & N & N & N \\
-\texttt{optimal\_mixed\_2025} & Nakao et al. & 2025 & mixed & city & N & Y & N \\
-\texttt{optimization\_of\_2025} & Zhang et al. & 2025 & optimization & city & N & Y & N \\
-\texttt{optimizing\_electric\_2025} & Zhong et al. & 2025 & mixed & city & N & Y & N \\
-\texttt{optimizing\_urban\_2025} & Ai et al. & 2025 & optimization & city & N & Y & N \\
-\texttt{planning\_future\_2025} & Yuan et al. & 2025 & empirical & regional & N & Y & Y \\
-\texttt{predicting\_optimal\_2025} & Mousaei et al. & 2025 & empirical & city & N & N & N \\
-\texttt{reinforcement\_learning\_2025} & Zhu et al. & 2025 & empirical & city & N & Y & N \\
-\texttt{robust\_charging\_2025} & Xia et al. & 2025 & optimization & corridor & N & Y & N \\
-\texttt{synergistic\_development\_2025} & Pimpale & 2025 & optimization & city & N & Y & N \\
-\texttt{trajectory-integrated\_accessibility\_2025} & Ju et al. & 2025 & optimization & neighborhood & N & N & N \\
-\texttt{a\_data-driven\_2024} & Zhang et al. & 2024 & mixed & city & N & N & Y \\
-\texttt{a\_multi-objective\_2024} & Zhang et al. & 2024 & optimization & site & N & Y & N \\
-\texttt{a\_particle\_2024} & Aljaidi et al. & 2024 & optimization & city & N & N & N \\
-\texttt{a\_quantum\_2024} & Radvand et al. & 2024 & optimization & city & N & N & N \\
-\texttt{a\_two-layer\_2024} & Wu et al. & 2024 & optimization & city & N & Y & N \\
-\texttt{advancing\_urban\_2024} & Zhang et al. & 2024 & optimization & city & N & N & N \\
-\texttt{battery\_swapping\_2024} & Liu et al. & 2024 & mixed & neighborhood & N & Y & Y \\
-\texttt{beyond\_profit\_2024} & Wang et al. & 2024 & mixed & city & N & Y & N \\
-\texttt{charging\_station\_2024} & Cai et al. & 2024 & mixed & site & N & N & N \\
-\texttt{electric\_vehicle\_2024} & Li et al. & 2024 & optimization & city & N & Y & N \\
-\texttt{energy\_management\_2024} & Cao et al. & 2024 & mixed & city & N & N & N \\
-\texttt{integrating\_en\_2024} & Mehditabrizi et al. & 2024 & optimization & city & N & N & N \\
-\texttt{multiobjective\_optimization\_2024} & Mohammed et al. & 2024 & optimization & city & N & N & N \\
-\texttt{optimal\_electric\_2024} & Kumar et al. & 2024 & optimization & site & N & N & N \\
-\texttt{optimal\_ev\_2024} & Pierrou et al. & 2024 & optimization & city & N & Y & N \\
-\texttt{optimal\_evcs\_2024} & He et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{optimal\_planning\_2024} & Heo et al. & 2024 & empirical & city & N & N & N \\
-\texttt{optimization\_strategies\_2024} & Panyaram & 2024 & optimization & city & N & Y & Y \\
-\texttt{optimizing\_ev\_2024} & Huang et al. & 2024 & optimization & city & N & N & N \\
-\texttt{optimizing\_urban\_2024} & Munawar & 2024 & mixed & regional & N & N & N \\
-\texttt{sequential\_charging\_2024} & Shen et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{sustainable\_planning\_2024} & Seilabi et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{the\_electric\_2024} & Akbay et al. & 2024 & optimization & city & N & N & N \\
-\texttt{towards\_sustainable\_2024} & Boonprong et al. & 2024 & empirical & city & Y & Y & N \\
-\texttt{towards\_using\_2024} & Miltner et al. & 2024 & mixed & city & N & Y & Y \\
-\texttt{urban\_electric\_2024} & Alhussan et al. & 2024 & optimization & city & N & N & N \\
-\texttt{a\_battery\_2023} & Xin et al. & 2023 & optimization & city & N & N & N \\
-\texttt{a\_data-driven\_2023} & Al-Dahabreh et al. & 2023 & mixed & city & N & Y & N \\
-\texttt{a\_robust\_2023} & Arief et al. & 2023 & mixed & city & Y & Y & N \\
-\texttt{an\_agent-based\_2023} & Yi et al. & 2023 & mixed & city & N & Y & N \\
-\texttt{electric\_vehicle\_2023} & Varma et al. & 2023 & simulation & city & N & Y & N \\
-\texttt{fast-charging\_station\_2023} & Qiao et al. & 2023 & optimization & city & N & N & N \\
-\texttt{incorporating\_time-dependent\_2023} & Filippi et al. & 2023 & optimization & city & N & Y & Y \\
-\texttt{initial\_location\_2023} & Tambunan et al. & 2023 & optimization & city & N & N & N \\
-\texttt{layout\_and\_2023} & Jiang & 2023 & optimization & city & N & Y & N \\
-\texttt{maximum\_flow-based\_2023} & Parent et al. & 2023 & mixed & city & N & Y & Y \\
-\texttt{on\_the\_2023} & Tiu et al. & 2023 & optimization & city & N & Y & Y \\
-\texttt{optimal\_location\_2023} & Mourgues et al. & 2023 & optimization & city & N & N & N \\
-\texttt{optimal\_placement\_2023} & Liu et al. & 2023 & optimization & city & Y & Y & N \\
-\texttt{optimizing\_electric\_2023} & Wu et al. & 2023 & mixed & city & N & N & N \\
-\texttt{placement\_of\_2023} & Pal et al. & 2023 & optimization & city & N & N & N \\
-\texttt{spap\_simultaneous\_2023} & Wang et al. & 2023 & mixed & city & N & Y & Y \\
-\texttt{spatial\_arbitrage\_2023} & Mohammadian et al. & 2023 & mixed & city & N & N & Y \\
-\texttt{a\_framework\_2022} & Mishra et al. & 2022 & mixed & corridor & N & Y & N \\
-\texttt{a\_novel\_2022} & Hung et al. & 2022 & optimization & city & N & N & N \\
-\texttt{designing\_an\_2022} & Amilia et al. & 2022 & mixed & city & Y & Y & Y \\
-\texttt{development\_of\_2022} & Jin et al. & 2022 & optimization & city & N & Y & N \\
-\texttt{distributed\_coordination\_2022} & Yan et al. & 2022 & optimization & city & N & N & N \\
-\texttt{ev\_charging\_2022} & Mousavi et al. & 2022 & mixed & city & N & N & N \\
-\texttt{optimal\_placement\_2022} & Srinivas et al. & 2022 & optimization & city & N & N & N \\
-\texttt{optimising\_electric\_2022} & Lamontagne et al. & 2022 & mixed & city & N & N & N \\
-\texttt{performance\_analysis\_2022} & Qin et al. & 2022 & optimization & city & N & Y & N \\
-\texttt{planning\_of\_2022} & Bian et al. & 2022 & optimization & city & N & N & Y \\
-\texttt{predictive\_energy\_2022} & Lin et al. & 2022 & mixed & city & N & N & N \\
-\texttt{reinforcement\_learning-based\_2022} & Wahl et al. & 2022 & empirical & city & N & Y & N \\
-\texttt{research\_on\_2022} & Wang et al. & 2022 & mixed & city & N & Y & N \\
-\texttt{web\_mining\_2022} & Hummler et al. & 2022 & empirical & city & N & Y & N \\
-\texttt{a\_gis-based\_2021} & Zafar et al. & 2021 & optimization & city & N & N & N \\
-\texttt{citizen\_centric\_2021} & Cintrano et al. & 2021 & optimization & neighborhood & N & N & N \\
-\texttt{deep\_spatio-temporal\_2021} & H\"uttel et al. & 2021 & optimization & city & N & Y & Y \\
-\texttt{energy-optimal\_design\_2021} & Hurk et al. & 2021 & mixed & city & N & N & N \\
-\texttt{hierarchical\_optimization\_2021} & Mirheli et al. & 2021 & optimization & city & N & Y & Y \\
-\texttt{joint\_optimization\_2021} & Luke et al. & 2021 & optimization & city & N & Y & N \\
-\texttt{optimal\_placement\_2021} & Padmanabhan et al. & 2021 & optimization & city & N & Y & N \\
-\texttt{optimal\_planning\_2021} & Hou et al. & 2021 & mixed & city & N & Y & N \\
-\texttt{reducing\_waiting\_2021} & Schoenberg et al. & 2021 & simulation & city & N & N & N \\
-\texttt{siting\_and\_2021} & Ahadi et al. & 2021 & mixed & city & N & Y & N \\
-\texttt{strategic\_competition\_2021} & Bayani et al. & 2021 & optimization & city & N & N & N \\
-\texttt{a\_method\_2020} & Rizopoulos et al. & 2020 & optimization & city & N & N & Y \\
-\texttt{double-layer\_game\_2020} & Wang et al. & 2020 & mixed & city & N & N & N \\
-\texttt{dynamic\_modeling\_2020} & Yang et al. & 2020 & simulation & regional & N & Y & N \\
-\texttt{location\_of\_2020} & Brandst\"atter et al. & 2020 & mixed & city & N & Y & Y \\
-\texttt{optimal\_fast\_2020} & Ma et al. & 2020 & optimization & city & N & N & N \\
-\texttt{optimizing\_the\_2020} & GORBUNOVA et al. & 2020 & empirical & city & N & N & N \\
-\texttt{resource\_aware\_2020} & Santoyo et al. & 2020 & mixed & city & N & Y & N \\
-\texttt{a\_method\_2019} & Ouyang et al. & 2019 & mixed & city & N & Y & Y \\
-\texttt{optimal\_decision\_2019} & Upadhaya et al. & 2019 & optimization & city & N & Y & N \\
-\texttt{predicting\_popularity\_2019} & Straka et al. & 2019 & optimization & city & N & Y & Y \\
-\texttt{a\_consumer\_2018} & Luo et al. & 2018 & mixed & city & N & Y & N \\
-\texttt{charging\_station\_2018} & Deza et al. & 2018 & optimization & city & N & N & N \\
-\texttt{electric\_vehicle\_2018} & Cui et al. & 2018 & optimization & city & N & N & N \\
-\texttt{engineering\_and\_2018} & Luo & 2018 & optimization & city & N & Y & N \\
-\texttt{placement\_of\_2018} & Luo et al. & 2018 & simulation & city & N & Y & N \\
-\texttt{predicting\_electric\_2018} & Ramachandran et al. & 2018 & simulation & city & N & Y & N \\
-\texttt{electric\_vehicle\_2017} & Aveklouris et al. & 2017 & simulation & city & N & N & N \\
-\texttt{route\_optimization\_2017} & Kosmanos et al. & 2017 & mixed & city & N & N & N \\
-\texttt{demand\_prediction\_2016} & Gopalakrishnan et al. & 2016 & mixed & city & N & Y & Y \\
-\texttt{charging\_games\_2015} & Beaude et al. & 2015 & optimization & city & N & N & N \\
-\texttt{electric\_vehicles\_2015} & Lanna et al. & 2015 & optimization & city & N & N & Y \\
-\texttt{introducing\_decentralized\_2015} & Beaude et al. & 2015 & mixed & neighborhood & N & N & N \\
-\texttt{minimizing\_the\_2015} & Beaude et al. & 2015 & mixed & city & N & Y & N \\
-\texttt{optimizing\_the\_2015} & Vazifeh et al. & 2015 & optimization & city & N & Y & Y \\
-\texttt{electric\_vehicle\_2013} & Lam et al. & 2013 & simulation & city & N & N & N \\
-\texttt{socially\_optimal\_2013} & Yudovina et al. & 2013 & simulation & city & N & N & Y \\
-\texttt{electric\_vehicle\_0} & Li et al. & 0 & optimization & city & N & Y & Y \\
+\cite{a_two-stage_2026} & Najafzad et al. & 2026 & Two-stage stochastic MILP: Stage 1 FCS siting (ESS algorithm + long-term traffic/budget/equity) + Stage 2 dynamic MCS assignment under demand uncertainty (scenario-based) & Bexar County, TX, USA & Y & Y & Y \\
+\cite{joint_planning_2026} & Mejia et al. & 2026 & GIS-based spatial analysis (GWR + AHP multi-criteria siting) with stochastic MILP (CPLEX) & Sao Paulo state, Brazil (unnamed city, 230k pop.) & N & N & N \\
+\cite{pricing_electric_2026} & Jiang et al. & 2026 & MILP pricing via copositive programming (CPP/COP dual for marginal EV charging prices with binary station access; revenue-adequate incentive-compatible mechanism) & Newark, NJ, USA & N & Y & N \\
+\cite{regional_transportation_2026} & Babur et al. & 2026 & Regional discrete event simulation (Mobiliti platform; 19M trips; spatial BEV charging demand density and equity impact analysis) & SF Bay Area, USA & Y & Y & Y \\
+\cite{simultaneous_optimization_2026} & Bertucci et al. & 2026 & MILP (joint electric ferry scheduling, charging infrastructure sizing, and ship battery sizing for marine electrification) & Buenos Aires, AR & N & N & N \\
+\cite{strategic_planning_2026} & Fariza et al. & 2026 & GIS + AHP + Weighted Overlay (multi-criteria spatial priority zoning for EVCS; five suitability criteria) & West Java, Indonesia & N & Y & N \\
+\cite{a_2025} & Do et al. & 2025 & Digital twin + agent-based simulation with embedded GA optimization (EV station config, policies, renewable energy) & Hanoi, Vietnam & N & Y & N \\
+\cite{a_density-based_2025} & Ameer et al. & 2025 & Mathematical Optimization & Hefei, China & N & N & N \\
+\cite{a_joint_2025} & Yu et al. & 2025 & Two-stage MILP + ADMM (joint FCS/MCS planning: queueing theory + SQP for power-traffic coordination) & Mobile, AL, USA & N & Y & Y \\
+\cite{a_multi-modal_2025} & Karaku\c{s} et al. & 2025 & RSERI-EV spatial risk framework (remote sensing + kNN graph; flood/LST/NDVI/LULC resilience scoring for EV charging network) & Wales, UK & N & N & Y \\
+\cite{a_spatially_2025} & Huang et al. & 2025 & Spatially aware ML (SAML): MLP + spatial loss function + SHAP explainability for EVCS demand prediction & Wuhan, China & N & Y & N \\
+\cite{a_two-stage_2025} & Meng et al. & 2025 & Two-stage heuristic-MILP (Gurobi): Monte Carlo + K-means demand simulation with iterative CP allocation & Abstract synthetic grid (China-inspired context, 4x3 uniform spatial grid) & N & N & N \\
+\cite{a_united_2025} & Kinchen et al. & 2025 & Simulation-integrated optimization (traffic simulation + energy modeling + mobility equity measure for equitable CS placement) & New York City, NY, USA & Y & N & N \\
+\cite{an_exact_2025} & Nankali et al. & 2025 & Bi-level exact Branch-and-Price-and-Cut (upper: revenue-maximizing CS placement; lower: EV user routing via Frank-Wolfe traffic assignment) & Benchmark networks (E. Massachusetts, Anaheim, Barcelona; no real deployment city) & N & N & N \\
+\cite{analyzing_locational_2025} & Mousaei & 2025 & Machine learning for EV charging locational inequality analysis (empirical case study) & Glasgow, UK & N & N & N \\
+\cite{causal_spillover_2025} & Silva et al. & 2025 & Quasi-experimental causal inference (staggered DiD with mobile GPS data; EVCS business spillover impact analysis) & New York City and SF Bay Area, CA, USA & N & N & Y \\
+\cite{charge-map_an_2025} & Islam et al. & 2025 & Agent-based simulation + optimization (CHARGE-MAP: spatiotemporal demand simulation + CS/charger location optimization + grid stability module) & Virginia, USA & N & Y & Y \\
+\cite{competitive_ev_2025} & Nguyen et al. & 2025 & Bilevel optimization with queueing-based user behavior (M/M/s/K, M/Er/s/K) and user equilibrium; surrogate-based heuristic for competitive CS location & Montreal, Canada & N & N & N \\
+\cite{data-driven_ev_2025} & Alharbi et al. & 2025 & ST-FCLM + M/M/C queuing theory for EV facility siting/sizing; SOS metaheuristic for battery storage allocation under stochastic demand/RES uncertainty & Standard benchmark (Nguyen-Dupuis RTN + modified IEEE 33-bus MG, SUMO-simulated; no real city) & N & N & Y \\
+\cite{data-driven_optimization_2025} & Junker et al. & 2025 & Agent-based simulation & Palo Alto, CA, USA & N & Y & N \\
+\cite{electric_vehicle_2025} & Zhao et al. & 2025 & Mathematical Optimization (GIS-based analysis) & Analytical framework & Y & N & N \\
+\cite{explainable_and_2025} & Kapoor & 2025 & Graph Attention Network (GAT) with SHAP/LIME explainability & Fully synthetic dataset (SUMO-simulated) & N & N & N \\
+\cite{fairness-oriented_charging_2025} & Yuan et al. & 2025 & Fairness-oriented MCLP + SpoNet DRL (GRU encoder-decoder with multi-head attention); Geodetector for factor weighting; GIS spatial analysis (kernel density, SDE, ANN) & Beijing, China (Haidian District) & Y & N & N \\
+\cite{hybrid_optimization_2025} & Ameer et al. & 2025 & Hybrid Bender's decomp + NSGA-II (master: EVCS siting; sub: Pareto consumer pricing and re-routing; real Hefei EV demand data) & Hefei, China (all 9 districts{\slash}counties) & N & N & N \\
+\cite{joint_optimization_2025} & Okada et al. & 2025 & QUBO-based sequential optimization with Bayesian inference (quantum annealer-compatible joint EV routing and CS location) & Synthetic (20-location routing problem, no real city) & N & Y & Y \\
+\cite{large_language_2025} & Zheng et al. & 2025 & LLM-assisted MILP + ADMM (joint investment and charging assignment; spatial-temporal demand dynamics) & Chengdu, China & N & Y & Y \\
+\cite{location_and_2025} & Choi et al. & 2025 & Genetic algorithm + Fuzzy AHP (location optimization and fast/slow charger ratio balancing); urban metrics: parking index, public transit connectivity, land use plans & Seoul, South Korea & N & Y & N \\
+\cite{multiobjective_model_2025} & Ruiz-Barajas et al. & 2025 & Multi-objective flow refueling location model (FRLM) with epsilon constraint method; three objectives: maximize CO2 reduction, minimize total cost, minimize user charging time & Mexico (national interurban corridor network) & N & N & N \\
+\cite{optimal_mixed_2025} & Nakao et al. & 2025 & Bi-level optimization: upper-level stochastic charging station configuration + lower-level mixed fleet dial-a-ride routing (DARP) with CO2 and capacity constraints; deterministic annealing metaheuristic & Bettembourg, Luxembourg & N & Y & N \\
+\cite{optimization_of_2025} & Zhang et al. & 2025 & NSGA-III multi-objective optimization (minimize construction cost, maximize user satisfaction and convenience) + TOPSIS ranking for final siting; based on activity-travel pattern analysis & Lanzhou, China & N & Y & N \\
+\cite{optimizing_electric_2025} & Zhong et al. & 2025 & Deep RL + agent-based simulation (dual Q-network, hybrid reward function) & Hanoi, Vietnam & N & Y & N \\
+\cite{optimizing_urban_2025} & Ai et al. & 2025 & MILP + location-inventory-grid model with continuous approximation (joint EV charging and battery swapping under grid and demand uncertainty) & New York City, NY, USA & N & Y & N \\
+\cite{planning_future_2025} & Yuan et al. & 2025 & Multi-objective bottom-up capacity allocation model (BEV/EREV/PHEV demand differentiation; 2025-2030 projection) & Chongqing, China & N & Y & Y \\
+\cite{predicting_optimal_2025} & Mousaei et al. & 2025 & Empirical / Case Study & General {\slash} theoretical & N & N & N \\
+\cite{reinforcement_learning_2025} & Zhu et al. & 2025 & Deep RL + MPC for hybrid fixed/mobile charging station planning and operation (HCSPO) & New York City, NY, USA & N & Y & N \\
+\cite{robust_charging_2025} & Xia et al. & 2025 & Robust path-based optimization (E-RCRSP: joint E-MAU charging station location and routing-scheduling under demand uncertainty) & Beijing, China & N & Y & N \\
+\cite{trajectory-integrated_accessibility_2025} & Ju et al. & 2025 & Trajectory-integrated accessibility metric (TI-acs): individual GPS trajectory data + spatial equity analysis (Gini index, racial disparities) for EVCS accessibility & San Francisco, CA, USA & N & N & N \\
+\cite{a_data-driven_2024} & Zhang et al. & 2024 & Agent-based simulation (ABS) + Pareto multi-objective optimization (maximize ET user satisfaction, minimize EVCI workload variance); GPS trajectory data in GIS & Shenzhen, China & N & N & Y \\
+\cite{a_multi-objective_2024} & Zhang et al. & 2024 & NSGA-II multi-objective optimization (maximize system benefits + minimum coverage level); TF-IDF urban land use + POI clustering for demand estimation & Hohhot, China & N & Y & N \\
+\cite{a_particle_2024} & Aljaidi et al. & 2024 & PSO + Mixed Linear Programming (minimize EV energy consumption to reach CS; horizontal distance via Haversine + positive elevation difference; validated on Newcastle upon Tyne real data) & Newcastle upon Tyne, UK & N & N & N \\
+\cite{a_quantum_2024} & Radvand et al. & 2024 & Quantum search-based optimization (amplitude amplification + quantum phase estimation; quadratic speedup over classical branch-and-bound for NP-hard CS placement) & C. Illinois, USA & N & N & N \\
+\cite{a_two-layer_2024} & Wu et al. & 2024 & Two-layer PSO: upper layer CS siting (minimize demand inconvenience + construction cost + waiting time via M/M/c queuing + Voronoi service areas) + lower layer pile capacity (maximize utilization); fuzzy logic charging demand prediction; Wujiang District real EV data & Wujiang District, Suzhou, China & N & Y & N \\
+\cite{advancing_urban_2024} & Zhang et al. & 2024 & MADRL (TD3): cooperative Price-agent + Nudge-agent for day-ahead CS pricing and behavioral nudge optimization; Random Forest user choice model + grid-based OD mobility model; objectives: CSO revenue maximization and power curve tracking; Xi'an ride-hailing data & Xi'an, China & N & N & N \\
+\cite{battery_swapping_2024} & Liu et al. & 2024 & Simulation optimization + Large Neighborhood Search (LNS) framework + Bayesian optimization for single-station allocation; minimizes demand loss under stochastic BSS demand in city network & Shanghai, China & N & Y & Y \\
+\cite{beyond_profit_2024} & Wang et al. & 2024 & SAC (Soft Actor-Critic) DRL + LP-based safe layer for multi-objective CS pricing and scheduling (maximize profit and reputation); constraint satisfaction via linear programming projection & Shenzhen, China & N & Y & N \\
+\cite{charging_station_2024} & Cai et al. & 2024 & Improved GA (farthest-insertion heuristic + local search) for ELV CS siting with time-window and load constraints; reduces CS count 22.97\%, vehicles 13.71\%, algorithm complexity 46.81\%; validated on C/R/RC benchmarks + Chongqing case study & Chongqing, China & N & N & N \\
+\cite{electric_vehicle_2024} & Li et al. & 2024 & MINLP solved by Gurobi Branch-and-Cut; 7 cost types from CS operator and EV user perspectives; 1509 candidate POIs $\rightarrow$ 134 selected sites, 923 charging stations; Ho Chi Minh City case study & Ho Chi Minh City, Vietnam & N & Y & N \\
+\cite{energy_management_2024} & Cao et al. & 2024 & Deep learning MPC (BPNN + CNN) for HEV energy management optimization; questionnaire-validated with 1,500 consumers; predicts energy consumption across 5 road condition types; outperforms traditional control on fuel, battery, and CO2 metrics & General {\slash} theoretical & N & N & N \\
+\cite{integrating_en_2024} & Mehditabrizi et al. & 2024 & Spatial accessibility analysis (en route + home proximity EV charging); spatial autocorrelation + high/low access clustering; identifies CS underestimation in peripheral commuting zones vs. overestimation in urban cores; Washington Metropolitan Area & Washington DC, USA & N & N & N \\
+\cite{multiobjective_optimization_2024} & Mohammed et al. & 2024 & PSO multi-objective optimization (minimize installation cost + operation cost + CO2 emissions); Monte Carlo simulation for 4 EV types (L7e/M1/N1/N2) with gamma/normal battery capacity PDFs; OD gravity model + M/M/c queuing for waiting time; station-specific daily load curve forecasting; Hainan Island ring freeway (14 FCS, 17,297 EVs) & Hainan Island, China & N & N & N \\
+\cite{optimal_electric_2024} & Kumar et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{optimal_ev_2024} & Pierrou et al. & 2024 & Mathematical Optimization & Chur, Switzerland & N & Y & N \\
+\cite{optimal_evcs_2024} & He et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & Y & Y \\
+\cite{optimal_planning_2024} & Heo et al. & 2024 & Empirical / Case Study & Texas, USA & N & N & N \\
+\cite{optimization_strategies_2024} & Panyaram & 2024 & Mathematical Optimization (machine learning) & General {\slash} theoretical & N & Y & Y \\
+\cite{optimizing_ev_2024} & Huang et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{optimizing_urban_2024} & Munawar & 2024 & Mixed Methods (GIS-based analysis) & International {\slash} general & N & N & N \\
+\cite{sequential_charging_2024} & Shen et al. & 2024 & Stochastic MILP & Ann Arbor, MI, USA & N & Y & Y \\
+\cite{sustainable_planning_2024} & Seilabi et al. & 2024 & Mathematical Optimization (genetic algorithm) & Numerical simulation & N & Y & Y \\
+\cite{the_electric_2024} & Akbay et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{towards_sustainable_2024} & Boonprong et al. & 2024 & Empirical / Case Study (GIS-based analysis) & Bangkok, Thailand & Y & Y & N \\
+\cite{towards_using_2024} & Miltner et al. & 2024 & Neural network & Eindhoven, Netherlands & N & Y & Y \\
+\cite{urban_electric_2024} & Alhussan et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{a_battery_2023} & Xin et al. & 2023 & Mathematical Optimization & International {\slash} general & N & N & N \\
+\cite{a_data-driven_2023} & Al-Dahabreh et al. & 2023 & Machine learning & Quebec, Canada & N & Y & N \\
+\cite{a_robust_2023} & Arief et al. & 2023 & Mixed-integer programming & Surabaya, Indonesia & Y & Y & N \\
+\cite{an_agent-based_2023} & Yi et al. & 2023 & Mixed Methods & General {\slash} theoretical & N & Y & N \\
+\cite{electric_vehicle_2023} & Varma et al. & 2023 & Spatial optimization & Los Angeles, CA, USA & N & Y & N \\
+\cite{fast-charging_station_2023} & Qiao et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{incorporating_time-dependent_2023} & Filippi et al. & 2023 & Branch-and-bound & Chicago, IL, USA & N & Y & Y \\
+\cite{initial_location_2023} & Tambunan et al. & 2023 & Mathematical Optimization (clustering) & Jakarta, Indonesia & N & N & N \\
+\cite{layout_and_2023} & Jiang & 2023 & Mathematical Optimization & Xi'an, China & N & Y & N \\
+\cite{maximum_flow-based_2023} & Parent et al. & 2023 & MILP & Mobile, AL, USA & N & Y & Y \\
+\cite{on_the_2023} & Tiu et al. & 2023 & Mixed-integer programming & Paris, France & N & Y & Y \\
+\cite{optimal_location_2023} & Mourgues et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{optimal_placement_2023} & Liu et al. & 2023 & Mathematical Optimization (reinforcement learning) & Europe (multi-city) & Y & Y & N \\
+\cite{optimizing_electric_2023} & Wu et al. & 2023 & Mixed Methods & Hunan Province, China & N & N & N \\
+\cite{placement_of_2023} & Pal et al. & 2023 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{spap_simultaneous_2023} & Wang et al. & 2023 & Mixed Methods & Beijing{\slash}Guangzhou{\slash}Tianjin, China & N & Y & Y \\
+\cite{spatial_arbitrage_2023} & Mohammadian et al. & 2023 & Genetic algorithm & San Antonio, TX, USA & N & N & Y \\
+\cite{a_framework_2022} & Mishra et al. & 2022 & Mixed Methods (agent-based simulation) & Los Angeles, USA & N & Y & N \\
+\cite{a_novel_2022} & Hung et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{designing_an_2022} & Amilia et al. & 2022 & Mixed-integer programming & Surabaya, Indonesia & Y & Y & Y \\
+\cite{development_of_2022} & Jin et al. & 2022 & Multi-objective optimization & Austin, TX, USA & N & Y & N \\
+\cite{distributed_coordination_2022} & Yan et al. & 2022 & Particle swarm optimization & Shanghai, China & N & N & N \\
+\cite{ev_charging_2022} & Mousavi et al. & 2022 & Two-stage stochastic MILP & Raleigh, NC, USA & N & N & N \\
+\cite{optimal_placement_2022} & Srinivas et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{optimising_electric_2022} & Lamontagne et al. & 2022 & Bilevel optimization & Orlando, FL, USA & N & N & N \\
+\cite{performance_analysis_2022} & Qin et al. & 2022 & Survey-based analysis & Salem, OR, USA & N & Y & N \\
+\cite{planning_of_2022} & Bian et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & N & N & Y \\
+\cite{predictive_energy_2022} & Lin et al. & 2022 & Mixed Methods & International {\slash} general & N & N & N \\
+\cite{reinforcement_learning-based_2022} & Wahl et al. & 2022 & Deep Q-network (DQN) & Hannover, Germany & N & Y & N \\
+\cite{research_on_2022} & Wang et al. & 2022 & Multi-objective genetic algorithm & Beijing, China & N & Y & N \\
+\cite{web_mining_2022} & Hummler et al. & 2022 & Neural network & New York City, NY, USA & N & Y & N \\
+\cite{a_gis-based_2021} & Zafar et al. & 2021 & Mathematical Optimization & General {\slash} theoretical & N & N & N \\
+\cite{citizen_centric_2021} & Cintrano et al. & 2021 & Genetic algorithm & Malaga, Spain & N & N & N \\
+\cite{deep_spatio-temporal_2021} & H\"uttel et al. & 2021 & Graph convolutional network & Palo Alto, CA, USA & N & Y & Y \\
+\cite{energy-optimal_design_2021} & Hurk et al. & 2021 & Mixed-integer programming & Paris, France & N & N & N \\
+\cite{hierarchical_optimization_2021} & Mirheli et al. & 2021 & Stochastic MILP & New York City, NY, USA & N & Y & Y \\
+\cite{joint_optimization_2021} & Luke et al. & 2021 & Mixed-integer programming & San Francisco, CA, USA & N & Y & N \\
+\cite{optimal_placement_2021} & Padmanabhan et al. & 2021 & Deep Q-network (DQN) & New York City, NY, USA & N & Y & N \\
+\cite{optimal_planning_2021} & Hou et al. & 2021 & Mixed Methods (particle swarm optimization) & International {\slash} general & N & Y & N \\
+\cite{reducing_waiting_2021} & Schoenberg et al. & 2021 & Multi-objective MILP & Dallas, TX, USA & N & N & N \\
+\cite{siting_and_2021} & Ahadi et al. & 2021 & Mixed Methods (agent-based simulation) & Berlin, Germany & N & Y & N \\
+\cite{strategic_competition_2021} & Bayani et al. & 2021 & Mathematical Optimization & San Diego, CA, USA & N & N & N \\
+\cite{a_method_2020} & Rizopoulos et al. & 2020 & Mathematical Optimization (genetic algorithm) & Budapest, Hungary & N & N & Y \\
+\cite{double-layer_game_2020} & Wang et al. & 2020 & Stackelberg game & Mobile, AL, USA & N & N & N \\
+\cite{dynamic_modeling_2020} & Yang et al. & 2020 & Queuing theory & Los Angeles, CA, USA & N & Y & N \\
+\cite{location_of_2020} & Brandst\"atter et al. & 2020 & Mixed Methods (linear programming) & Vienna, Austria & N & Y & Y \\
+\cite{optimal_fast_2020} & Ma et al. & 2020 & Stochastic MILP & Tehran, Iran & N & N & N \\
+\cite{optimizing_the_2020} & GORBUNOVA et al. & 2020 & Empirical / Case Study & General {\slash} theoretical & N & N & N \\
+\cite{resource_aware_2020} & Santoyo et al. & 2020 & Genetic algorithm & New York City, NY, USA & N & Y & N \\
+\cite{a_method_2019} & Ouyang et al. & 2019 & Multi-objective genetic algorithm & Chicago, IL, USA & N & Y & Y \\
+\cite{optimal_decision_2019} & Upadhaya et al. & 2019 & MILP & Montreal, Canada & N & Y & N \\
+\cite{predicting_popularity_2019} & Straka et al. & 2019 & Stochastic programming & New York City, NY, USA & N & Y & Y \\
+\cite{a_consumer_2018} & Luo et al. & 2018 & Bayesian optimization & Los Angeles, CA, USA & N & Y & N \\
+\cite{charging_station_2018} & Deza et al. & 2018 & Stochastic MILP & Toronto, Canada & N & N & N \\
+\cite{electric_vehicle_2018} & Cui et al. & 2018 & Integer programming & Chicago, IL, USA & N & N & N \\
+\cite{engineering_and_2018} & Luo & 2018 & Stochastic programming & New York City, NY, USA & N & Y & N \\
+\cite{placement_of_2018} & Luo et al. & 2018 & Bayesian optimization & Los Angeles, CA, USA & N & Y & N \\
+\cite{predicting_electric_2018} & Ramachandran et al. & 2018 & Neural network & Washington DC, USA & N & Y & N \\
+\cite{electric_vehicle_2017} & Aveklouris et al. & 2017 & Dynamic programming & Nashville, TN, USA & N & N & N \\
+\cite{route_optimization_2017} & Kosmanos et al. & 2017 & Machine learning & Las Vegas, NV, USA & N & N & N \\
+\cite{demand_prediction_2016} & Gopalakrishnan et al. & 2016 & Facility location model & Seattle, WA, USA & N & Y & Y \\
+\cite{charging_games_2015} & Beaude et al. & 2015 & Nash equilibrium game & New York City, NY, USA & N & N & N \\
+\cite{electric_vehicles_2015} & Lanna et al. & 2015 & Mathematical Optimization & New York City, NY, USA & N & N & Y \\
+\cite{introducing_decentralized_2015} & Beaude et al. & 2015 & Monte Carlo simulation & Boston, MA, USA & N & N & N \\
+\cite{minimizing_the_2015} & Beaude et al. & 2015 & Game-theoretic model & Cambridge, MA, USA & N & Y & N \\
+\cite{optimizing_the_2015} & Vazifeh et al. & 2015 & Multi-objective optimization & New York City, NY, USA & N & Y & Y \\
+\cite{electric_vehicle_2013} & Lam et al. & 2013 & Greedy algorithm & New York City, NY, USA & N & N & N \\
+\cite{socially_optimal_2013} & Yudovina et al. & 2013 & Queuing theory & Ann Arbor, MI, USA & N & N & Y \\
+\cite{electric_vehicle_0} & Li et al. & 0 & Mathematical Optimization (deep learning) & General {\slash} theoretical & N & Y & Y \\
 \bottomrule
 \end{longtable}
 
@@ -1687,19 +1711,22 @@ Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
 
 
 
-\noindent \textbf{Table 4.2: Papers Addressing Gap 2}
-
-
-\begin{longtable}{L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\begin{longtable}{L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\caption{Papers Addressing Gap 2}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
 \midrule
 \endhead
-\texttt{strategic\_planning\_2026} & Fariza et al. & 2026 & optimization & regional & N & Y & N \\
-\texttt{a\_multi-modal\_2025} & Karaku\c{s} et al. & 2025 & empirical & city & N & N & Y \\
-\texttt{a\_multi-objective\_2024} & Zhang et al. & 2024 & optimization & site & N & Y & N \\
-\texttt{towards\_sustainable\_2024} & Boonprong et al. & 2024 & empirical & city & Y & Y & N \\
-\texttt{on-demand\_valet\_2021} & Lai et al. & 2021 & optimization & city & N & Y & N \\
+\cite{strategic_planning_2026} & Fariza et al. & 2026 & GIS + AHP + Weighted Overlay (multi-criteria spatial priority zoning for EVCS; five suitability criteria) & West Java, Indonesia & N & Y & N \\
+\cite{a_multi-modal_2025} & Karaku\c{s} et al. & 2025 & RSERI-EV spatial risk framework (remote sensing + kNN graph; flood/LST/NDVI/LULC resilience scoring for EV charging network) & Wales, UK & N & N & Y \\
+\cite{a_multi-objective_2024} & Zhang et al. & 2024 & NSGA-II multi-objective optimization (maximize system benefits + minimum coverage level); TF-IDF urban land use + POI clustering for demand estimation & Hohhot, China & N & Y & N \\
+\cite{towards_sustainable_2024} & Boonprong et al. & 2024 & Empirical / Case Study (GIS-based analysis) & Bangkok, Thailand & Y & Y & N \\
+\cite{on-demand_valet_2021} & Lai et al. & 2021 & Stochastic programming & San Francisco, USA & N & Y & N \\
 \bottomrule
 \end{longtable}
 
@@ -1723,28 +1750,31 @@ Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
 
 
 
-\noindent \textbf{Table 4.3: Papers Addressing Gap 3}
-
-
-\begin{longtable}{L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\begin{longtable}{L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\caption{Papers Addressing Gap 3}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
 \midrule
 \endhead
-\texttt{a\_two-stage\_2026} & Najafzad et al. & 2026 & optimization & city & Y & Y & Y \\
-\texttt{regional\_transportation\_2026} & Babur et al. & 2026 & simulation & regional & Y & Y & Y \\
-\texttt{a\_united\_2025} & Kinchen et al. & 2025 & mixed & city & Y & N & N \\
-\texttt{an\_equity-based\_2025} & Jha et al. & 2025 & optimization & city & Y & N & N \\
-\texttt{electric\_vehicle\_2025} & Zhao et al. & 2025 & optimization & city & Y & N & N \\
-\texttt{fairness-oriented\_charging\_2025} & Yuan et al. & 2025 & optimization & city & Y & N & N \\
-\texttt{crowdfunding\_for\_2024} & Erfani et al. & 2024 & optimization & neighborhood & Y & N & N \\
-\texttt{towards\_sustainable\_2024} & Boonprong et al. & 2024 & empirical & city & Y & Y & N \\
-\texttt{a\_robust\_2023} & Arief et al. & 2023 & mixed & city & Y & Y & N \\
-\texttt{optimal\_placement\_2023} & Liu et al. & 2023 & optimization & city & Y & Y & N \\
-\texttt{designing\_an\_2022} & Amilia et al. & 2022 & mixed & city & Y & Y & Y \\
-\texttt{inequitable\_access\_2021} & Khan et al. & 2021 & optimization & neighborhood & Y & N & N \\
-\texttt{electrical\_vehicle\_2017} & Wang et al. & 2017 & mixed & city & Y & Y & N \\
-\texttt{critical\_behaviour\_2015} & Carvalho et al. & 2015 & empirical & city & Y & Y & N \\
+\cite{a_two-stage_2026} & Najafzad et al. & 2026 & Two-stage stochastic MILP: Stage 1 FCS siting (ESS algorithm + long-term traffic/budget/equity) + Stage 2 dynamic MCS assignment under demand uncertainty (scenario-based) & Bexar County, TX, USA & Y & Y & Y \\
+\cite{regional_transportation_2026} & Babur et al. & 2026 & Regional discrete event simulation (Mobiliti platform; 19M trips; spatial BEV charging demand density and equity impact analysis) & SF Bay Area, USA & Y & Y & Y \\
+\cite{a_united_2025} & Kinchen et al. & 2025 & Simulation-integrated optimization (traffic simulation + energy modeling + mobility equity measure for equitable CS placement) & New York City, NY, USA & Y & N & N \\
+\cite{an_equity-based_2025} & Jha et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & Y & N & N \\
+\cite{electric_vehicle_2025} & Zhao et al. & 2025 & Mathematical Optimization (GIS-based analysis) & Analytical framework & Y & N & N \\
+\cite{fairness-oriented_charging_2025} & Yuan et al. & 2025 & Fairness-oriented MCLP + SpoNet DRL (GRU encoder-decoder with multi-head attention); Geodetector for factor weighting; GIS spatial analysis (kernel density, SDE, ANN) & Beijing, China (Haidian District) & Y & N & N \\
+\cite{crowdfunding_for_2024} & Erfani et al. & 2024 & Spatial optimization & Los Angeles, CA, USA & Y & N & N \\
+\cite{towards_sustainable_2024} & Boonprong et al. & 2024 & Empirical / Case Study (GIS-based analysis) & Bangkok, Thailand & Y & Y & N \\
+\cite{a_robust_2023} & Arief et al. & 2023 & Mixed-integer programming & Surabaya, Indonesia & Y & Y & N \\
+\cite{optimal_placement_2023} & Liu et al. & 2023 & Mathematical Optimization (reinforcement learning) & Europe (multi-city) & Y & Y & N \\
+\cite{designing_an_2022} & Amilia et al. & 2022 & Mixed-integer programming & Surabaya, Indonesia & Y & Y & Y \\
+\cite{inequitable_access_2021} & Khan et al. & 2021 & Survey-based analysis & New York City, NY, USA & Y & N & N \\
+\cite{electrical_vehicle_2017} & Wang et al. & 2017 & Lagrangian relaxation & Shenzhen, China & Y & Y & N \\
+\cite{critical_behaviour_2015} & Carvalho et al. & 2015 & Simulated annealing & New York City, NY, USA & Y & Y & N \\
 \bottomrule
 \end{longtable}
 
@@ -1768,58 +1798,61 @@ Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
 
 
 
-\noindent \textbf{Table 4.4: Papers Addressing Gap 4}
-
-
-\begin{longtable}{L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\begin{longtable}{L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\caption{Papers Addressing Gap 4}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
 \midrule
 \endhead
-\texttt{a\_two-stage\_2026} & Najafzad et al. & 2026 & optimization & city & Y & Y & Y \\
-\texttt{regional\_transportation\_2026} & Babur et al. & 2026 & simulation & regional & Y & Y & Y \\
-\texttt{a\_joint\_2025} & Yu et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{a\_multi-modal\_2025} & Karaku\c{s} et al. & 2025 & empirical & city & N & N & Y \\
-\texttt{an\_electric\_2025} & Jiang et al. & 2025 & optimization & city & N & Y & Y \\
-\texttt{causal\_spillover\_2025} & Silva et al. & 2025 & empirical & city & N & N & Y \\
-\texttt{charge-map\_an\_2025} & Islam et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{data-driven\_ev\_2025} & Alharbi et al. & 2025 & optimization & city & N & N & Y \\
-\texttt{joint\_optimization\_2025} & Okada et al. & 2025 & optimization & city & N & Y & Y \\
-\texttt{large\_language\_2025} & Zheng et al. & 2025 & mixed & city & N & Y & Y \\
-\texttt{planning\_future\_2025} & Yuan et al. & 2025 & empirical & regional & N & Y & Y \\
-\texttt{stochastic\_behavior\_2025} & Tang et al. & 2025 & optimization & city & N & N & Y \\
-\texttt{a\_data-driven\_2024} & Zhang et al. & 2024 & mixed & city & N & N & Y \\
-\texttt{battery\_swapping\_2024} & Liu et al. & 2024 & mixed & neighborhood & N & Y & Y \\
-\texttt{optimal\_evcs\_2024} & He et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{optimization\_strategies\_2024} & Panyaram & 2024 & optimization & city & N & Y & Y \\
-\texttt{sequential\_charging\_2024} & Shen et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{sustainable\_planning\_2024} & Seilabi et al. & 2024 & optimization & city & N & Y & Y \\
-\texttt{towards\_using\_2024} & Miltner et al. & 2024 & mixed & city & N & Y & Y \\
-\texttt{definition\_of\_2023} & Giudice et al. & 2023 & simulation & city & N & N & Y \\
-\texttt{forecasting\_electric\_2023} & Amara-Ouali et al. & 2023 & empirical & city & N & N & Y \\
-\texttt{incorporating\_time-dependent\_2023} & Filippi et al. & 2023 & optimization & city & N & Y & Y \\
-\texttt{m-bev\_masked\_2023} & Chen et al. & 2023 & optimization & city & N & Y & Y \\
-\texttt{maximum\_flow-based\_2023} & Parent et al. & 2023 & mixed & city & N & Y & Y \\
-\texttt{on\_the\_2023} & Tiu et al. & 2023 & optimization & city & N & Y & Y \\
-\texttt{spap\_simultaneous\_2023} & Wang et al. & 2023 & mixed & city & N & Y & Y \\
-\texttt{spatial\_arbitrage\_2023} & Mohammadian et al. & 2023 & mixed & city & N & N & Y \\
-\texttt{designing\_an\_2022} & Amilia et al. & 2022 & mixed & city & Y & Y & Y \\
-\texttt{model-based\_framework\_2022} & Eagon et al. & 2022 & optimization & city & N & N & Y \\
-\texttt{planning\_of\_2022} & Bian et al. & 2022 & optimization & city & N & N & Y \\
-\texttt{deep\_information\_2021} & Sao et al. & 2021 & empirical & city & N & N & Y \\
-\texttt{deep\_spatio-temporal\_2021} & H\"uttel et al. & 2021 & optimization & city & N & Y & Y \\
-\texttt{hierarchical\_optimization\_2021} & Mirheli et al. & 2021 & optimization & city & N & Y & Y \\
-\texttt{a\_method\_2020} & Rizopoulos et al. & 2020 & optimization & city & N & N & Y \\
-\texttt{electric\_vehicle\_2020} & Guillet et al. & 2020 & optimization & city & N & N & Y \\
-\texttt{increasing\_electric\_2020} & Anjos et al. & 2020 & optimization & city & N & N & Y \\
-\texttt{location\_of\_2020} & Brandst\"atter et al. & 2020 & mixed & city & N & Y & Y \\
-\texttt{a\_method\_2019} & Ouyang et al. & 2019 & mixed & city & N & Y & Y \\
-\texttt{predicting\_popularity\_2019} & Straka et al. & 2019 & optimization & city & N & Y & Y \\
-\texttt{demand\_prediction\_2016} & Gopalakrishnan et al. & 2016 & mixed & city & N & Y & Y \\
-\texttt{electric\_vehicles\_2015} & Lanna et al. & 2015 & optimization & city & N & N & Y \\
-\texttt{optimizing\_the\_2015} & Vazifeh et al. & 2015 & optimization & city & N & Y & Y \\
-\texttt{socially\_optimal\_2013} & Yudovina et al. & 2013 & simulation & city & N & N & Y \\
-\texttt{electric\_vehicle\_0} & Li et al. & 0 & optimization & city & N & Y & Y \\
+\cite{a_two-stage_2026} & Najafzad et al. & 2026 & Two-stage stochastic MILP: Stage 1 FCS siting (ESS algorithm + long-term traffic/budget/equity) + Stage 2 dynamic MCS assignment under demand uncertainty (scenario-based) & Bexar County, TX, USA & Y & Y & Y \\
+\cite{regional_transportation_2026} & Babur et al. & 2026 & Regional discrete event simulation (Mobiliti platform; 19M trips; spatial BEV charging demand density and equity impact analysis) & SF Bay Area, USA & Y & Y & Y \\
+\cite{a_joint_2025} & Yu et al. & 2025 & Two-stage MILP + ADMM (joint FCS/MCS planning: queueing theory + SQP for power-traffic coordination) & Mobile, AL, USA & N & Y & Y \\
+\cite{a_multi-modal_2025} & Karaku\c{s} et al. & 2025 & RSERI-EV spatial risk framework (remote sensing + kNN graph; flood/LST/NDVI/LULC resilience scoring for EV charging network) & Wales, UK & N & N & Y \\
+\cite{an_electric_2025} & Jiang et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & N & Y & Y \\
+\cite{causal_spillover_2025} & Silva et al. & 2025 & Quasi-experimental causal inference (staggered DiD with mobile GPS data; EVCS business spillover impact analysis) & New York City and SF Bay Area, CA, USA & N & N & Y \\
+\cite{charge-map_an_2025} & Islam et al. & 2025 & Agent-based simulation + optimization (CHARGE-MAP: spatiotemporal demand simulation + CS/charger location optimization + grid stability module) & Virginia, USA & N & Y & Y \\
+\cite{data-driven_ev_2025} & Alharbi et al. & 2025 & ST-FCLM + M/M/C queuing theory for EV facility siting/sizing; SOS metaheuristic for battery storage allocation under stochastic demand/RES uncertainty & Standard benchmark (Nguyen-Dupuis RTN + modified IEEE 33-bus MG, SUMO-simulated; no real city) & N & N & Y \\
+\cite{joint_optimization_2025} & Okada et al. & 2025 & QUBO-based sequential optimization with Bayesian inference (quantum annealer-compatible joint EV routing and CS location) & Synthetic (20-location routing problem, no real city) & N & Y & Y \\
+\cite{large_language_2025} & Zheng et al. & 2025 & LLM-assisted MILP + ADMM (joint investment and charging assignment; spatial-temporal demand dynamics) & Chengdu, China & N & Y & Y \\
+\cite{planning_future_2025} & Yuan et al. & 2025 & Multi-objective bottom-up capacity allocation model (BEV/EREV/PHEV demand differentiation; 2025-2030 projection) & Chongqing, China & N & Y & Y \\
+\cite{stochastic_behavior_2025} & Tang et al. & 2025 & Mathematical Optimization & General {\slash} theoretical & N & N & Y \\
+\cite{a_data-driven_2024} & Zhang et al. & 2024 & Agent-based simulation (ABS) + Pareto multi-objective optimization (maximize ET user satisfaction, minimize EVCI workload variance); GPS trajectory data in GIS & Shenzhen, China & N & N & Y \\
+\cite{battery_swapping_2024} & Liu et al. & 2024 & Simulation optimization + Large Neighborhood Search (LNS) framework + Bayesian optimization for single-station allocation; minimizes demand loss under stochastic BSS demand in city network & Shanghai, China & N & Y & Y \\
+\cite{optimal_evcs_2024} & He et al. & 2024 & Mathematical Optimization & General {\slash} theoretical & N & Y & Y \\
+\cite{optimization_strategies_2024} & Panyaram & 2024 & Mathematical Optimization (machine learning) & General {\slash} theoretical & N & Y & Y \\
+\cite{sequential_charging_2024} & Shen et al. & 2024 & Stochastic MILP & Ann Arbor, MI, USA & N & Y & Y \\
+\cite{sustainable_planning_2024} & Seilabi et al. & 2024 & Mathematical Optimization (genetic algorithm) & Numerical simulation & N & Y & Y \\
+\cite{towards_using_2024} & Miltner et al. & 2024 & Neural network & Eindhoven, Netherlands & N & Y & Y \\
+\cite{definition_of_2023} & Giudice et al. & 2023 & Simulation-Based & Milan, Italy & N & N & Y \\
+\cite{forecasting_electric_2023} & Amara-Ouali et al. & 2023 & LSTM & Paris, France & N & N & Y \\
+\cite{incorporating_time-dependent_2023} & Filippi et al. & 2023 & Branch-and-bound & Chicago, IL, USA & N & Y & Y \\
+\cite{m-bev_masked_2023} & Chen et al. & 2023 & Autoencoder & Beijing, China & N & Y & Y \\
+\cite{maximum_flow-based_2023} & Parent et al. & 2023 & MILP & Mobile, AL, USA & N & Y & Y \\
+\cite{on_the_2023} & Tiu et al. & 2023 & Mixed-integer programming & Paris, France & N & Y & Y \\
+\cite{spap_simultaneous_2023} & Wang et al. & 2023 & Mixed Methods & Beijing{\slash}Guangzhou{\slash}Tianjin, China & N & Y & Y \\
+\cite{spatial_arbitrage_2023} & Mohammadian et al. & 2023 & Genetic algorithm & San Antonio, TX, USA & N & N & Y \\
+\cite{designing_an_2022} & Amilia et al. & 2022 & Mixed-integer programming & Surabaya, Indonesia & Y & Y & Y \\
+\cite{model-based_framework_2022} & Eagon et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & N & N & Y \\
+\cite{planning_of_2022} & Bian et al. & 2022 & Mathematical Optimization & General {\slash} theoretical & N & N & Y \\
+\cite{deep_information_2021} & Sao et al. & 2021 & GRU & Lower Saxony, Germany & N & N & Y \\
+\cite{deep_spatio-temporal_2021} & H\"uttel et al. & 2021 & Graph convolutional network & Palo Alto, CA, USA & N & Y & Y \\
+\cite{hierarchical_optimization_2021} & Mirheli et al. & 2021 & Stochastic MILP & New York City, NY, USA & N & Y & Y \\
+\cite{a_method_2020} & Rizopoulos et al. & 2020 & Mathematical Optimization (genetic algorithm) & Budapest, Hungary & N & N & Y \\
+\cite{electric_vehicle_2020} & Guillet et al. & 2020 & Stochastic programming & San Francisco, CA, USA & N & N & Y \\
+\cite{increasing_electric_2020} & Anjos et al. & 2020 & Mathematical Optimization & General {\slash} theoretical & N & N & Y \\
+\cite{location_of_2020} & Brandst\"atter et al. & 2020 & Mixed Methods (linear programming) & Vienna, Austria & N & Y & Y \\
+\cite{a_method_2019} & Ouyang et al. & 2019 & Multi-objective genetic algorithm & Chicago, IL, USA & N & Y & Y \\
+\cite{predicting_popularity_2019} & Straka et al. & 2019 & Stochastic programming & New York City, NY, USA & N & Y & Y \\
+\cite{demand_prediction_2016} & Gopalakrishnan et al. & 2016 & Facility location model & Seattle, WA, USA & N & Y & Y \\
+\cite{electric_vehicles_2015} & Lanna et al. & 2015 & Mathematical Optimization & New York City, NY, USA & N & N & Y \\
+\cite{optimizing_the_2015} & Vazifeh et al. & 2015 & Multi-objective optimization & New York City, NY, USA & N & Y & Y \\
+\cite{socially_optimal_2013} & Yudovina et al. & 2013 & Queuing theory & Ann Arbor, MI, USA & N & N & Y \\
+\cite{electric_vehicle_0} & Li et al. & 0 & Mathematical Optimization (deep learning) & General {\slash} theoretical & N & Y & Y \\
 \bottomrule
 \end{longtable}
 
@@ -1843,25 +1876,28 @@ Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
 
 
 
-\noindent \textbf{Table 4.5: Papers Addressing Gap 5}
-
-
-\begin{longtable}{L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\begin{longtable}{L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}}
+\caption{Papers Addressing Gap 5}\\[4pt]
 \toprule
-Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Paper} & \textbf{Authors} & \textbf{Year} & \textbf{Approach} & \textbf{Location} & \textbf{Equity} & \textbf{Util.} & \textbf{Phased} \\
 \midrule
 \endhead
-\texttt{a\_2025} & Do et al. & 2025 & mixed & city & N & Y & N \\
-\texttt{optimizing\_urban\_2025} & Ai et al. & 2025 & optimization & city & N & Y & N \\
-\texttt{a\_data-driven\_2024} & Zhang et al. & 2024 & mixed & city & N & N & Y \\
-\texttt{crowdfunding\_for\_2024} & Erfani et al. & 2024 & optimization & neighborhood & Y & N & N \\
-\texttt{optimizing\_urban\_2024} & Munawar & 2024 & mixed & regional & N & N & N \\
-\texttt{electric\_vehicle\_2023} & Varma et al. & 2023 & simulation & city & N & Y & N \\
-\texttt{development\_of\_2022} & Jin et al. & 2022 & optimization & city & N & Y & N \\
-\texttt{predictive\_energy\_2022} & Lin et al. & 2022 & mixed & city & N & N & N \\
-\texttt{securing\_the\_2021} & Metere et al. & 2021 & optimization & city & N & Y & N \\
-\texttt{optimal\_decision\_2019} & Upadhaya et al. & 2019 & optimization & city & N & Y & N \\
-\texttt{smart\_vehicle\_2015} & Zuccaro et al. & 2015 & optimization & city & N & Y & N \\
+\cite{a_2025} & Do et al. & 2025 & Digital twin + agent-based simulation with embedded GA optimization (EV station config, policies, renewable energy) & Hanoi, Vietnam & N & Y & N \\
+\cite{optimizing_urban_2025} & Ai et al. & 2025 & MILP + location-inventory-grid model with continuous approximation (joint EV charging and battery swapping under grid and demand uncertainty) & New York City, NY, USA & N & Y & N \\
+\cite{a_data-driven_2024} & Zhang et al. & 2024 & Agent-based simulation (ABS) + Pareto multi-objective optimization (maximize ET user satisfaction, minimize EVCI workload variance); GPS trajectory data in GIS & Shenzhen, China & N & N & Y \\
+\cite{crowdfunding_for_2024} & Erfani et al. & 2024 & Spatial optimization & Los Angeles, CA, USA & Y & N & N \\
+\cite{optimizing_urban_2024} & Munawar & 2024 & Mixed Methods (GIS-based analysis) & International {\slash} general & N & N & N \\
+\cite{electric_vehicle_2023} & Varma et al. & 2023 & Spatial optimization & Los Angeles, CA, USA & N & Y & N \\
+\cite{development_of_2022} & Jin et al. & 2022 & Multi-objective optimization & Austin, TX, USA & N & Y & N \\
+\cite{predictive_energy_2022} & Lin et al. & 2022 & Mixed Methods & International {\slash} general & N & N & N \\
+\cite{securing_the_2021} & Metere et al. & 2021 & Mathematical Optimization & Mobile, AL, USA & N & Y & N \\
+\cite{optimal_decision_2019} & Upadhaya et al. & 2019 & MILP & Montreal, Canada & N & Y & N \\
+\cite{smart_vehicle_2015} & Zuccaro et al. & 2015 & Mathematical Optimization & Valencia, Spain & N & Y & N \\
 \bottomrule
 \end{longtable}
 
@@ -1869,12 +1905,15 @@ Key & Authors & Year & Approach & Scope & Equity & Util. & Phased \\
 \section{Overall Gap Coverage Summary}
 
 
-\noindent \textbf{Table 4.6: Dissertation Gap Coverage Across the Corpus}
-
-
 \begin{longtable}{L{1.9cm} L{1.9cm} L{1.9cm} L{1.9cm} L{1.9cm} L{1.9cm}}
+\caption{Dissertation Gap Coverage Across the Corpus}\\[4pt]
 \toprule
-Gap & Label & N Papers & \% & Level & Primary Sub-Gap Missing \\
+\textbf{Gap} & \textbf{Label} & \textbf{N Papers} & \textbf{\%} & \textbf{Level} & \textbf{Primary Sub-Gap Missing} \\
+\midrule
+\endfirsthead
+\multicolumn{6}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Gap} & \textbf{Label} & \textbf{N Papers} & \textbf{\%} & \textbf{Level} & \textbf{Primary Sub-Gap Missing} \\
 \midrule
 \endhead
 Gap 1 & Misaligned Spatial Units & 133 & 66\% & High & Corridor-based spatial unit construction and comparison \\
@@ -1889,12 +1928,15 @@ Gap 5 & Missing Meso-Micro Integration & 11 & 6\% & Low & Meso-to-micro translat
 \section{Methodology Distribution Across the Corpus}
 
 
-\noindent \textbf{Table 4.7: Approach Type Distribution}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Approach Type Distribution}\\[4pt]
 \toprule
-Approach & N & \% of Corpus \\
+\textbf{Approach} & \textbf{N} & \textbf{\% of Corpus} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Approach} & \textbf{N} & \textbf{\% of Corpus} \\
 \midrule
 \endhead
 optimization & 116 & 58.0\% \\
@@ -1906,12 +1948,15 @@ simulation & 17 & 8.5\% \\
 
 
 
-\noindent \textbf{Table 4.8: Spatial Scope Distribution}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Spatial Scope Distribution}\\[4pt]
 \toprule
-Planning Scope & N & \% of Corpus \\
+\textbf{Planning Scope} & \textbf{N} & \textbf{\% of Corpus} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Planning Scope} & \textbf{N} & \textbf{\% of Corpus} \\
 \midrule
 \endhead
 city & 182 & 91.0\% \\
@@ -1924,12 +1969,15 @@ corridor & 2 & 1.0\% \\
 
 
 
-\noindent \textbf{Table 4.9: Thematic Coverage Flags Across the Corpus}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Thematic Coverage Flags Across the Corpus}\\[4pt]
 \toprule
-Dimension & N Papers & \% of Corpus \\
+\textbf{Dimension} & \textbf{N Papers} & \textbf{\% of Corpus} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Dimension} & \textbf{N Papers} & \textbf{\% of Corpus} \\
 \midrule
 \endhead
 Equity measured or addressed & 14 & 7.0\% \\
@@ -1943,12 +1991,15 @@ Multi-objective formulation & 10 & 5.0\% \\
 
 
 
-\noindent \textbf{Table 4.10: Primary Category Distribution}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Primary Category Distribution}\\[4pt]
 \toprule
-Category & N & \% \\
+\textbf{Category} & \textbf{N} & \textbf{\%} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Category} & \textbf{N} & \textbf{\%} \\
 \midrule
 \endhead
 Spatial Optimization for Charging Station Placement & 133 & 66.5\% \\
@@ -2146,12 +2197,15 @@ Stage C outputs: (1) a formalized meso-to-micro translation protocol; (2) a site
 \section{Comparison with Existing Approaches}
 
 
-\noindent \textbf{Table 6.1: Proposed Framework vs. Existing Approaches in the Literature}
-
-
 \begin{longtable}{L{3.5cm} L{4.5cm} L{4.5cm}}
+\caption{Proposed Framework vs. Existing Approaches in the Literature}\\[4pt]
 \toprule
-Dimension & Existing Literature (n=200 papers) & Proposed Framework \\
+\textbf{Dimension} & \textbf{Existing Literature (n=200 papers)} & \textbf{Proposed Framework} \\
+\midrule
+\endfirsthead
+\multicolumn{3}{l}{\small\textit{Table \thetable\ --- continued}}\\[2pt]
+\toprule
+\textbf{Dimension} & \textbf{Existing Literature (n=200 papers)} & \textbf{Proposed Framework} \\
 \midrule
 \endhead
 Spatial unit & Administrative (TAZ, census tract) in \textasciitilde{}67 papers & Mobility-corridor zones (Stage A) \\

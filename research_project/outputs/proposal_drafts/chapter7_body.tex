@@ -1,4 +1,4 @@
-\section{Introduction}
+\subsection{Introduction}
 % The global transition to \gls{bev}s represents a cornerstone in decarbonizing urban transportation and advancing net-zero ambitions \cite{IEA2023GlobalEVOutlook}. As adoption accelerates across cities, the demand for a \acrlong{fc} network that is both reliable and well-positioned has grown substantially \cite{Ghosh2022}. Careful planning of this infrastructure is essential, not only to ensure user convenience and system resilience, but also to guarantee fair access to sustainable mobility \cite{Cai2024}.
 The global transition to \glspl{bev} represents a cornerstone in \gls{decarbonization} of urban transportation and advancing \gls{netzero} ambitions \cite{IEA2023GlobalEVOutlook}. As adoption accelerates across cities, the demand for a \gls{fc} network that is both reliable and well-positioned has grown substantially \cite{Ghosh2022}. Careful planning of this infrastructure is essential, not only to ensure user convenience and system resilience, but also to guarantee fair access to \gls{sustainablemobility} \cite{Cai2024}.
 
@@ -37,7 +37,7 @@ The main contributions of this study are as follows:
  \item Development of a graph-based proximity framework to assess the spatial alignment between charging infrastructure and \gls{bev} activity corridors, benchmarked against randomized network configurations. 
 
  \end{itemize}
-\section{Literature Review}
+\subsection{Literature Review}
 
 Research on \gls{bev} \gls{fc} planning spans \gls{microlevel}, \gls{mesolevel}, and \gls{macrolevel} levels, with the \gls{mesolevel} scale often serving as a bridge between strategic policy and local siting. At the micro level, optimization dominates: Ullah et al.~\cite{ullah2023} employed a set covering model to allocate chargers at gas stations in Aichi, Japan. Heo and Chang~\cite{HEO2024} combined deep reinforcement learning with geospatial analysis for deployment in Chicago. These studies illustrate the strength of advanced optimization but also highlight their dependence on either pre-selected candidate sites or high-resolution grid zoning, which demands detailed traffic and demand data. Our arterial corridor-zones framework differs by avoiding arbitrary candidate sets and instead grounding zoning schema in road topology, offering a more pragmatic \gls{mesolevel}-level entry point before fine-grained optimization.  
 
@@ -216,10 +216,10 @@ Taken together, prior studies highlight three recurring limitations. Zoning unit
 % \label{tab:literature review}
 % \end{table*}
 
-\section{Methodology}
+\subsection{Methodology}
 
 
-\subsection{Preliminaries}
+\subsubsection{Preliminaries}
 This subsection introduces the core datasets, variables, and spatial structures
 used in the study. Road classification systems are widely used in transportation planning to
 distinguish roads by function, ranging from high-capacity expressways to
@@ -314,7 +314,7 @@ Here, \gls{I} is the index set, and \gls{NFSA} represents the total number of \g
 % \boldsymbol{\mathrm{ST^{bl_j}_{ch_i}}} = \{\mathrm{st^{bl_j}_{{ch_i}_1}, st^{bl_j}_{{ch_i}_2}, \ldots, st^{bl_j}_{{ch_i}_s}}\}
 % \end{align}
 
-\subsection{From centrelines to arterial zones}\label{sec:derived_AZ}
+\subsubsection{From centrelines to arterial zones}\label{sec:derived_AZ}
 The zoning algorithm operates by taking two main inputs: a dataset of road centrelines that includes various road classifications and a \gls{fsa} zones' polygons. The algorithm generates a set of clean, uniquely labeled arterial zones, which are represented as polygons. These output zones are suitable for spatial analysis, demand modeling, and infrastructure planning. Below, we outline the detailed stages of the algorithm, as illustrated in Figure~\ref{fig:arterial_zoning_pipeline}.
 The first stage of the workflow, shown in Figure~\ref{fig:arterial_zoning_pipeline}, involves refining the centerline dataset to retain only the major arterial roads. Feature selection is carried out based on road classification attributes to ensure that highway, minor and local streets are excluded. The geometries are validated and repaired to eliminate any invalid or corrupted features that could disrupt topological operations. A snapping process is then applied to close micro-gaps and ensure complete network connectivity. Finally, multilines can optionally be simplified into a single-layer representation, reducing geometric redundancy and preparing the centerline for the subsequent polygonization stage.
 
@@ -396,7 +396,7 @@ where each \gls{ZArj} represents a simple polygonal subset of $\mathbb{R}^2$, \g
 %   \item \textbf{Topology QA:} If polygonize fails or yields holes, revisit \textbf{Fix geometries} and \textbf{Snap geometries}; inspect dangling ends and overlaps.
 % \end{itemize}
 
-\subsection{From \gls{fsa}-level \gls{bev} counts to arterial zones' \gls{bev} densities}\label{sec:Ev_density_for AZ}
+\subsubsection{From \gls{fsa}-level \gls{bev} counts to arterial zones' \gls{bev} densities}\label{sec:Ev_density_for AZ}
 Data on vehicle ownership for \gls{bev}s are only available at the \gls{fsa} level, which is the primary record of registered vehicles. Ideally, if ownership data were available at multiple administrative levels, the most detailed unit would be preferred, as higher-resolution data allows for a more accurate representation of spatial variations in \gls{bev} ownership. This improves the allocation of resources to arterial zones and aligns better with major mobility patterns.
 The \gls{fsa} polygons are used as the base administrative units. However, \glspl{fsa} do not correspond with mobility corridors and thus do not accurately reflect \gls{bev} activity along major arterial roads. Each \gls{fsa} is intersected with the defined arterial zones, allowing the proportional redistribution of \gls{bev} counts from \gls{fsa} zones to mobility-based arterial zones. This process ensures that \gls{bev} activity is accurately represented within the arterial zones, which serve as the fundamental spatial framework for planning \gls{fc} infrastructure.
 The set of intersection regions, denoted by \gls{Zcap}, is defined as
@@ -493,7 +493,7 @@ which ensures $\widehat{\rho}^{\mathrm{Ar}}_{j} \in [0,1]$ for all $j$. The set 
       : j \in \mathcal{J} 
    \,\bigr\}.
 \end{align}
-\subsection{Graph construction and hop distance}
+\subsubsection{Graph construction and hop distance}
 \label{subsec:hop_distance}
 To represent spatial connectivity among arterial zones, an undirected planar adjacency graph \gls{GraphG} is constructed.
 Each arterial zone \gls{ZArj} corresponds to a vertex \gls{VertexVj}, whose position is defined by the geometric centroid functional \gls{Centroid}.
@@ -555,7 +555,7 @@ N^{(h)}(j)  &= \{\, k\in\mathcal{J} : d_G(j,k)=h \,\}, \quad h=0,1,2,\dots
 % (iii) Smoothing and aggregation are applied within the connected component containing $j$; if $d_G(j,k)=\infty$, then $k\notin B^{(n)}(j)$ for any finite $n$.
 
 
-\subsection{Weighted $n$-hop smoothing}
+\subsubsection{Weighted $n$-hop smoothing}
 \label{subsec:nhop_smoothing}
 % Spatial smoothing replaces each arterial-zone EV density with a local average over its neighbors on the adjacency graph, reflecting spillovers and reducing small-area noise. Concretely, starting from the unsmoothed densities $\rho^{\mathrm{Ar}}_{j}$ in~\eqref{eq:EV_density_arterial}, we compute a smoothed value by averaging over neighboring zones using the weighted $n$-hop ball in~\eqref{eq:EV_density_nhop_weighted}. We smooth for two reasons: (i) EV ownership and charging demand exhibit spatial dependence along corridors and across adjacent neighborhoods, which a local average captures; and (ii) raw densities can be unstable in small or sparsely connected zones, so smoothing borrows strength from neighbors. The hyperparameter $n$ and ring weights control the spatial scale of influence, trading variance reduction against potential over-smoothing.
 % Given the arterial zones' EV densities $\rho^{\mathrm{Ar}}_{k}$ from~\eqref{eq:EV_density_arterial}, the $n$-hop distance-sensitive smoothing, uses ring weights over hop shells is \begin{align}
@@ -630,12 +630,12 @@ The hyperparameters $n$ and $\mathbf{w}$ control the spatial scale of influence,
 % \label{fig:smoothed_ev_density_heatmap}
 % \end{figure}
 
-\subsection{Ridge paths as \gls{bev} activity backbones}\label{sec:Ridge paths}
+\subsubsection{Ridge paths as \gls{bev} activity backbones}\label{sec:Ridge paths}
 Ridge paths are introduced as structural backbones of \gls{bev} activity and charging-demand proxies.
 They are extracted from the smoothed \gls{bev} density surface across the city's arterial zones, highlighting the most prominent spines of \gls{bev} movement and concentration.
  Conceptually, they represent concentrated movement patterns and strategic urban corridor zones where charging demand is expected to be greatest. Unlike uniform thresholding methods, ridge paths adapt to the relative peaks in the density field and align with the directional flow of activity. Therefore, they offer a spatially-aware, activity-driven basis for positioning \gls{fc} infrastructure along significant, high-usage urban routes. Ridge paths are defined as sequences of connected areas characterized by a decreasing yet consistently high \gls{bev} density. These paths are formed by tracing downward from local maxima on the density surface, allowing the density to decrease gradually based on a controlled drop ratio. This regulation ensures that small local dips do not prematurely interrupt the paths, thereby maintaining continuity along important high-activity corridor zones. Each resulting ridge path effectively captures a coherent high-flow activity line, acting as a proxy for zones where latent charging corridors exist within the urban.
 
-\subsubsection{Ridge path extraction}
+\paragraph{Ridge path extraction}
 The set of local maxima, denoted by \gls{M}, consists of all arterial zones in \gls{J} whose smoothed densities \gls{rhoAr} are not smaller than those of any neighboring zones \gls{NeighborSet}. Each element of \gls{M} represents an arterial zone that attains a locally dominant demand level within its adjacency neighborhood, thereby serving as a potential origin point for ridge-path extraction in the density field:
 \begin{equation}
   \label{eq:local_maxima_set}
@@ -837,10 +837,10 @@ Each element of \gls{VRP} represents a centroid of an arterial zone that rests a
 % ridge paths are then snapped to the arterial road network, producing demand corridors
 % that align both with intensity of EV activity and with underlying mobility structure.
 
-\subsection{Graph-based proximity evaluation}
+\subsubsection{Graph-based proximity evaluation}
 Corridor zones are represented as nodes positioned along ridge paths, with each node characterized by specific attributes, such as \gls{bev} density acting as a demand proxy and charger density functioning as a supply proxy. Proximity metrics are calculated between ridge-path nodes and charger nodes, using hop-distance measures that are weighted by \gls{bev} density, along with inverse-distance accessibility indices. The effectiveness of this spatial configuration is assessed by comparing it to randomized baseline scenarios, where charger locations are shuffled to create null models for evaluation.
 
-\subsubsection{Charger capacity density as supply proxy}
+\paragraph{Charger capacity density as supply proxy}
 The supply of charging infrastructure is represented by the aggregate charging capacity assigned to each arterial zone. Let \gls{C} denote the set of charger stations deployed within the study area. Each charger \gls{c} $ \in $ \gls{C} is characterized by a geographic location $\mathrm{loc}(c) \in \mathbb{R}^2$ and a rated capacity $P_c \in \mathbb{R}_{>0}$. Chargers are spatially assigned to arterial zones through the mapping
 \begin{align}
   \label{eq:charger_mapping}
@@ -913,7 +913,7 @@ which ensures that $\widehat{\rho}^{\mathrm{Ch}}_{j} \in [0,1]$ for all $j$. The
 \end{equation}
 
 
-\subsubsection{Weighted proximity distance metric}
+\paragraph{Weighted proximity distance metric}
 \label{subsubsec:wpd_metric}
 The effectiveness of charging infrastructure in serving high-activity corridor zones, ridge paths' nodes on the arterial-zone graph \gls{GraphG} is assessed.
 The nodes of ridge paths capture localized concentrations of \gls{bev} activity, which serve as indicators of charging demand. Meanwhile, charger nodes represent the available supply and capacity for charging. Proximity between these nodes is assessed based on the hop-based structure of the underlying road network rather than using Euclidean distance. To measure the accessibility between demand and supply nodes, the \gls{wpd} is introduced.
@@ -931,7 +931,7 @@ For each node $v_j \in \mathcal{V}_{\mathrm{RP}}$, let \gls{cvstar} denote its n
 where \gls{dvvstar} denotes the hop-based shortest-path distance between the ridge-path node $v_j$ and its nearest charger node \gls{cvstar}, while \gls{rhoArSmooth} represents the smoothed demand density at $v_j$. The parameter $\varepsilon > 0$ is introduced to prevent zero weighting in regions with sparse charger availability, ensuring numerical stability and maintaining the continuity of accessibility evaluation across the network.
 This formulation measures accessibility by weighting proximity based on local \gls{bev} density and charger capacity. This approach effectively captures the spatial reach of charging supply across high-activity corridor zones. A smaller value of \gls{wpd} indicates a stronger alignment between ridge-path nodes and charging infrastructure, meaning that high-demand nodes are closer, in terms of hop distance, to adequately equipped chargers. In contrast, larger values of \gls{wpd} signal reduced accessibility, showing that ridge-path nodes are generally farther away from suitable chargers within the network. The computational procedure is described in Algorithm \ref{alg:wpd}.
 
-\subsubsection{Proximity Evaluation Algorithm}
+\paragraph{Proximity Evaluation Algorithm}
 \label{subsubsec:wpd_algorithm}
 
 \begin{algorithm}[H]
@@ -949,14 +949,14 @@ demand weights $\widetilde{\mathcal{D}}^{\mathrm{Ar}}(n,\mathbf{w})$ in~\eqref{e
 \end{algorithmic}
 \end{algorithm}
 
-\subsection{Evaluating charger–activity spatial alignment}
+\subsubsection{Evaluating charger–activity spatial alignment}
 \label{subsec:null_distribution}
 % To evaluate the spatial alignment between real-world fast charger locations and \gls{bev} ridge-path activity, a null distribution was constructed to represent the performance expected under purely random infrastructure placements. This baseline enables statistical testing to determine whether the observed charger-activity alignment arises from intentional spatial design or is a chance occurrence. A statistically significant alignment indicates that ridge-paths' \gls{bev} activity effectively represents the underlying spatial structure of charging demand, validating its use as a behavioral proxy for infrastructure planning.
 To assess the degree to which real-world \gls{fc} infrastructure align with \gls{bev} high-activity zones, a null distribution was constructed.
 This distribution represents the level of alignment we would expect if charger locations were placed randomly. By establishing this randomized baseline, we can conduct statistical tests to determine whether the observed correspondence between charger locations and \gls{bev} high-activity zones is significantly different from what would occur by chance. If the results are statistically significant, it indicates a meaningful relationship between the locations of the chargers and the activity zones, suggesting a deliberate spatial arrangement rather than mere coincidence. This approach allows for a comprehensive assessment of the demand for, and accessibility to, \gls{fc} infrastructure across the city, treating both the charging network and mobility corridors as interconnected components of the urban system.
 
 
-\subsubsection{Null distribution construction}
+\paragraph{Null distribution construction}
 The null model preserves two essential characteristics of the real network: the total number of charging stations and the number of charging ports in each charging station. Under these constraints, charger nodes are randomly distributed across the arterial-zones, ensuring that the underlying network topology and \gls{bev} activity surface remain fixed.
 For each randomized configuration, the \gls{wpd} is recalculated to quantify accessibility between ridge-paths' nodes and their nearest charging nodes, weighted by both \gls{bev} activity intensity and charger capacity. Let \gls{VChreal} $\subseteq V$ denote the set of real charger locations, where each charger \gls{creal} is assigned a rated capacity \gls{kcreal} $\in$ \gls{Nplus}. Similarly, let \gls{VChrandom} $\subseteq$ \gls{VertexSet} denote the set of randomized charger locations, where each charger \gls{crandom} is assigned a capacity \gls{kcrandom} $\in $ \gls{Nplus}. These randomized configurations serve as null counterparts to the real-world charger set, preserving the overall number and capacity distribution while randomizing spatial placement across the network.
 The null model generates randomized configurations subject to the following constraints:
@@ -990,7 +990,7 @@ The collection of \gls{wpd}$(\mathcal{V}^{Ch}_{\mathrm{random},r})$ values obtai
     \{\mathrm{WPD}(\mathcal{V}^{Ch}_{\mathrm{random,1}}),\dots\, \mathrm{WPD}(\mathcal{V}^{Ch}_{\mathrm{random,r}}), \dots\,\mathrm{WPD}(\mathcal{V}^{Ch}_{\mathrm{random,R}})\}
 \label{eq:null_distribution_formal}
 \end{align}
-\subsubsection{Elbow analysis for convergence detection}
+\paragraph{Elbow analysis for convergence detection}
 The reliability of the null distribution \gls{M0} depends on the number of independent random realizations \gls{R}. Let \gls{muR} and \gls{sigmaR} represent the sample mean and standard deviation of \gls{wpd}$(\mathcal{V}^{Ch}_{\mathrm{random},r})$ values obtained after \gls{R} experiments:
 
 \begin{align}
@@ -1073,7 +1073,7 @@ Integrating mobility-based activity structure with the null distribution framewo
 
 % The proposed WPD offers practical benefits in a single, interpretable construct: (i) \emph{joint supply--demand weighting}, where distances are modulated by EV demand intensity and charger capacity to highlight consequential gaps; (ii) \emph{network realism}, since hop-based paths respect the arterial topology and avoid misleading Euclidean shortcuts; (iii) a \emph{benchmarkable scalar} that enables direct comparison of deployment scenarios across space and time; and (iv) \emph{diagnostic by-products}, as nearest-charger assignments and path lengths per ridge support spatial audits and equity analyses.
 
-% \subsection{Meso-Level Planning Toolkit}
+% \subsubsection{Meso-Level Planning Toolkit}
 % The integration of corridor-aligned zoning, ridge-path extraction, and graph-based
 % proximity metrics produces a meso-level planning toolkit. This framework bridges
 % macro-level adoption forecasting and micro-level site optimization. It enables planners
@@ -1087,9 +1087,9 @@ Integrating mobility-based activity structure with the null distribution framewo
 % ======================
 % Case Study
 % ======================
-\section{Case study}
+\subsection{Case study}
 \label{sec:case_study}
-\subsection{Study area and datasets}
+\subsubsection{Study area and datasets}
 \label{subsec:study_area}
 This study focuses on the City of Toronto, Canada, employing arterial corridor zones derived in Section~\ref{sec:derived_AZ}. 
 The empirical analysis draws upon three primary datasets: 
@@ -1103,7 +1103,7 @@ All spatial analyses were conducted using \texttt{QGIS v3.34} and Python \texttt
 Computations were performed on a 64-bit Windows~10 workstation equipped with an Intel\textsuperscript{\textregistered} Core\textsuperscript{TM} i7-8700T CPU @ 2.40\,GHz, 16\,GB RAM, and integrated Intel UHD Graphics~630. 
 Data were stored on a 512\,GB NVMe SSD. 
 Typical preprocessing and spatial intersection operations over 234 arterial regions completed within several minutes.
-\subsection{Arterial zone extraction}\label{subsec:az_extraction}
+\subsubsection{Arterial zone extraction}\label{subsec:az_extraction}
 The proposed arterial zoning algorithm successfully transformed the \gls{tcl} and \gls{fsa} boundaries, as illustrated in Figure \ref{fig:TCN_FSA}, into a topologically coherent and spatially continuous set of arterial zones shown in Figure \ref{fig:arterial_zones}, suitable for meso-scale spatial analysis. All layers are projected to UTM 17N (EPSG:32617) per Definition~\ref{def:projection}.  Starting from over 40{,}000 individual road segments in the \gls{tcl} dataset, the filtering and connectivity refinement stages reduced the network to approximately 1{,}200 major arterial links. This selective extraction preserved the primary mobility corridors that shape \gls{bev} travel demand while excluding expressway, local and collector roads that fragment the network topology. 
 \begin{figure}[htbp]
   \centering
@@ -1144,7 +1144,7 @@ The final arterial zoning layer  provides a robust spatial framework for subsequ
   \caption{Derived arterial zones for the City of Toronto.}
   \label{fig:arterial_zones}
 \end{figure}
-\subsection{Arterial zones' \gls{bev} densities}
+\subsubsection{Arterial zones' \gls{bev} densities}
 \label{subsec:EV_density_results}
 The redistribution procedure described in Section~\ref{sec:Ev_density_for AZ} produces spatial field of  \gls{bev} densities aligned with the arterial corridor zones. 
 % Figure~\ref{fig:arterial_ev_density} illustrates the resulting distribution of smoothed BEV densities $\tilde{\rho}^{\mathrm{Ar}}_{j}$ across the arterial zones of Toronto, as computed from~\eqref{eq:EV_density_nhop_weighted}. 
@@ -1216,10 +1216,10 @@ Absolute ownership counts are first converted into arterial-zone intensity measu
 %   \label{fig:arterial_ev_density}
 % \end{figure}
 
-% \subsection{Preprocessing and Spatial Setup}
+% \subsubsection{Preprocessing and Spatial Setup}
 % \label{subsec:preprocessing}
 % EV counts are dasymetrically disaggregated from FSAs to intersection regions (Eq.~\eqref{eq:EV_allocation_intersection}) and aggregated to arterial zones (Eq.~\eqref{eq:EV_aggregate_arterial}), then normalized (Eq.~\eqref{eq:EV_density_norm}).
-\subsection{Graph constraction}
+\subsubsection{Graph constraction}
 \label{subsec:hop_distance_results}
 
 The planar adjacency graph defined in Equation~\eqref{eq:urban_graph} yields a connected and topologically coherent representation of Toronto's arterial zones, as illustrated in Figure~\ref{fig:local_maxima_map}. 
@@ -1236,7 +1236,7 @@ The resulting graph contains $|$\gls{VertexSet}$| = 234$ vertices and $|$\gls{Ed
 %========================
 % Graph-Theoretic Analysis
 %========================
-\subsubsection{Graph-theoretic analysis of the arterial adjacency network}
+\paragraph{Graph-theoretic analysis of the arterial adjacency network}
 \label{subsec:graph_analysis}
 The edge density is low $0.0176$, indicating a sparse mesh, expected for an adjacency graph rather than a road-traffic graph. Despite sparsity, the graph is fully connected, one component, ensuring network-wide reachability.
 Node degrees range from $2$ to $9$, with a median of $4$ and a mean of $4.094$. No leaves are present, leaf fraction $=0$, indicating that every zone maintains at least two distinct neighbors and thus exhibits non-fragile local connectivity. The hub set is modest, with a maximum degree of $9$, ensuring that no extreme star-like structures emerge, as shown in Table~\ref{tab:top_degree}.
@@ -1253,7 +1253,7 @@ The degree assortativity coefficient is $r = 0.0789$, indicating a weakly positi
 
 Node \texttt{170} ranks highest across multiple centrality measures, including degree, betweenness, closeness, and eigenvector centrality, indicating its pivotal structural role within the network. Node \texttt{222} also exhibits consistently high centrality, underscoring its importance as a secondary hub. The primary betweenness hotspots, nodes \texttt{170}, \texttt{222}, \texttt{160}, \texttt{166}, \texttt{54}, \texttt{181}, \texttt{75}, \texttt{150}, \texttt{158}, and \texttt{62}, function as inter-community gateways in the modular structure of the network, as reported in Table~\ref{tab:top_betweenness}. These nodes are strategic candidates for the placement of high-capacity facilities, as they mediate flows between communities and alleviate cross-community bottlenecks. Degree alone is insufficient to characterize such nodes, since the maximum degree remains moderate; a composite interpretation integrating betweenness, closeness, and eigenvector centralities provides a more accurate delineation of the network’s functional backbone, as summarized in Tables~\ref{tab:top_closeness}--\ref{tab:top_degree_centrality}.
 Collectively, the adjacency graph serves as the backbone for subsequent ridge-path analyses, enabling the integration of topological proximity into \gls{bev} activity modeling.
-\subsubsection{Ridge path extraction}
+\paragraph{Ridge path extraction}
 \label{subsubsec:ridge_path_results}
 Ridge path extraction identifies the high-density corridor zones within the arterial adjacency graph by tracing sequences of zones that consistently maintain elevated \gls{bev} densities. 
 % The procedure begins by detecting the set of local maxima defined in Equation~\eqref{eq:local_maxima_set}, representing arterial zones whose smoothed densities are greater than or equal to those of all immediate neighbours. These local maxima, shown in Figure~\ref{fig:local_maxima_map}, correspond to the peaks of the smoothed \gls{bev} density surface and delineate the starting points of potential high-demand corridors. The set of local maxima zones is 
@@ -1585,7 +1585,7 @@ The union of all ridge-path nodes, as defined in Equation~\eqref{eq:ridge_path_n
 % }
 % \end{table}
 % The ridge-path extraction framework highlights the hierarchical organization of \gls{bev} activity across arterial zones. High-activity ridges indicate the core areas of the urban \gls{bev} ecosystem, where the deployment of charging infrastructure is anticipated to have the greatest impact on vehicle utilization.
-\subsection{Proximity analysis between ridge zones and the \gls{dcfc} network}
+\subsubsection{Proximity analysis between ridge zones and the \gls{dcfc} network}
 \label{subsec:results_wpd}
 \noindent The graph-based proximity analysis assesses the spatial accessibility between \gls{bev} activities along arterial ridge paths and the existing FLO \gls{dcfc} network. Table~\ref{tab:flo_dcfc_full} summarizes the technical characteristics of the FLO \gls{dcfc} stations, while Figure~\ref{fig:flo_dcfc_map}  illustrates their spatial distribution throughout Toronto's arterial network. The \gls{wpd} metric is then applied to evaluate how effectively the charging supply nodes serve the ridge-path nodes within the arterial-zone graph. 
 % Together, these visual and tabular summaries provide the empirical basis for subsequent proximity-based accessibility and network-alignment evaluations.
@@ -1876,7 +1876,7 @@ Minimum / Maximum random \gls{wpd}$_{null}$ & 0.7471 / 4.7077 \\[4pt]
 %   \label{fig:null_wpd}
 % \end{figure}
 
-% \subsection{Proximity Performance (Observed)}
+% \subsubsection{Proximity Performance (Observed)}
 % \label{subsec:observed_wpd}
 % We compute $\mathrm{WPD}_{\mathrm{real}}$ via Eq.~\eqref{eq:wpd}. The observed value is
 % \[
@@ -1890,7 +1890,7 @@ Minimum / Maximum random \gls{wpd}$_{null}$ & 0.7471 / 4.7077 \\[4pt]
 %   \label{fig:nearest_assignments}
 % \end{figure}
 
-% \subsection{Null Distribution and Significance}
+% \subsubsection{Null Distribution and Significance}
 % \label{subsec:null_significance}
 % We generate $R=\texttt{TODO}$ randomized charger configurations under~\eqref{eq:null_constraints}. 
 % The null mean and SD are $\mu_R=\texttt{TODO}$ and $\sigma_R=\texttt{TODO}$ (Eq.~\eqref{eq:null_stats}). 
@@ -1908,7 +1908,7 @@ Minimum / Maximum random \gls{wpd}$_{null}$ & 0.7471 / 4.7077 \\[4pt]
 %   \label{fig:null_hist}
 % \end{figure}
 
-% \subsection{Sensitivity and Ablation Analyses}
+% \subsubsection{Sensitivity and Ablation Analyses}
 % \label{subsec:sensitivity}
 % We probe robustness to modeling choices:
 % \begin{enumerate}
@@ -1934,7 +1934,7 @@ Minimum / Maximum random \gls{wpd}$_{null}$ & 0.7471 / 4.7077 \\[4pt]
 %   \end{tabular}
 % \end{table}
 
-% \subsection{Targeted Corridor Diagnostics (Actionable Gaps)}
+% \subsubsection{Targeted Corridor Diagnostics (Actionable Gaps)}
 % \label{subsec:diagnostics}
 % We identify ridge nodes with largest $d_G(v_j,c^*(v_j))$ under high demand $\widehat{\rho}^{\mathrm{Ar}}_j$ and low supply $\widehat{\rho}^{\mathrm{Ch}}$.
 % Figure~\ref{fig:gap_map} maps top decile gaps; Table~\ref{tab:corridor_candidates} lists candidate corridors for prioritization.
@@ -1959,14 +1959,14 @@ Minimum / Maximum random \gls{wpd}$_{null}$ & 0.7471 / 4.7077 \\[4pt]
 %   \end{tabular}
 % \end{table}
 
-% \subsection{Computation and Reproducibility}
+% \subsubsection{Computation and Reproducibility}
 % \label{subsec:compute_repro}
 % Total runtime: \texttt{TODO} (R=\texttt{TODO}); peak memory: \texttt{TODO}.
 % Code and parameter files are archived at \texttt{TODO-Repository} with fixed random seeds.
 % % TODO: add DOI/Zenodo link if applicable.
 
 
-\section{Conclusion}
+\subsection{Conclusion}
 \label{sec:conclusion}
 This study has redefined how spatial structure is conceptualized in \gls{bev} \gls{fc} planning by introducing a meso-level, mobility-based framework grounded in arterial mobility network topology. Through the derivation of 234 arterial zones in Toronto, the proposed schema bridges the disconnect between administrative or statical zoning schema and the dynamic nature of \gls{bev} movement. By redistributing ownership data from \glspl{fsa} to these arterial units, the framework constructs a demand field that is directly anchored in urban mobility. Ridge-path extraction then identifies contiguous high-activity corridor zones that represent the structural backbone of BEV activity, while a graph-based proximity analysis quantifies how effectively current infrastructure serves these activity ridges.
 
@@ -1985,7 +1985,7 @@ In sum, this research establishes a methodological bridge between macro-level el
 % These findings indicate that the existing FLO \gls{dcfc} network does not exhibit spatial optimization relative to potential configurations of comparable scale and capacity. Although charger deployment shows concentration along several \gls{bev}-intensive arterial corridor-zones, the overall placement does not outperform randomized alternatives, revealing a clear gap between the current infrastructure pattern and an optimized spatial configuration. This discrepancy underscores an important research direction-investigating the sources of this gap and the contextual parameters that influence charger siting decisions. Potential contributing factors include business-driven placement priorities, infrastructural and zoning constraints, the coexistence of other \gls{dcfc} networks, and limited coordination among service providers. Understanding these influences is essential for developing data-driven, system-level siting strategies that better align charging supply with \gls{bev} demand along urban arterial corridor-zones.
 % Several simplifying assumptions remain. Port power ratings were standardized where station-level specifications were unavailable, potentially understating spatial heterogeneity in delivered capacity. Static BEV density surfaces do not capture temporal fluctuations in activity, and the hop-based metric abstracts away operational constraints such as queuing, power-sharing, and distribution feeder limits. Finally, proximity benchmarking relies on a specific null model and a fixed set of ridge hyperparameters $(L,\eta)$. In sum, the ridge-path lens offers a concise and interpretable backbone of BEV activity that aligns with, but is not yet fully served by, the existing FLO DCFC network. Targeted expansions along undersupplied ridge segments, guided by proximity benchmarks and the future extensions outlined above, present a viable pathway toward higher utilization, equitable access, and grid-aware electrification outcomes.
 
-\section{Future directions}
+\subsection{Future directions}
 Future work will extend the proposed meso-level framework along three complementary dimensions: methodological refinement, data integration, and policy application.
 From a methodological standpoint, subsequent studies should examine the sensitivity of ridge-path extraction to hyperparameters such as hop distance, drop tolerance, and smoothing weights, as well as explore alternative definitions of adjacency that incorporate traffic flow intensity or functional road hierarchy. The null-distribution benchmarking framework can be expanded to account for spatial clustering, land-use constraints, and power-grid limitations, thereby producing more realistic counterfactual baselines for evaluating charger-activity alignment.
 

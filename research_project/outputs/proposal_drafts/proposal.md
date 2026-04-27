@@ -67,27 +67,27 @@ This systematic review follows the Preferred Reporting Items for Systematic Revi
 The primary search was conducted on arXiv (categories: cs.AI, cs.SY, eess.SY, math.OC, econ.GN) Supplementary searches were conducted on Semantic Scholar, the Transportation Research Board Annual Meeting Proceedings, and Web of Science. The primary search strings included:
 
 **Core queries (Gaps 1, 3):**
-- `EV charging infrastructure planning urban spatial optimization`
-- `electric vehicle charging station location optimization equity accessibility`
-- `EV charging station siting GIS spatial optimization`
+- EV charging infrastructure planning urban spatial optimization
+- electric vehicle charging station location optimization equity accessibility
+- EV charging station siting GIS spatial optimization
 
 **Phased deployment queries (Gap 4):**
-- `BEV charging deployment rollout phased urban infrastructure`
-- `EV charging infrastructure temporal sequential staged deployment`
-- `electric vehicle charging district-level meso site selection implementation planning`
+- BEV charging deployment rollout phased urban infrastructure
+- EV charging infrastructure temporal sequential staged deployment
+- electric vehicle charging district-level meso site selection implementation planning
 
 **Zoning and land-use queries (Gap 2):**
-- `charging infrastructure land use zoning regulatory compatibility`
-- `electric vehicle charging zoning ordinance permitting municipal land use regulation`
-- `EV charging station mixed-use district land use compatibility urban form`
+- charging infrastructure land use zoning regulatory compatibility
+- electric vehicle charging zoning ordinance permitting municipal land use regulation
+- EV charging station mixed-use district land use compatibility urban form
 
 **Equity and utilization queries (Gap 3):**
-- `electric vehicle charging spatial justice coverage underserved`
-- `EV charging demand forecasting utilization optimization network`
+- electric vehicle charging spatial justice coverage underserved
+- EV charging demand forecasting utilization optimization network
 
 **Meso-micro queries (Gap 5):**
-- `EV charging infrastructure meso micro multi-scale planning`
-- `EV charging infrastructure multi-scale urban district site level planning integration`
+- EV charging infrastructure meso micro multi-scale planning
+- EV charging infrastructure multi-scale urban district site level planning integration
 
 All search results were deduplicated by arXiv ID and title-year matching prior to screening. Results were rate-limited to comply with arXiv API terms of service (1-second minimum interval between requests).
 
@@ -227,7 +227,6 @@ Spatial optimization constitutes the dominant methodological paradigm in chargin
 
 **Xia et al. (2025)** present *Robust charging station location and routing-scheduling for electric modular autonomous units*. Problem definition: Motivated by global electrification targets and the advent of electric modular autonomous units (E-MAUs), this paper addresses a robust charging station location and routing-scheduling problem (E-RCRSP) in an inter-modal transit system, presenting a novel solution to traditional electric bus scheduling. The system integrates regular bus services, offering full-line or sectional coverage, and short-turning services. Considering the fast-charging technology with quick top-ups, we jointly optimize charging station locations and capacities, fleet sizing, as well as routing-scheduling for E-MAUs under demand uncertainty. This work addresses dissertation gaps: G1.
 
-**Pimpale (2025)** present *Synergistic Development of Cybersecurity and Functional Safety for Smart EVs*. The introduction of Smart EVs (SEVs) represents an increasingly disruption on automotive area, once integrates advanced computer and communication technologies to highly electrical cars, which come with high performances, environment friendly and user friendly characteristics . But the increasing complexity of SEVs prompted by greater dependence on interconnected systems, autonomous capabilities and electrification, presents new challenges in cybersecurity as well as functional safety. The safety and reliability of such vehicles is paramount, as unsafe or unreliable operation in either case represents an unacceptable risk in terms of the performance of the vehicle and safety of the passenger. This work addresses dissertation gaps: G1.
 
 **Ju et al. (2025)** present *Trajectory-Integrated Accessibility Analysis of Public EVCSs*. EV charging infrastructure is crucial for advancing EV adoption, managing charging loads, and ensuring equitable transportation electrification. However, there remains a notable gap in comprehensive accessibility metrics that integrate the mobility of the users. This study introduces a novel accessibility metric, termed Trajectory-Integrated Public EVCS Accessibility (TI-acs), and uses it to assess public EVCS accessibility for approximately 6 million residents in the San Francisco Bay Area based on detailed individual trajectory data in one week. This work addresses dissertation gaps: G1.
 
@@ -461,7 +460,6 @@ Spatial optimization constitutes the dominant methodological paradigm in chargin
 | `predicting_optimal_2025` | Mousaei et al. | 2025 | empirical | city | G1 |
 | `reinforcement_learning_2025` | Zhu et al. | 2025 | empirical | city | G1 |
 | `robust_charging_2025` | Xia et al. | 2025 | optimization | corridor | G1 |
-| `synergistic_development_2025` | Pimpale | 2025 | optimization | city | G1 |
 | `trajectory-integrated_accessibility_2025` | Ju et al. | 2025 | optimization | neighborhood | G1 |
 | `a_data-driven_2024` | Zhang et al. | 2024 | mixed | city | G1, G4, G5 |
 | `a_multi-objective_2024` | Zhang et al. | 2024 | optimization | site | G1, G2 |
@@ -885,7 +883,6 @@ This section presents a systematic analysis of the five dissertation research ga
 | `predicting_optimal_2025` | Mousaei et al. | 2025 | empirical | city | N | N | N |
 | `reinforcement_learning_2025` | Zhu et al. | 2025 | empirical | city | N | Y | N |
 | `robust_charging_2025` | Xia et al. | 2025 | optimization | corridor | N | Y | N |
-| `synergistic_development_2025` | Pimpale | 2025 | optimization | city | N | Y | N |
 | `trajectory-integrated_accessibility_2025` | Ju et al. | 2025 | optimization | neighborhood | N | N | N |
 | `a_data-driven_2024` | Zhang et al. | 2024 | mixed | city | N | N | Y |
 | `a_multi-objective_2024` | Zhang et al. | 2024 | optimization | site | N | Y | N |
@@ -1447,7 +1444,6 @@ All references are presented in academic format, grouped by thematic category. a
 [optimization_strategies_2024] Sudheer Panyaram (2024). *Optimization Strategies for Efficient Charging Station Deployment in Urban and Rural Networks*. FMDB Transactions on Sustainable Environmental Sciences. DOI: 10.69888/ftsess.2024.000245
 [maximum_flow-based_2023] Pierre-Luc Parent, Margarida Carvalho, Miguel F. Anjos, Ribal Atallah (2023). *Maximum flow-based formulation for the optimal location of EVCSs*. arXiv. arXiv:2312.05980v1
 [optimal_ev_2024] G. Pierrou, C. Valero-De La Flor, G. Hug (2024). *Optimal EV Charging Scheduling at Electric Railway Stations Under Peak Load Constraints*. arXiv. arXiv:2404.07804v1
-[synergistic_development_2025] Siddhesh Pimpale (2025). *Synergistic Development of Cybersecurity and Functional Safety for Smart EVs*. arXiv. arXiv:2511.07713v1
 [fast-charging_station_2023] Dong Qiao, Guangmin Wang, Meng Xu (2023). *Fast-charging station location problem: A two-phase approach with mathematical program with equilibrium constraints considering charging choice behaviour*. Sustainable Cities and Society. DOI: 10.1016/j.scs.2023.104678
 [performance_analysis_2022] Yujie Qin, Mustafa A. Kishk, Mohamed-Slim Alouini (2022). *Performance Analysis of Charging Infrastructure Sharing in UAV and EV-involved Networks*. arXiv. arXiv:2208.06782v1
 [a_quantum_2024] Tina Radvand, Alireza Talebpour, Homa Khosravian (2024). *A Quantum Optimization Algorithm for Optimal EVCS Placement for Intercity Trips*. arXiv. arXiv:2410.16231v2

@@ -70,6 +70,11 @@ PREAMBLE = r"""\PassOptionsToPackage{colorlinks=true,linkcolor=black,citecolor=b
 % === Misc ====================================================================
 \usepackage{xcolor}
 
+% === Chapter heading format (suppress "Chapter X" label) =====================
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]{\Large\bfseries}{\thechapter\quad}{0pt}{\Large\bfseries}
+\titlespacing*{\chapter}{0pt}{20pt}{12pt}
+
 % === Chapter 7 (prior work) packages =========================================
 \usepackage{algorithm}
 \usepackage{algorithmic}
@@ -261,33 +266,252 @@ _APPROACH_LABELS = {
     "mixed":        "Mixed Methods",
 }
 
-# Populated by main() from memory/papers/*_metadata.json
+# Technique keywords searched (in priority order) in paper abstracts
+_TECHNIQUE_PATTERNS = [
+    ("two-stage stochastic",       "two-stage stochastic programming"),
+    ("robust optimization",        "robust optimization"),
+    ("bilevel",                    "bilevel programming"),
+    ("multi-objective",            "multi-objective optimization"),
+    ("multiobjective",             "multi-objective optimization"),
+    ("reinforcement learning",     "reinforcement learning"),
+    ("deep learning",              "deep learning"),
+    ("neural network",             "neural network"),
+    ("machine learning",           "machine learning"),
+    ("genetic algorithm",          "genetic algorithm"),
+    ("particle swarm",             "particle swarm optimization"),
+    ("milp",                       "MILP"),
+    ("mixed-integer linear",       "MILP"),
+    ("mixed-integer nonlinear",    "MINLP"),
+    ("mixed-integer",              "mixed-integer programming"),
+    ("stochastic program",         "stochastic programming"),
+    ("dynamic program",            "dynamic programming"),
+    ("integer program",            "integer programming"),
+    ("linear program",             "linear programming"),
+    ("agent-based",                "agent-based simulation"),
+    ("monte carlo",                "Monte Carlo simulation"),
+    ("discrete event",             "discrete-event simulation"),
+    ("traffic simulat",            "traffic simulation"),
+    ("regression",                 "regression analysis"),
+    ("clustering",                 "clustering"),
+    ("gis",                        "GIS-based analysis"),
+    ("spatial analysis",           "spatial analysis"),
+    ("graph-based",                "graph-based approach"),
+    ("network flow",               "network flow"),
+    ("queueing",                   "queuing theory"),
+    ("case study",                 "case study"),
+]
+
+# Populated by main() from memory/papers/*_metadata.json and *_extraction.md
 _KEY_TITLE_MAP: dict[str, str] = {}
+_APPROACH_DETAILS: dict[str, str] = {}   # key → elaborated approach (from abstract)
+_PDF_APPROACHES: dict[str, str] = {}     # key → specific technique (from full PDF)
 
 
 def _raw_key(cell: str) -> str:
-    """Extract the raw paper key string from a markdown table cell (strip backticks)."""
+    """Strip backticks from a markdown table cell to get the paper key."""
     return re.sub(r"^`(.+)`$", r"\1", cell.strip())
 
 
-def _key_to_display(raw_key: str) -> str:
-    """Convert a paper key to a short display title using the metadata title map."""
-    title = _KEY_TITLE_MAP.get(raw_key, "")
-    if title:
-        # Truncate to ~50 chars at a word boundary
-        if len(title) > 52:
-            title = title[:50].rsplit(" ", 1)[0] + "…"
-        return title
-    # Fallback: strip year and underscores/hyphens
-    display = re.sub(r"[_-]\d{4}$", "", raw_key)
-    return display.replace("_", " ").replace("-", " ")
+def _key_to_cite(raw_key: str) -> str:
+    """Return a \\cite{key} link for use in the Paper column."""
+    return f"\\cite{{{raw_key}}}"
 
 
-def _expand_approach(cell: str) -> str:
-    return _APPROACH_LABELS.get(cell.strip().lower(), cell)
+def _expand_approach(key: str, code: str) -> str:
+    """Return elaborated approach string for a paper.
+    Priority: PDF-extracted specific technique > abstract-derived > generic label."""
+    if key in _PDF_APPROACHES:
+        return _PDF_APPROACHES[key]
+    detail = _APPROACH_DETAILS.get(key, "")
+    if detail:
+        return detail
+    return _APPROACH_LABELS.get(code.strip().lower(), code)
 
 
-def convert_table(lines: list[str]) -> str:
+def _extract_technique(abstract: str) -> str:
+    """Find the most specific technique label from an abstract."""
+    text = abstract.lower()
+    for keyword, label in _TECHNIQUE_PATTERNS:
+        if keyword in text:
+            return label
+    return ""
+
+
+# Ordered list of (search_pattern, display_label) — longer/more-specific first
+# Searched with word boundaries in both title and abstract
+_PLACE_LIST = [
+    # Multi-word cities first (to avoid partial matches)
+    ("New York City",       "New York, USA"),
+    ("New York",            "New York, USA"),
+    ("Los Angeles",         "Los Angeles, USA"),
+    ("San Francisco",       "San Francisco, USA"),
+    ("San Diego",           "San Diego, USA"),
+    ("Orange County",       "Orange Co., USA"),
+    ("Sioux Falls",         "Sioux Falls, USA"),
+    ("Kansas City",         "Kansas City, USA"),
+    ("Las Vegas",           "Las Vegas, USA"),
+    ("Salt Lake City",      "Salt Lake City, USA"),
+    ("Southern California", "S. California, USA"),
+    ("Ho Chi Minh City",    "Ho Chi Minh, Vietnam"),
+    ("Ho Chi Minh",         "Ho Chi Minh, Vietnam"),
+    ("Hong Kong",           "Hong Kong"),
+    ("Abu Dhabi",           "Abu Dhabi, UAE"),
+    ("West Java",           "West Java, Indonesia"),
+    ("São Paulo",           "São Paulo, Brazil"),
+    # Single-word cities — US
+    ("Toronto",   "Toronto, Canada"),   ("Ottawa",    "Ottawa, Canada"),
+    ("Vancouver", "Vancouver, Canada"), ("Montreal",  "Montreal, Canada"),
+    ("Calgary",   "Calgary, Canada"),   ("Edmonton",  "Edmonton, Canada"),
+    ("Chicago",   "Chicago, USA"),      ("Houston",   "Houston, USA"),
+    ("Seattle",   "Seattle, USA"),      ("Boston",    "Boston, USA"),
+    ("Atlanta",   "Atlanta, USA"),      ("Denver",    "Denver, USA"),
+    ("Phoenix",   "Phoenix, USA"),      ("Portland",  "Portland, USA"),
+    ("Austin",    "Austin, USA"),       ("Detroit",   "Detroit, USA"),
+    ("Minneapolis","Minneapolis, USA"), ("Pittsburgh","Pittsburgh, USA"),
+    ("Columbus",  "Columbus, USA"),     ("Charlotte", "Charlotte, USA"),
+    ("Nashville",  "Nashville, USA"),   ("Raleigh",   "Raleigh, USA"),
+    # US States (fallback when no city)
+    ("Michigan",   "Michigan, USA"),  ("California", "California, USA"),
+    ("Texas",      "Texas, USA"),     ("Florida",    "Florida, USA"),
+    ("Illinois",   "Illinois, USA"),  ("Ohio",       "Ohio, USA"),
+    ("Maryland",   "Maryland, USA"),
+    # Europe
+    ("London",    "London, UK"),       ("Birmingham", "Birmingham, UK"),
+    ("Manchester","Manchester, UK"),   ("Edinburgh",  "Edinburgh, UK"),
+    ("Paris",     "Paris, France"),    ("Lyon",       "Lyon, France"),
+    ("Toulouse",  "Toulouse, France"),
+    ("Berlin",    "Berlin, Germany"),  ("Munich",     "Munich, Germany"),
+    ("Hamburg",   "Hamburg, Germany"), ("Frankfurt",  "Frankfurt, Germany"),
+    ("Cologne",   "Cologne, Germany"),
+    ("Amsterdam", "Amsterdam, NL"),    ("Utrecht",    "Utrecht, NL"),
+    ("Oslo",      "Oslo, Norway"),     ("Bergen",     "Bergen, Norway"),
+    ("Stockholm", "Stockholm, Sweden"),("Gothenburg", "Gothenburg, Sweden"),
+    ("Copenhagen","Copenhagen, DK"),   ("Aarhus",     "Aarhus, DK"),
+    ("Vienna",    "Vienna, Austria"),  ("Graz",       "Graz, Austria"),
+    ("Zurich",    "Zurich, CH"),       ("Geneva",     "Geneva, CH"),
+    ("Chur",      "Chur, CH"),
+    ("Barcelona", "Barcelona, Spain"), ("Madrid",     "Madrid, Spain"),
+    ("Valencia",  "Valencia, Spain"),  ("Seville",    "Seville, Spain"),
+    ("Rome",      "Rome, Italy"),      ("Milan",      "Milan, Italy"),
+    ("Turin",     "Turin, Italy"),     ("Naples",     "Naples, Italy"),
+    ("Brussels",  "Brussels, Belgium"),("Hasselt",    "Hasselt, Belgium"),
+    ("Helsinki",  "Helsinki, Finland"),
+    ("Lisbon",    "Lisbon, Portugal"),  ("Porto",     "Porto, Portugal"),
+    ("Warsaw",    "Warsaw, Poland"),    ("Krakow",    "Krakow, Poland"),
+    ("Prague",    "Prague, Czechia"),   ("Budapest",  "Budapest, Hungary"),
+    ("Bucharest", "Bucharest, Romania"),("Athens",    "Athens, Greece"),
+    ("Ljubljana", "Ljubljana, Slovenia"),
+    ("Luxembourg","Luxembourg City"),   ("Bettembourg","Bettembourg, LU"),
+    ("Malaga",    "Malaga, Spain"),
+    # Middle East
+    ("Dubai",     "Dubai, UAE"),       ("Riyadh",    "Riyadh, KSA"),
+    ("Istanbul",  "Istanbul, Turkey"), ("Ankara",    "Ankara, Turkey"),
+    ("Tel Aviv",  "Tel Aviv, Israel"),
+    # Asia
+    ("Beijing",   "Beijing, China"),   ("Shanghai",  "Shanghai, China"),
+    ("Shenzhen",  "Shenzhen, China"),  ("Chengdu",   "Chengdu, China"),
+    ("Wuhan",     "Wuhan, China"),     ("Nanjing",   "Nanjing, China"),
+    ("Guangzhou", "Guangzhou, China"), ("Hangzhou",  "Hangzhou, China"),
+    ("Lanzhou",   "Lanzhou, China"),   ("Tianjin",   "Tianjin, China"),
+    ("Wuxi",      "Wuxi, China"),      ("Chongqing", "Chongqing, China"),
+    ("Zhengzhou", "Zhengzhou, China"),
+    ("Singapore", "Singapore"),
+    ("Tokyo",     "Tokyo, Japan"),     ("Osaka",     "Osaka, Japan"),
+    ("Seoul",     "Seoul, Korea"),     ("Busan",     "Busan, Korea"),
+    ("Delhi",     "Delhi, India"),     ("Mumbai",    "Mumbai, India"),
+    ("Bangalore", "Bangalore, India"), ("Chennai",   "Chennai, India"),
+    ("Hyderabad", "Hyderabad, India"),
+    ("Hanoi",     "Hanoi, Vietnam"),   ("Jakarta",   "Jakarta, Indonesia"),
+    ("Bangkok",   "Bangkok, Thailand"),("Kuala Lumpur","Kuala Lumpur, Malaysia"),
+    # Oceania
+    ("Sydney",    "Sydney, Australia"),("Melbourne", "Melbourne, Australia"),
+    ("Brisbane",  "Brisbane, Australia"),
+    # Africa & Americas
+    ("Cairo",     "Cairo, Egypt"),     ("Nairobi",   "Nairobi, Kenya"),
+    ("Johannesburg","Johannesburg, SA"),
+    ("Santiago",  "Santiago, Chile"),  ("Bogota",    "Bogota, Colombia"),
+    ("Lima",      "Lima, Peru"),
+    # Countries (last resort — only when no city found above)
+    ("China",     "China"),     ("Germany",    "Germany"),
+    ("Netherlands","Netherlands"), ("France",  "France"),
+    ("Italy",     "Italy"),     ("Spain",      "Spain"),
+    ("Indonesia", "Indonesia"), ("Vietnam",    "Vietnam"),
+    ("Switzerland","Switzerland"), ("Luxembourg","Luxembourg"),
+    ("Norway",    "Norway"),    ("Sweden",     "Sweden"),
+    ("Denmark",   "Denmark"),   ("Finland",    "Finland"),
+    ("Poland",    "Poland"),    ("Australia",  "Australia"),
+    ("Brazil",    "Brazil"),    ("India",      "India"),
+    ("Japan",     "Japan"),     ("Korea",      "Korea"),
+    ("Turkey",    "Turkey"),    ("Israel",     "Israel"),
+    ("Europe",    "Europe (multi-city)"),
+]
+
+# Populated in main() from extraction files
+_LOCATION_MAP: dict[str, str] = {}
+
+
+def _extract_location(text: str) -> str:
+    """Find the most specific place name from title+abstract text."""
+    for pattern, label in _PLACE_LIST:
+        if re.search(r'\b' + re.escape(pattern) + r'\b', text, re.IGNORECASE):
+            return label
+    return ""
+
+
+# Ordered synthetic/theoretical study type patterns
+_STUDY_TYPE_PATTERNS = [
+    # Named benchmark networks
+    (r'\bSioux[\s\-]Falls\b',                  "Sioux Falls (benchmark)"),
+    (r'\bIEEE\s+\d+[\-\s]bus\b',               "IEEE bus test system"),
+    (r'\bIEEE\s+test\b',                        "IEEE test system"),
+    (r'\b33[\-\s]bus\b',                        "IEEE 33-bus network"),
+    (r'\b69[\-\s]bus\b',                        "IEEE 69-bus network"),
+    (r'\bSFO\s+network\b',                      "SF road network"),
+    # Synthetic/simulated data
+    (r'\bsynthetic\s+(network|data|graph|instance|case)',  "Synthetic network"),
+    (r'\bsimulated\s+(network|data|environment|scenario)', "Simulated scenario"),
+    (r'\brandom(ly)?\s+(generat|sampl|simulat)',           "Randomly generated"),
+    (r'\bnumerical\s+(experiment|simulation|study|result)', "Numerical simulation"),
+    (r'\bmimick(s|ing)?\s+real[\s\-]world\b',              "Synthetic (real-world proxy)"),
+    (r'\btest\s+(network|case|bed|instance)',               "Synthetic test case"),
+    (r'\brealistic\s+(network|scenario|case|data)',         "Realistic synthetic network"),
+    (r'\bsmall[\s\-]scale\s+network\b',                    "Small-scale test network"),
+    (r'\bbenchmark\b',                                      "Benchmark instance"),
+    # Agent/game/queueing — purely theoretical
+    (r'\bgame[\s\-]theoret',          "Game-theoretic model"),
+    (r'\bnon[\s\-]cooperative\s+game', "Non-cooperative game model"),
+    (r'\bqueueing\s+(model|theor)',    "Queueing-theory model"),
+    (r'\bMarkov\s+(chain|decision)',   "Markov decision model"),
+    # General / analytical frameworks
+    (r'\banalytical\s+(framework|model|approach|result)', "Analytical framework"),
+    (r'\btheoretical\s+(framework|model|analysis)',        "Theoretical model"),
+    (r'\bgeneral\s+(framework|formulation|model)',         "General framework"),
+    (r'\bco[\s\-]simulation\b',        "Co-simulation testbed"),
+    (r'\breal[\s\-]time\s+simulat',    "Real-time simulation"),
+    # Global/multi-city reviews
+    (r'\bglobal\s+review\b',           "Global review"),
+    (r'\bmulti[\s\-]city\b',           "Multi-city study"),
+    (r'\b(worldwide|global|international)\b', "International / general"),
+]
+
+
+def _classify_study_type(text: str) -> str:
+    """Return a descriptive study-type label for papers with no real-world location."""
+    for pattern, label in _STUDY_TYPE_PATTERNS:
+        if re.search(pattern, text, re.IGNORECASE):
+            return label
+    return "General / theoretical"
+
+
+def _latex_location(loc: str) -> str:
+    """Escape a location string for a LaTeX table cell.
+    Replaces '/' with '{\\slash}' so LaTeX can break long slash-delimited names."""
+    loc = _process_inline(loc)
+    loc = loc.replace("/", "{\\slash}")
+    return loc
+
+
+def convert_table(lines: list[str], caption: str = "") -> str:
     """Convert a markdown table (list of raw lines) to a LaTeX longtable."""
     rows = []
     header_cells: list[str] = []
@@ -306,23 +530,31 @@ def convert_table(lines: list[str]) -> str:
     if not rows:
         return ""
 
-    # Detect whether this is a paper-list table (has Key / Authors / Gaps cols)
+    # Detect paper-list tables: has "key" in first col, and either "gap" or "equity"/"util"/"phased"
     is_paper_table = (
         len(header_cells) >= 6
         and "key" in header_cells[0]
-        and any("gap" in h for h in header_cells)
+        and (
+            any("gap" in h for h in header_cells)
+            or any(h in ("equity", "util.", "phased") for h in header_cells)
+        )
     )
 
-    # Locate Approach column index for expansion
-    approach_col = next(
-        (i for i, h in enumerate(header_cells) if "approach" in h), -1
-    )
+    # Locate column indices
+    approach_col = next((i for i, h in enumerate(header_cells) if "approach" in h), -1)
+    scope_col    = next((i for i, h in enumerate(header_cells) if "scope" in h), -1)
 
     n_cols = max(len(r) for r in rows)
-    # Column spec — paper tables get a dedicated layout
+    # Column spec — paper tables get dedicated layouts
     if is_paper_table and n_cols == 6:
-        # Title  Authors  Year  Approach  Scope  Gaps  (total 11.6cm fits ~15cm textwidth with tabcolsep)
-        col_spec = "L{3.2cm} L{2.3cm} L{0.8cm} L{2.5cm} L{1.0cm} L{1.8cm}"
+        # Paper  Authors  Year  Approach(wide)  Location  Gaps
+        col_spec = "L{0.9cm} L{2.2cm} L{0.8cm} L{3.3cm} L{2.5cm} L{1.5cm}"
+    elif is_paper_table and n_cols == 7:
+        # Paper  Authors  Year  Approach  Location  Gap1  Gap2...
+        col_spec = "L{0.9cm} L{2.0cm} L{0.7cm} L{2.6cm} L{2.2cm} L{0.9cm} L{0.9cm}"
+    elif is_paper_table and n_cols == 8:
+        # Paper  Authors  Year  Approach  Location  Equity  Util.  Phased
+        col_spec = "L{0.9cm} L{1.8cm} L{0.7cm} L{2.5cm} L{2.1cm} L{0.7cm} L{0.7cm} L{0.7cm}"
     elif n_cols <= 2:
         col_spec = " ".join(["L{6cm}"] * n_cols)
     elif n_cols == 3:
@@ -331,33 +563,58 @@ def convert_table(lines: list[str]) -> str:
         col_spec = "L{4.5cm} L{3.5cm} L{2.5cm} L{4cm}"
     elif n_cols == 5:
         col_spec = "L{3.5cm} L{2.5cm} L{2cm} L{2cm} L{3.5cm}"
-    elif n_cols == 7:
-        col_spec = "L{2.0cm} L{1.8cm} L{0.8cm} L{1.8cm} L{1.0cm} L{0.9cm} L{0.9cm}"
-    elif n_cols == 8:
-        # Gap analysis tables: Title Authors Year Approach Scope Equity Util Phased
-        col_spec = "L{2.3cm} L{1.5cm} L{0.7cm} L{1.6cm} L{0.8cm} L{0.7cm} L{0.7cm} L{0.7cm}"
     else:
-        # Generic wide tables: distribute evenly within safe width
         per_col = min(2.0, 11.5 / max(n_cols, 1))
         col_spec = " ".join([f"L{{{per_col:.1f}cm}}"] * n_cols)
 
-    out = ["\\begin{longtable}{" + col_spec + "}",
-           "\\toprule"]
+    # Build the header row cells
+    header_row = list(rows[0]) + [""] * (n_cols - len(rows[0]))
+    if is_paper_table:
+        if header_row[0].lower().strip() == "key":
+            header_row[0] = "Paper"
+        if scope_col >= 0 and header_row[scope_col].lower().strip() == "scope":
+            header_row[scope_col] = "Location"
+    header_cells_bold = [f"\\textbf{{{_process_inline(c)}}}" for c in header_row]
+    header_line = " & ".join(header_cells_bold) + r" \\"
 
-    for i, row in enumerate(rows):
-        # Pad to n_cols
+    out = ["\\begin{longtable}{" + col_spec + "}"]
+
+    # ── First-page header (caption appears here only → single LOT entry) ──────
+    if caption:
+        out.append(f"\\caption{{{caption}}}\\\\[4pt]")
+    out.append("\\toprule")
+    out.append(header_line)
+    out.append("\\midrule")
+    out.append("\\endfirsthead")
+
+    # ── Continuation header (no caption → no extra LOT entries) ──────────────
+    if caption:
+        out.append(
+            f"\\multicolumn{{{n_cols}}}{{l}}"
+            f"{{\\small\\textit{{Table \\thetable\\ --- continued}}}}\\\\[2pt]"
+        )
+    out.append("\\toprule")
+    out.append(header_line)
+    out.append("\\midrule")
+    out.append("\\endhead")
+
+    # ── Data rows ─────────────────────────────────────────────────────────────
+    for i, row in enumerate(rows[1:], start=1):
         row = row + [""] * (n_cols - len(row))
-        if is_paper_table and i > 0:
-            # Replace key slug with descriptive title
-            row[0] = _key_to_display(_raw_key(row[0]))
-            # Expand approach code
+        if is_paper_table:
+            raw_key = _raw_key(row[0])
             if approach_col >= 0:
-                row[approach_col] = _expand_approach(row[approach_col])
-        cells = [_process_inline(c) for c in row]
+                row[approach_col] = _expand_approach(raw_key, row[approach_col])
+            cells = [_key_to_cite(raw_key)]
+            for ci, c in enumerate(row[1:], start=1):
+                if ci == scope_col and scope_col >= 0:
+                    loc_val = _LOCATION_MAP.get(raw_key, "General / theoretical")
+                    cells.append(_latex_location(loc_val))
+                else:
+                    cells.append(_process_inline(c))
+        else:
+            cells = [_process_inline(c) for c in row]
         out.append(" & ".join(cells) + r" \\")
-        if i == 0:
-            out.append("\\midrule")
-            out.append("\\endhead")
 
     out.append("\\bottomrule")
     out.append("\\end{longtable}")
@@ -425,7 +682,22 @@ def md_to_latex(md: str) -> str:
             while i < len(lines) and lines[i].strip().startswith("|"):
                 table_lines.append(lines[i])
                 i += 1
-            out.append(convert_table(table_lines))
+            # Check if the preceding non-blank output line was a bold caption
+            caption_tex = ""
+            cap_match = None
+            for k in range(len(out) - 1, -1, -1):
+                if out[k].strip() == "":
+                    continue
+                cap_m = re.match(
+                    r"^\\noindent\s*\\textbf\{Table\s+[\d.]+:\s*(.*?)\}\\?\s*$",
+                    out[k].strip()
+                )
+                if cap_m:
+                    caption_tex = cap_m.group(1).rstrip("\\").strip()
+                    out.pop(k)
+                break
+            inner = convert_table(table_lines, caption=caption_tex)
+            out.append(inner)
             out.append("")
             continue
 
@@ -453,14 +725,12 @@ def md_to_latex(md: str) -> str:
                 continue
             m = re.match(r"^(\d+)\.\s+(.*)", heading)
             ch_title = m.group(2) if m else heading
-            # Chapter 7 (Expected Contributions and Timeline) is commented out
+            # Expected Contributions and Timeline is commented out
             COMMENTED_CHAPTERS = {"Expected Contributions and Timeline"}
             if ch_title.strip() in COMMENTED_CHAPTERS:
-                # Emit \iffalse ... \fi around the entire chapter
                 out.append("\\iffalse % ---- Chapter commented out ----")
                 out.append(f"\\chapter{{{_process_inline(ch_title)}}}")
                 i += 1
-                # Collect chapter body until next ## or end of document
                 while i < len(lines) and not lines[i].startswith("## "):
                     out.append(_process_inline(lines[i]))
                     i += 1
@@ -770,7 +1040,7 @@ def main():
     input_path  = Path(args.input)
     output_path = Path(args.output)
 
-    # Build key → title lookup from all metadata files
+    # Build key → title and key → approach-detail lookups
     papers_dir = PROJECT_ROOT / "memory" / "papers"
     import json as _json
     for meta_file in papers_dir.glob("*_metadata.json"):
@@ -783,6 +1053,51 @@ def main():
         except Exception:
             pass
     print(f"[info] Loaded {len(_KEY_TITLE_MAP)} paper titles for table rendering")
+
+    # Load PDF-extracted specific technique names
+    approaches_path = PROJECT_ROOT / "memory" / "paper_approaches.json"
+    if approaches_path.exists():
+        _PDF_APPROACHES.update(_json.loads(approaches_path.read_text(encoding="utf-8")))
+    print(f"[info] Loaded {len(_PDF_APPROACHES)} PDF-extracted approach techniques")
+
+    # Load curated paper_locations.json (hand-verified via web search)
+    curated_locs_path = PROJECT_ROOT / "memory" / "paper_locations.json"
+    curated_keys: set[str] = set()
+    if curated_locs_path.exists():
+        curated = _json.loads(curated_locs_path.read_text(encoding="utf-8"))
+        _LOCATION_MAP.update({k: v for k, v in curated.items() if v})
+        curated_keys = set(curated.keys())
+
+    # Build approach details and location map from extraction files
+    for ext_file in papers_dir.glob("*_extraction.md"):
+        try:
+            text = ext_file.read_text(encoding="utf-8")
+            key_m = re.search(r"\*\*Key:\*\*\s*(\S+)", text)
+            code_m = re.search(r"\*\*Approach:\*\*\s*(\S+)", text)
+            abs_m = re.search(r"## Abstract\s*\n(.*)", text, re.DOTALL)
+            if not key_m:
+                continue
+            key = key_m.group(1)
+            code = code_m.group(1).strip().lower() if code_m else "optimization"
+            abstract = abs_m.group(1).strip() if abs_m else ""
+            # Approach
+            base = _APPROACH_LABELS.get(code, code.title())
+            technique = _extract_technique(abstract)
+            _APPROACH_DETAILS[key] = f"{base} ({technique})" if technique else base
+            # Location — curated values take priority; only derive if not already set
+            if key in curated_keys:
+                continue
+            title = _KEY_TITLE_MAP.get(key, "")
+            combined = title + " " + abstract
+            loc = _extract_location(combined)
+            if loc:
+                _LOCATION_MAP[key] = loc
+            elif abstract:
+                # Fall back to study-type classification
+                _LOCATION_MAP[key] = _classify_study_type(combined)
+        except Exception:
+            pass
+    print(f"[info] Loaded {len(_APPROACH_DETAILS)} approach details, {len(_LOCATION_MAP)} locations")
 
     # Build cite map: normalized_last_name+year → bibtex key
     cite_map = _build_cite_map(papers_dir)

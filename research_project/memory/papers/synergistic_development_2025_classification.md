@@ -7,8 +7,8 @@
 
 ## Inclusion Decision
 
-**Included:** Yes
-**Reason:** Meets inclusion criteria — addresses relevant BEV charging infrastructure planning themes
+**Included:** No
+**Reason:** Excluded — unrelated to EV charging station planning; covers cybersecurity and functional safety for Smart EVs only.
 
 ## Categories
 

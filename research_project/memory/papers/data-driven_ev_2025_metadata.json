@@ -9,7 +9,7 @@
   "venue": "Scientific Reports",
   "doi": "10.1038/s41598-025-12079-3",
   "arxiv_id": "",
-  "abstract": "",
+  "abstract": "This paper proposes an integrated planning framework for EV charging infrastructure in urban microgrids (MGs) under uncertainty. A Spatial-Temporal Flow Capturing Location Model (ST-FCLM) allocates three facility types (DC fast charging stations, on-road wireless chargers, and parking lots with AC chargers) by analyzing spatio-temporal traffic flow distributions; M/M/C queuing theory then optimizes facility sizing to meet QoS targets. A stochastic scenario generation method (roulette wheel mechanism based on PDFs, reduced via fast-forward selection to 10 scenarios) models uncertainty in electrical load, wind turbine, and PV output. A novel multi-objective Symbiotic Organisms Search (SOS) model allocates battery storage systems (BSS) to minimize power losses, improve voltage profiles, and maximize the voltage stability index. Validated on the Nguyen-Dupuis RTN coupled with a modified IEEE 33-bus MG (1500 EVs simulated via SUMO), results show BSS integration raises the minimum VSI from 0.5848 to 0.8631, reduces daily power losses by 33.34%, and decreases transformer loading by 19.5%. Among five battery technologies evaluated, Na-NiCl2 yields the highest cost savings at 6.99%.",
   "url": "https://doi.org/10.1038/s41598-025-12079-3",
   "key": "data-driven_ev_2025"
 }

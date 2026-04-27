@@ -11,7 +11,7 @@
   "venue": "IEEE Transactions on Industry Applications",
   "doi": "10.1109/tia.2025.3600209",
   "arxiv_id": "",
-  "abstract": "",
+  "abstract": "The availability of public charging infrastructure is essential for accelerating the widespread adoption of electric vehicles (EVs). This article introduces an innovative spatial analysis framework based on Geographic Information Systems (GIS) designed to enable the integrated planning of distribution systems and public electric vehicle charging infrastructure (EVCI). The proposed framework consists of three modules. The first module estimates the spatial locations of potential EV users based on socioeconomic data and calculates the charging demand profiles using geographically weighted regression (GWR) and a travel simulation algorithm. The second module examines spatial relationships between distribution system nodes, road infrastructure, popular venues, and urban land use restrictions using multi-criteria spatial analysis (weighted linear combination + AHP). The third module optimizes the location and size of the EVCI using a stochastic scenario-based MILP model solved with CPLEX. The framework was tested using geospatial data from a medium-sized Brazilian city (~230,000 population). The findings suggest that planning EVCI without considering the spatial features of the study area can lead to impractical or unfeasible solutions.",
   "url": "https://doi.org/10.1109/tia.2025.3600209",
   "key": "joint_planning_2026"
 }

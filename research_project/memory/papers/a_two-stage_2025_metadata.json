@@ -12,7 +12,7 @@
   "venue": "Applied Energy",
   "doi": "10.1016/j.apenergy.2025.126911",
   "arxiv_id": "",
-  "abstract": "",
+  "abstract": "This paper proposes a two-stage optimization framework for EV charging station (CS) planning that jointly minimizes investment cost and maximizes user service satisfaction. Stage 1 uses a demand-informed heuristic (Monte Carlo simulation + K-means clustering) to warm-start a MILP that determines CS siting and sizing. Stage 2 employs an LP-based charging pile (CP) allocation model with iterative adjustment guided by a user satisfaction index (service rate, matching rate, waiting rate) until a satisfaction threshold is met. The framework is validated on an abstract 4x3 uniform spatial grid (12 zones) with parameters drawn from Chinese urban data (Baidu Maps 2024, Jinan Starting Area). Results demonstrate that the two-stage approach reduces investment cost by 18.7% and improves satisfaction by 12.3% compared to single-stage benchmarks.",
   "url": "https://doi.org/10.1016/j.apenergy.2025.126911",
   "key": "a_two-stage_2025"
 }
